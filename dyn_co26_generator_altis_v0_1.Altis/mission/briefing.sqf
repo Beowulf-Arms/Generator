@@ -85,7 +85,7 @@ _bsoMb1 = ["bso_mission_board_1", "Secure Area","",{[-2,{execVM "mission\gene\mi
 _bsoMb1a = ["bso_mission_board_1a", "Secure Area - Large","",{[-2,{execVM "mission\gene\mission_secure_large.sqf"},{}] call CBA_fnc_globalExecute;},{true}] call ace_interact_menu_fnc_createAction;
 _bsoMb2 = ["bso_mission_board_2", "Destroy Weapons Cache","",{[-2,{execVM "mission\gene\mission_cache.sqf"},{}] call CBA_fnc_globalExecute;},{true}] call ace_interact_menu_fnc_createAction;
 _bsoMb3 = ["bso_mission_board_3", "Capture HVT","",{[-2,{execVM "mission\gene\mission_c_hvt.sqf"},{}] call CBA_fnc_globalExecute;},{true}] call ace_interact_menu_fnc_createAction;
-_bsoMb4 = ["bso_mission_board_4", "Eliminate HVT","",{[-2,{execVM "mission\gene\mission_c_hvt.sqf"},{}] call CBA_fnc_globalExecute;},{true}] call ace_interact_menu_fnc_createAction;
+_bsoMb4 = ["bso_mission_board_4", "Eliminate HVT","",{[-2,{execVM "mission\gene\mission_e_hvt.sqf"},{}] call CBA_fnc_globalExecute;},{true}] call ace_interact_menu_fnc_createAction;
 
 _bsoMbC = ["bso_mission_board_C", "Clear Obj.","",{[-2,{execVM "mission\gene\mission_clear.sqf"},{}] call CBA_fnc_globalExecute;},{true}] call ace_interact_menu_fnc_createAction;
 

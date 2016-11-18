@@ -52,7 +52,7 @@ if (isServer) then
 
 //};
 
-	["Task_c_hvt","Capture the HVT","We have identified the location of an FIA commander. Move in and eliminate the him."] call SHK_Taskmaster_add;
+	["Task_c_hvt","Capture the HVT","We have identified the location of an FIA commander. Move in and capture him."] call SHK_Taskmaster_add;
 	
 	HVT1 addHeadgear "H_Beret_blk";
 	HVT1 addGoggles "G_Sport_Greenblack";

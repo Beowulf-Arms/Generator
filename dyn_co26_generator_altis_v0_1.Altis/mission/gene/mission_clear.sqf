@@ -1,8 +1,4 @@
-//if (!isServer) then 
-//{
 
-	//{deleteVehicle _x} foreach units grp1; deleteGroup grp1;
-	//{deleteVehicle _x} foreach units grp2; deleteGroup grp2;
 	["BSOMission",["Clearing AO"]] call BIS_fnc_showNotification;
 
 	
@@ -25,8 +21,7 @@
 	
 	deletevehicle trg1;
 	deletevehicle trg2;
-		
-//	sleep 10;
 	
-//	hint "clear complete";
-//};
+	deletevehicle cache0;
+	deletevehicle cache1;
+	deletevehicle cache2;
