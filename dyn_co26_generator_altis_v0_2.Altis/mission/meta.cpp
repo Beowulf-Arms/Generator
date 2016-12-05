@@ -52,9 +52,9 @@ class Header {
 //BSO Loadout System (Add custom loadouts to your mission)
 	
 class CfgBsoLoadouts {
-	#include "loadouts\blufor.cpp"
-  //#include "loadouts\opfor.cpp" //create this file by copying blufor.cpp and renaming
-  //#include "loadouts\indep.cpp" //create this file by copying blufor.cpp and renaming
+	#include "loadouts\pmc_g36.cpp"
+	#include "loadouts\pmc_416.cpp" 
+	#include "loadouts\pmc_ak12.cpp"
 };
 
 // Used for custom debriefing screens launched by the admin or triggers ingame. See briefing.sqf for admin interactions
@@ -82,6 +82,16 @@ class CfgDebriefing
 
 class Params
 {
+	class PlayerFaction
+	{
+		title = "Player Faction";
+		texts[] = {"PMC - G36","PMC - HK416","PMC - AK12"};
+		values[] = {1,2,3};
+		default = 1;
+	//	function = "BIS_fnc_paramDaytime"; // (Optional) Function called when player joins, selected value is passed as an argument
+ 		isGlobal = 1; // (Optional) 1 to execute script / function locally for every player who joins, 0 to do it only on server
+	};	
+	
 	class Daytime
 	{
 		title = "Time";

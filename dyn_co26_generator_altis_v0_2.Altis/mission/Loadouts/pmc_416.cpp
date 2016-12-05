@@ -1,29 +1,29 @@
-class PMC {
-		name = "PMC";
+class PMC_416 {
+		name = "PMC HK416";
 		class Operator {
 			name = "Operator";
-			primaryWeapon = "hlc_rifle_G36KV";
-			primaryWeaponItems[] = {"rhsusf_acc_anpeq15A","rhsusf_acc_SpecterDR"};
-			handgun = "RH_usp";
+			primaryWeapon = "rhs_weap_hk416d145";
+			primaryWeaponItems[] = {"acc_pointer_IR","optic_Hamr","rhsusf_acc_grip1"};
+			handgun = "hgun_Pistol_heavy_01_F";
 			handgunItems[] = {""};
 			magazines[] = {
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_EPR_G36",				
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_Tracers_G36",
-				"hlc_30rnd_556x45_Tracers_G36",
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag",				
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag_Tracer_Red",
+				"30Rnd_556x45_Stanag_Tracer_Red",
 				"rhs_mag_m67",
 				"rhs_mag_m67",
 				"SmokeShell",
 				"ACE_M84",
 				"Chemlight_blue",
 				"Chemlight_red",
-				"RH_12Rnd_45cal_usp",
-				"RH_12Rnd_45cal_usp",
-				"RH_12Rnd_45cal_usp"
+				"11Rnd_45ACP_Mag",
+				"11Rnd_45ACP_Mag",
+				"11Rnd_45ACP_Mag"
 			};
 			items[] = {
 				"ACE_EarPlugs",
@@ -67,30 +67,105 @@ class PMC {
 			insignia = "";
 		};	
 
-		class OperatorLAT {
-			name = "Operator (LAT)";
-			primaryWeapon = "hlc_rifle_G36KV";
-			primaryWeaponItems[] = {"rhsusf_acc_anpeq15A","rhsusf_acc_SpecterDR"};
-			handgun = "RH_usp";
+		class OperatorIAR {
+			name = "Operator (IAR)";
+			primaryWeapon = "rhs_weap_m27iar_grip";
+			primaryWeaponItems[] = {"acc_pointer_IR","optic_Hamr","rhsusf_acc_harris_bipod"};
+			handgun = "hgun_Pistol_heavy_01_F";
 			handgunItems[] = {""};
 			magazines[] = {
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_EPR_G36",				
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_Tracers_G36",
-				"hlc_30rnd_556x45_Tracers_G36",
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag",				
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag_Tracer_Red",
+				"30Rnd_556x45_Stanag_Tracer_Red",
 				"rhs_mag_m67",
 				"rhs_mag_m67",
 				"SmokeShell",
 				"ACE_M84",
 				"Chemlight_blue",
 				"Chemlight_red",
-				"RH_12Rnd_45cal_usp",
-				"RH_12Rnd_45cal_usp",
-				"RH_12Rnd_45cal_usp"
+				"11Rnd_45ACP_Mag",
+				"11Rnd_45ACP_Mag",
+				"11Rnd_45ACP_Mag"
+			};
+			items[] = {
+				"ACE_EarPlugs",
+				"ACE_Flashlight_MX991",
+				"ACE_fieldDressing",
+				"ACE_fieldDressing",
+				"ACE_morphine",				
+				"ACE_tourniquet",
+				"ACE_quikclot"			
+			};
+			personalRadios[] = {
+				"ACRE_PRC343"
+			};					
+			assignedItems[] = {
+				"ItemGPS",
+				"ItemMap",
+				"ItemCompass",
+				"ItemWatch"
+			};
+			backpack = "UK3CB_BAF_B_Bergen_TAN_Rifleman_A";
+			backpackMagazines[] = {
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag",				
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag_Tracer_Red",
+				"30Rnd_556x45_Stanag_Tracer_Red",
+				"ACE_M84",
+				"SmokeShellPurple",
+				"Chemlight_blue",
+				"Chemlight_red"
+				};
+			launcher = "";
+			launcherItems[] = {};
+			backpackItems[] = {
+				
+				"ACE_fieldDressing",
+				"ACE_fieldDressing",
+				"ACE_morphine",
+				"ACE_epinephrine",
+				"ACE_CableTie"
+				};
+			uniform[] = {"tacs_Uniform_Garment_LS_BS_GP_BB","tacs_Uniform_Combat_RS_BS_TP_TB","tacs_Uniform_Garment_RS_ES_GP_BB","tacs_Uniform_Combat_RS_BS_GP_TB","tacs_Uniform_Garment_LS_GS_BP_BB","tacs_Uniform_Combat_RS_BS_GP_BB","tacs_Uniform_Garment_LS_BS_GP_BB","tacs_Uniform_Garment_RS_GS_BP_BB","tacs_Uniform_Garment_LS_BS_GP_BB","tacs_Uniform_Combat_RS_BS_TP_TB"};
+			vest[] = {"V_PlateCarrierH_CTRG","V_PlateCarrierL_CTRG","V_PlateCarrier2_rgr","V_PlateCarrier2_blk","tacs_Vest_PlateCarrier_MARPAT","tacs_Vest_PlateCarrier_Coyote","Project_Honor_Vest_1"};
+			headgear[] = {"H_MilCap_gry","H_Watchcap_khk","H_Cap_headphones","H_Watchcap_blk","H_Bandanna_khk_hs"};
+			nvg = "";
+			insignia = "";
+		};			
+		
+		class OperatorLAT {
+			name = "Operator (LAT)";
+			primaryWeapon = "rhs_weap_hk416d145";
+			primaryWeaponItems[] = {"acc_pointer_IR","optic_Hamr","rhsusf_acc_grip1"};
+			handgun = "hgun_Pistol_heavy_01_F";
+			handgunItems[] = {""};
+			magazines[] = {
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag",				
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag_Tracer_Red",
+				"30Rnd_556x45_Stanag_Tracer_Red",
+				"rhs_mag_m67",
+				"rhs_mag_m67",
+				"SmokeShell",
+				"ACE_M84",
+				"Chemlight_blue",
+				"Chemlight_red",
+				"11Rnd_45ACP_Mag",
+				"11Rnd_45ACP_Mag",
+				"11Rnd_45ACP_Mag"
 			};
 			items[] = {
 				"ACE_EarPlugs",
@@ -136,28 +211,28 @@ class PMC {
 
 		class OperatorMAT {
 			name = "Operator (MAT)";
-			primaryWeapon = "hlc_rifle_G36KV";
-			primaryWeaponItems[] = {"rhsusf_acc_anpeq15A","rhsusf_acc_SpecterDR"};
-			handgun = "RH_usp";
+			primaryWeapon = "rhs_weap_hk416d145";
+			primaryWeaponItems[] = {"acc_pointer_IR","optic_Hamr","rhsusf_acc_grip1"};
+			handgun = "hgun_Pistol_heavy_01_F";
 			handgunItems[] = {""};
 			magazines[] = {
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_EPR_G36",				
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_Tracers_G36",
-				"hlc_30rnd_556x45_Tracers_G36",
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag",				
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag_Tracer_Red",
+				"30Rnd_556x45_Stanag_Tracer_Red",
 				"rhs_mag_m67",
 				"rhs_mag_m67",
 				"SmokeShell",
 				"ACE_M84",
 				"Chemlight_blue",
 				"Chemlight_red",
-				"RH_12Rnd_45cal_usp",
-				"RH_12Rnd_45cal_usp",
-				"RH_12Rnd_45cal_usp"
+				"11Rnd_45ACP_Mag",
+				"11Rnd_45ACP_Mag",
+				"11Rnd_45ACP_Mag"
 			};
 			items[] = {
 				"ACE_EarPlugs",
@@ -203,28 +278,28 @@ class PMC {
 		
 		class TeamLeader {
 			name = "Team Leader";
-			primaryWeapon = "hlc_rifle_G36KV";
-			primaryWeaponItems[] = {"rhsusf_acc_anpeq15A","rhsusf_acc_SpecterDR"};
-			handgun = "RH_usp";
+			primaryWeapon = "rhs_weap_hk416d145";
+			primaryWeaponItems[] = {"acc_pointer_IR","optic_Hamr","rhsusf_acc_grip1"};
+			handgun = "hgun_Pistol_heavy_01_F";
 			handgunItems[] = {""};
 			magazines[] = {
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_EPR_G36",				
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_Tracers_G36",
-				"hlc_30rnd_556x45_Tracers_G36",
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag",				
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag_Tracer_Red",
+				"30Rnd_556x45_Stanag_Tracer_Red",
 				"rhs_mag_m67",
 				"rhs_mag_m67",
 				"SmokeShell",
 				"ACE_M84",
 				"Chemlight_blue",
 				"Chemlight_red",
-				"RH_12Rnd_45cal_usp",
-				"RH_12Rnd_45cal_usp",
-				"RH_12Rnd_45cal_usp"
+				"11Rnd_45ACP_Mag",
+				"11Rnd_45ACP_Mag",
+				"11Rnd_45ACP_Mag"
 			};
 			items[] = {
 				"ACE_EarPlugs",
@@ -244,7 +319,7 @@ class PMC {
 				"ItemCompass",
 				"ItemWatch"
 			};
-			backpack = "B_AssaultPack_rgr";
+			backpack = "UK3CB_BAF_B_Bergen_TAN_SL_A";
 			backpackMagazines[] = {
 				"ACE_M84",
 				"SmokeShellPurple",
@@ -271,23 +346,23 @@ class PMC {
 	
 		class SG {
 			name = "Support Gunner";
-			primaryWeapon = "hlc_lmg_M60E4";
-			primaryWeaponItems[] = {};
-			handgun = "RH_usp";
+			primaryWeapon = "hlc_lmg_MG3KWS_b";
+			primaryWeaponItems[] = {"optic_Hamr"};
+			handgun = "hgun_Pistol_heavy_01_F";
 			handgunItems[] = {""};
 			magazines[] = {
-				"hlc_100Rnd_762x51_M_M60E4",
-				"hlc_100Rnd_762x51_M_M60E4",
-				"hlc_100Rnd_762x51_M_M60E4",
+				"hlc_100Rnd_762x51_M_MG3",
+				"hlc_100Rnd_762x51_M_MG3",
+				"hlc_100Rnd_762x51_M_MG3",
 				"rhs_mag_m67",
 				"rhs_mag_m67",
 				"SmokeShell",
 				"ACE_M84",
 				"Chemlight_blue",
 				"Chemlight_red",
-				"RH_12Rnd_45cal_usp",
-				"RH_12Rnd_45cal_usp",
-				"RH_12Rnd_45cal_usp"
+				"11Rnd_45ACP_Mag",
+				"11Rnd_45ACP_Mag",
+				"11Rnd_45ACP_Mag"
 			};
 			items[] = {
 				"ACE_EarPlugs",
@@ -307,12 +382,12 @@ class PMC {
 				"ItemCompass",
 				"ItemWatch"
 			};
-			backpack = "UK3CB_BAF_B_Bergen_OLI_Rifleman_A";
+			backpack = "UK3CB_BAF_B_Bergen_TAN_Rifleman_A";
 			backpackMagazines[] = {
-				"hlc_100Rnd_762x51_M_M60E4",
-				"hlc_100Rnd_762x51_M_M60E4",
-				"hlc_100Rnd_762x51_M_M60E4",
-				"hlc_100Rnd_762x51_M_M60E4"
+				"hlc_100Rnd_762x51_M_MG3",
+				"hlc_100Rnd_762x51_M_MG3",
+				"hlc_100Rnd_762x51_M_MG3",
+				"hlc_100Rnd_762x51_M_MG3"
 				};
 			launcher = "";
 			launcherItems[] = {};
@@ -331,28 +406,28 @@ class PMC {
 
 		class SGAsst {
 			name = "SG Asst.";
-			primaryWeapon = "hlc_rifle_G36KV";
-			primaryWeaponItems[] = {"rhsusf_acc_anpeq15A","rhsusf_acc_SpecterDR"};
-			handgun = "RH_usp";
+			primaryWeapon = "rhs_weap_hk416d145";
+			primaryWeaponItems[] = {"acc_pointer_IR","optic_Hamr","rhsusf_acc_grip1"};
+			handgun = "hgun_Pistol_heavy_01_F";
 			handgunItems[] = {""};
 			magazines[] = {
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_EPR_G36",				
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_Tracers_G36",
-				"hlc_30rnd_556x45_Tracers_G36",
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag",				
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag_Tracer_Red",
+				"30Rnd_556x45_Stanag_Tracer_Red",
 				"rhs_mag_m67",
 				"rhs_mag_m67",
 				"SmokeShell",
 				"ACE_M84",
 				"Chemlight_blue",
 				"Chemlight_red",
-				"RH_12Rnd_45cal_usp",
-				"RH_12Rnd_45cal_usp",
-				"RH_12Rnd_45cal_usp"
+				"11Rnd_45ACP_Mag",
+				"11Rnd_45ACP_Mag",
+				"11Rnd_45ACP_Mag"
 			};
 			items[] = {
 				"ACE_EarPlugs",
@@ -372,12 +447,12 @@ class PMC {
 				"ItemCompass",
 				"ItemWatch"
 			};
-			backpack = "UK3CB_BAF_B_Bergen_OLI_Rifleman_A";
+			backpack = "UK3CB_BAF_B_Bergen_TAN_Rifleman_A";
 			backpackMagazines[] = {
-				"hlc_100Rnd_762x51_M_M60E4",
-				"hlc_100Rnd_762x51_M_M60E4",
-				"hlc_100Rnd_762x51_M_M60E4",
-				"hlc_100Rnd_762x51_M_M60E4"
+				"hlc_100Rnd_762x51_M_MG3",
+				"hlc_100Rnd_762x51_M_MG3",
+				"hlc_100Rnd_762x51_M_MG3",
+				"hlc_100Rnd_762x51_M_MG3"
 				};
 			launcher = "";
 			launcherItems[] = {};
@@ -396,21 +471,23 @@ class PMC {
 			insignia = "";
 		};	
 
+		
+		
 		class EOD	{
 			name = "EOD";
-			primaryWeapon = "hlc_rifle_G36CV";
-			primaryWeaponItems[] = {"rhsusf_acc_anpeq15A","RH_eotech553"};
-			handgun = "RH_usp";
+			primaryWeapon = "rhs_weap_hk416d10";
+			primaryWeaponItems[] = {"acc_pointer_IR","optic_Hamr","rhsusf_acc_grip2"};
+			handgun = "hgun_Pistol_heavy_01_F";
 			handgunItems[] = {""};
 			magazines[] = {
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_EPR_G36",				
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_Tracers_G36",
-				"hlc_30rnd_556x45_Tracers_G36",
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag",				
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag_Tracer_Red",
+				"30Rnd_556x45_Stanag_Tracer_Red",
 				"rhs_mag_m67",
 				"rhs_mag_m67",
 				"SmokeShell",
@@ -418,9 +495,9 @@ class PMC {
 				"SmokeShellBlue",
 				"Chemlight_blue",
 				"Chemlight_red",
-				"RH_12Rnd_45cal_usp",
-				"RH_12Rnd_45cal_usp",
-				"RH_12Rnd_45cal_usp"
+				"11Rnd_45ACP_Mag",
+				"11Rnd_45ACP_Mag",
+				"11Rnd_45ACP_Mag"
 			};
 			items[] = {
 				"ACE_EarPlugs",
@@ -472,19 +549,19 @@ class PMC {
 
 		class Medic	{
 			name = "Combat Medic";
-			primaryWeapon = "hlc_rifle_G36CV";
-			primaryWeaponItems[] = {"rhsusf_acc_anpeq15A","RH_eotech553"};
-			handgun = "RH_usp";
+			primaryWeapon = "rhs_weap_hk416d10";
+			primaryWeaponItems[] = {"acc_pointer_IR","optic_Hamr","rhsusf_acc_grip2"};
+			handgun = "hgun_Pistol_heavy_01_F";
 			handgunItems[] = {""};
 			magazines[] = {
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_EPR_G36",				
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_Tracers_G36",
-				"hlc_30rnd_556x45_Tracers_G36",
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag",				
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag_Tracer_Red",
+				"30Rnd_556x45_Stanag_Tracer_Red",
 				"rhs_mag_m67",
 				"rhs_mag_m67",
 				"SmokeShell",
@@ -492,9 +569,9 @@ class PMC {
 				"SmokeShellBlue",
 				"Chemlight_blue",
 				"Chemlight_red",
-				"RH_12Rnd_45cal_usp",
-				"RH_12Rnd_45cal_usp",
-				"RH_12Rnd_45cal_usp"
+				"11Rnd_45ACP_Mag",
+				"11Rnd_45ACP_Mag",
+				"11Rnd_45ACP_Mag"
 			};
 			items[] = {
 				"ACE_EarPlugs",
@@ -522,9 +599,9 @@ class PMC {
 				"Chemlight_blue",
 				"Chemlight_red",
 				
-				"RH_12Rnd_45cal_usp",
-				"RH_12Rnd_45cal_usp",
-				"RH_12Rnd_45cal_usp"
+				"11Rnd_45ACP_Mag",
+				"11Rnd_45ACP_Mag",
+				"11Rnd_45ACP_Mag"
 			};
 			launcher = "";
 			launcherItems[] = {};
@@ -653,28 +730,28 @@ class PMC {
 		
 		class OpsCommander {
 			name = "Ops Commander";
-			primaryWeapon = "hlc_rifle_G36CV";
-			primaryWeaponItems[] = {"rhsusf_acc_anpeq15A","RH_eotech553"};
-			handgun = "RH_usp";
+			primaryWeapon = "rhs_weap_hk416d10";
+			primaryWeaponItems[] = {"acc_pointer_IR","optic_Hamr","rhsusf_acc_grip2"};
+			handgun = "hgun_Pistol_heavy_01_F";
 			handgunItems[] = {""};
 			magazines[] = {
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_EPR_G36",				
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_Tracers_G36",
-				"hlc_30rnd_556x45_Tracers_G36",
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag",				
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag_Tracer_Red",
+				"30Rnd_556x45_Stanag_Tracer_Red",
 				"rhs_mag_m67",
 				"rhs_mag_m67",
 				"SmokeShell",
 				"ACE_M84",
 				"Chemlight_blue",
 				"Chemlight_red",
-				"RH_12Rnd_45cal_usp",
-				"RH_12Rnd_45cal_usp",
-				"RH_12Rnd_45cal_usp",
+				"11Rnd_45ACP_Mag",
+				"11Rnd_45ACP_Mag",
+				"11Rnd_45ACP_Mag",
 				"Laserbatteries"
 			};
 			items[] = {
@@ -695,7 +772,7 @@ class PMC {
 				"ItemCompass",
 				"ItemWatch"
 			};
-			backpack = "UK3CB_BAF_B_Bergen_OLI_SL_A";
+			backpack = "UK3CB_BAF_B_Bergen_TAN_SL_A";
 			backpackMagazines[] = {
 				"SmokeShellPurple",
 				"Chemlight_red",
@@ -707,9 +784,9 @@ class PMC {
 				"Chemlight_red",
 				
 				"Laserbatteries",
-				"RH_12Rnd_45cal_usp",
-				"RH_12Rnd_45cal_usp",
-				"RH_12Rnd_45cal_usp"
+				"11Rnd_45ACP_Mag",
+				"11Rnd_45ACP_Mag",
+				"11Rnd_45ACP_Mag"
 				};
 			launcher = "";
 			launcherItems[] = {};
@@ -731,21 +808,24 @@ class PMC {
 	
 		class JTAC {
 			name = "JTAC";
-			primaryWeapon = "hlc_rifle_G36CV";
-			primaryWeaponItems[] = {"rhsusf_acc_anpeq15A","RH_eotech553"};
-			handgun = "rhs_weap_M320";
+			primaryWeapon = "rhs_weap_hk416d10_m320";
+			primaryWeaponItems[] = {"acc_pointer_IR","optic_Hamr","rhsusf_acc_grip2"};
+			handgun = "hgun_Pistol_heavy_01_F";
 			handgunItems[] = {""};
 			magazines[] = {
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_EPR_G36",				
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_Tracers_G36",
-				"hlc_30rnd_556x45_Tracers_G36",
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag",				
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag_Tracer_Red",
+				"30Rnd_556x45_Stanag_Tracer_Red",
 				"rhs_mag_m67",
 				"rhs_mag_m67",
+				"11Rnd_45ACP_Mag",
+				"11Rnd_45ACP_Mag",
+				"11Rnd_45ACP_Mag",
 				"1Rnd_HE_Grenade_shell",
 				"1Rnd_HE_Grenade_shell",
 				"1Rnd_HE_Grenade_shell",
@@ -769,7 +849,7 @@ class PMC {
 				"ItemCompass",
 				"ItemWatch"
 			};
-			backpack = "UK3CB_BAF_B_Bergen_OLI_SL_A";
+			backpack = "UK3CB_BAF_B_Bergen_TAN_SL_A";
 			backpackMagazines[] = {
 				"1Rnd_HE_Grenade_shell",
 				"1Rnd_HE_Grenade_shell",
@@ -823,28 +903,28 @@ class PMC {
 
 		class UAV {
 			name = "UAV Operator";
-			primaryWeapon = "hlc_rifle_G36CV";
-			primaryWeaponItems[] = {"rhsusf_acc_anpeq15A","RH_eotech553"};
-			handgun = "RH_usp";
+			primaryWeapon = "rhs_weap_hk416d10";
+			primaryWeaponItems[] = {"acc_pointer_IR","optic_Hamr","rhsusf_acc_grip2"};
+			handgun = "hgun_Pistol_heavy_01_F";
 			handgunItems[] = {""};
 			magazines[] = {
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_EPR_G36",				
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_Tracers_G36",
-				"hlc_30rnd_556x45_Tracers_G36",
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag",				
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag_Tracer_Red",
+				"30Rnd_556x45_Stanag_Tracer_Red",
 				"rhs_mag_m67",
 				"rhs_mag_m67",
 				"SmokeShell",
 				"ACE_M84",
 				"Chemlight_blue",
 				"Chemlight_red",
-				"RH_12Rnd_45cal_usp",
-				"RH_12Rnd_45cal_usp",
-				"RH_12Rnd_45cal_usp"
+				"11Rnd_45ACP_Mag",
+				"11Rnd_45ACP_Mag",
+				"11Rnd_45ACP_Mag"
 			};
 			items[] = {
 				"ACE_EarPlugs",
@@ -890,28 +970,28 @@ class PMC {
 
 		class Marksman {
 			name = "Marksman";
-			primaryWeapon = "hlc_rifle_g3ka4";
-			primaryWeaponItems[] = {"optic_MRCO","rhsusf_acc_anpeq15A","RH_HBLM","RH_fa762"};
-			handgun = "RH_usp";
+			primaryWeapon = "rhs_weap_sr25_ec";
+			primaryWeaponItems[] = {"rhsusf_acc_LEUPOLDMK4_2","acc_pointer_IR","rhsusf_acc_harris_bipod","rhsusf_acc_SR25S"};
+			handgun = "hgun_Pistol_heavy_01_F";
 			handgunItems[] = {""};
 			magazines[] = {
-				"hlc_20rnd_762x51_barrier_G3",
-				"hlc_20rnd_762x51_barrier_G3",
-				"hlc_20rnd_762x51_barrier_G3",				
-				"hlc_20rnd_762x51_barrier_G3",
-				"hlc_20rnd_762x51_barrier_G3",
-				"hlc_20rnd_762x51_barrier_G3",
-				"hlc_20rnd_762x51_T_G3",
-				"hlc_20rnd_762x51_T_G3",
+				"rhsusf_20Rnd_762x51_m993_Mag",
+				"rhsusf_20Rnd_762x51_m993_Mag",
+				"rhsusf_20Rnd_762x51_m993_Mag",				
+				"rhsusf_20Rnd_762x51_m993_Mag",
+				"rhsusf_20Rnd_762x51_m993_Mag",
+				"rhsusf_20Rnd_762x51_m993_Mag",
+				"rhsusf_20Rnd_762x51_m62_Mag",
+				"rhsusf_20Rnd_762x51_m62_Mag",
 				"rhs_mag_m67",
 				"rhs_mag_m67",
 				"SmokeShell",
 				"ACE_M84",
 				"Chemlight_blue",
 				"Chemlight_red",
-				"RH_12Rnd_45cal_usp",
-				"RH_12Rnd_45cal_usp",
-				"RH_12Rnd_45cal_usp"
+				"11Rnd_45ACP_Mag",
+				"11Rnd_45ACP_Mag",
+				"11Rnd_45ACP_Mag"
 			};
 			items[] = {
 				"ACE_EarPlugs",
@@ -956,13 +1036,14 @@ class PMC {
 			headgear[] = {"H_MilCap_gry","H_Watchcap_khk","H_Cap_headphones","H_Watchcap_blk","H_Bandanna_khk_hs"};
 			nvg = "";
 			insignia = "";
+			binoculars = "Rangefinder";
 		};			
 
 		class Sniper {
 			name = "Sniper";
 			primaryWeapon = "srifle_LRR_F";
 			primaryWeaponItems[] = {"optic_LRPS"};
-			handgun = "RH_usp";
+			handgun = "hgun_Pistol_heavy_01_F";
 			handgunItems[] = {""};
 			magazines[] = {
 				"7Rnd_408_Mag",
@@ -972,9 +1053,9 @@ class PMC {
 				"SmokeShell",
 				"Chemlight_blue",
 				"Chemlight_red",
-				"RH_12Rnd_45cal_usp",
-				"RH_12Rnd_45cal_usp",
-				"RH_12Rnd_45cal_usp"
+				"11Rnd_45ACP_Mag",
+				"11Rnd_45ACP_Mag",
+				"11Rnd_45ACP_Mag"
 			};
 			items[] = {
 				"ACE_EarPlugs",
@@ -1024,28 +1105,28 @@ class PMC {
 
 		class Spotter {
 			name = "Spotter";
-			primaryWeapon = "hlc_rifle_G36KV";
-			primaryWeaponItems[] = {"rhsusf_acc_anpeq15A","rhsusf_acc_SpecterDR"};
-			handgun = "RH_usp";
+			primaryWeapon = "rhs_weap_hk416d145";
+			primaryWeaponItems[] = {"acc_pointer_IR","optic_Hamr","rhsusf_acc_grip1"};
+			handgun = "hgun_Pistol_heavy_01_F";
 			handgunItems[] = {""};
 			magazines[] = {
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_EPR_G36",				
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_EPR_G36",
-				"hlc_30rnd_556x45_Tracers_G36",
-				"hlc_30rnd_556x45_Tracers_G36",
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag",				
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag",
+				"30Rnd_556x45_Stanag_Tracer_Red",
+				"30Rnd_556x45_Stanag_Tracer_Red",
 				"rhs_mag_m67",
 				"rhs_mag_m67",
 				"SmokeShell",
 				"ACE_M84",
 				"Chemlight_blue",
 				"Chemlight_red",
-				"RH_12Rnd_45cal_usp",
-				"RH_12Rnd_45cal_usp",
-				"RH_12Rnd_45cal_usp",
+				"11Rnd_45ACP_Mag",
+				"11Rnd_45ACP_Mag",
+				"11Rnd_45ACP_Mag",
 				"Laserbatteries"
 			};
 			items[] = {
@@ -1066,7 +1147,7 @@ class PMC {
 				"ItemCompass",
 				"ItemWatch"
 			};
-			backpack = "UK3CB_BAF_B_Bergen_OLI_SL_A";
+			backpack = "UK3CB_BAF_B_Bergen_TAN_SL_A";
 			backpackMagazines[] = {
 				"7Rnd_408_Mag",	
 				"7Rnd_408_Mag",						
