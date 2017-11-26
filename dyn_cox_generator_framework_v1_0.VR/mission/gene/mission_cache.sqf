@@ -88,3 +88,5 @@ if (isServer) then {
 	diag_log format ["%1, %2 - NO QRF", player, time];
 		};
 	};
+	
+};	

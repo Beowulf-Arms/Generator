@@ -56,3 +56,5 @@ if (isServer) then {
 	[-2, {["BSOMission",["Mission Cleared. Generator ready"]] call BIS_fnc_showNotification;}] call CBA_fnc_globalExecute;
 
 };
+
+

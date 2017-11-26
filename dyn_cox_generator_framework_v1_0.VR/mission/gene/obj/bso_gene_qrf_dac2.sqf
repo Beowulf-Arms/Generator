@@ -29,4 +29,4 @@ _qrfSMark2 = createMarker ["QrfStrMark2", _posZ2];
 	_values6 = ["z6",[2,0,0,0],[],[4,3,1,2],[1,1,1,2],[],[bso_gene_sideV,0,1,0,1]];
 	[(getMarkerPos "QrfStrMark2"),100,100,0,0,_values6] call DAC_fNewZone;
 	
-	};	
+};	

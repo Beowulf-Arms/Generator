@@ -100,6 +100,6 @@ if (isServer) then {
     case 4: {
 	//[-2,{hint "no QRF today";},[]] call CBA_fnc_globalExecute;};
 	diag_log format ["%1, %2 - No QRF", player, time];
-	};	
-};
-	
+		};	
+	};
+};	
