@@ -16,11 +16,11 @@ _qrfSMark = createMarker ["QrfStrMark1", _posZ];
 	
 
 // DAC QRF Waypoints
-	_values4 = ["z4",[1,0,0],[],[10],[10],[],[bso_gene_sideV,0,0,0,0]];
+	_values4 = ["z4",[1,0,0],[],[10],[10],[],[bso_gene_sideV,0,1,0,1]];
 	[(getMarkerPos _qrfTMark_1),100,100,0,0,_values4] call DAC_fNewZone;
 	waituntil{DAC_NewZone == 0};
 	
 // DAC QRF 1
-	_values5 = ["z5",[1,0,0,0],[],[4,3,1,2],[2,1,1,2],[],[bso_gene_sideV,0,0,0,0]];
+	_values5 = ["z5",[1,0,0,0],[],[4,4,1,2],[2,1,1,2],[],[bso_gene_sideV,0,1,0,1]];
 	[(getMarkerPos "QrfStrMark1"),100,100,0,0,_values5] call DAC_fNewZone;
 	};

@@ -19,14 +19,14 @@ if((_DAC_WP_Typ < 5) && (_DAC_WP_Typ >= 0)) then
 {
 	switch (_DAC_WP_Nr) do
 	{
-		case 0:	{
+		case 0:	{ //Patrol and main camps
 					//----------------- #Sol----#Veh----#Tan----#Air----#Camp----;
-					_CheckRadius1 	= [	1,		3,		10,		20,		20		];
-					_CheckRadius2 	= [	3,		5,		20,		40,		40		];
+					_CheckRadius1 	= [	1,		3,		3,		10,		10		];
+					_CheckRadius2 	= [	3,		5,		5,		20,		20		];
 					_checkAreaH   	= [	40,		15,		20,		10,		20		];
 					_checkMaxH    	= [	5000,	5000,	5000,	5000,	5000	];
 					_checkMinH    	= [	1,		1,		1,		1,		3		];
-					_checkNear    	= [	20,		30,		30,		100,	300		];
+					_checkNear    	= [	20,		30,		30,		100,	500		];
 					_checkObjH1    	= [	1.5,	0.5,	0.5,	0.2,	2		];
 					_checkObjH2    	= [	30,		15,		15,		5,		30		];
 					_checkCount   	= [	200,	200,	200,	500,	1500	];
@@ -34,14 +34,14 @@ if((_DAC_WP_Typ < 5) && (_DAC_WP_Typ >= 0)) then
 					
 					_TempWPArray  = call compile format["DAC_WP_Pool_%1",(_DACTemp select _DAC_WP_Typ)];
 				};
-		case 1:	{
+		case 1:	{ //qrf
 					//----------------- #Sol----#Veh----#Tan----#Air----#Camp----;
-					_CheckRadius1 	= [	8,		8,		8,		15,		15		];
-					_CheckRadius2 	= [	12,		15,		15,		30,		30		];
-					_checkAreaH   	= [	50,		20,		25,		15,		15		];
+					_CheckRadius1 	= [	1,		3,		3,		10,		10		];
+					_CheckRadius2 	= [	3,		3,		3,		20,		20		];
+					_checkAreaH   	= [	40,		15,		20,		10,		20		];
 					_checkMaxH    	= [	5000,	5000,	5000,	5000,	5000	];
 					_checkMinH    	= [	1,		1,		1,		1,		3		];
-					_checkNear    	= [	0,		0,		0,		75, 	150		];
+					_checkNear    	= [	0,		0,		0,		10, 	150		];
 					_checkObjH1    	= [	2.5,	1.5,	1.5,	0.5,	0.5		];
 					_checkObjH2    	= [	30,		15,		15,		5,		4		];
 					_checkCount   	= [	200,	200,	200,	500,	1500	];
