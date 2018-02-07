@@ -80,6 +80,23 @@ class Params
 		function = "BIS_fnc_setOvercast"; // (Optional) Function called when player joins, selected value is passed as an argument
  		isGlobal = 1; // (Optional) 1 to execute script / function locally for every player who joins, 0 to do it only on server
 	};
+	
+	class GroupTele
+	{
+		title = "Group Leader Teleport Flag";
+		texts[] = {"Enabled","Disabled"};
+		values[] = {1,0};
+		default = 1;
+	};	
+
+	class LeaderTele
+	{
+		title = "Mission Leader Teleport Flag";
+		texts[] = {"Enabled","Disabled"};
+		values[] = {1,0};
+		default = 1;
+	};	
+	
 };
 
 

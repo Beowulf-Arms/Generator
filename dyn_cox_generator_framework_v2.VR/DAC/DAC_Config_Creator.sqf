@@ -19,12 +19,7 @@ if(isServer) then {if(local player) then {DAC_Code = 1} else {DAC_Code = 0}} els
 //===============|=============================================================================================|
 
 	if(isNil "DAC_STRPlayers")		then {		DAC_STRPlayers		= [
-	"tl_1","sg_1","sga_1","eod_1","lat_1","mark_1",
-	"tl_2","sg_2","sga_2","eod_2","lat_2","mark_2",
-	"tl_3","sg_3","sga_3","eod_3","lat_3","mark_3",
-	"sniper_4","Spotter_4",
-	"pl_0","medic_0","jtac_0",
-	"pilot_1","pilot_2","pilot_3"
+	"b_pl_0"
 	
 	
 	]};
