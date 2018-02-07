@@ -23,10 +23,18 @@ if (isServer) then {
 	waituntil{DAC_NewZone == 0};
 	
 
-// 3rd zone for Cache Protection
-	_values3 = ["z3",[3,0,0],[2,3,6,2],[1,3,3,4],[],[],[bso_gene_sideV,0,0,0,0]];
-	[(getPos cache0),100,100,0,0,_values3] call DAC_fNewZone;	
-	waituntil{DAC_NewZone == 0};
+
+	_bso_gene_Rgrp1 = [bso_gene_opfgrp1, bso_gene_opfgrp2, bso_gene_opfgrp3] call BIS_fnc_selectRandom;
+	grp1 = [getPos cache0, bso_gene_side, _bso_gene_Rgrp1] call BIS_fnc_spawnGroup;
+	[grp1, getPos cache0, 10, 1, 0.1, 0.33] call CBA_fnc_taskDefend;	
+
+	_bso_gene_Rgrp2 = [bso_gene_opfgrp1, bso_gene_opfgrp2, bso_gene_opfgrp3] call BIS_fnc_selectRandom;
+	grp1 = [getPos cache1, bso_gene_side, _bso_gene_Rgrp2] call BIS_fnc_spawnGroup;
+	[grp1, getPos cache1, 10, 1, 0.1, 0.33] call CBA_fnc_taskDefend;	
+
+	_bso_gene_Rgrp3 = [bso_gene_opfgrp1, bso_gene_opfgrp2, bso_gene_opfgrp3] call BIS_fnc_selectRandom;
+	grp1 = [getPos cache2, bso_gene_side, _bso_gene_Rgrp3] call BIS_fnc_spawnGroup;
+	[grp1, getPos cache2, 10, 1, 0.1, 0.33] call CBA_fnc_taskDefend;		
 	
 	
 //obj trigger	
@@ -41,4 +49,44 @@ if (isServer) then {
 	[[format ["Task_%1",bso_gene_taskNum],"The enemy are stockpiling weapon caches around the town. Locate and destroy them.",format ["%1. Destroy the weapons caches",bso_gene_taskNum],"Destroy"]]call FHQ_fnc_ttAddTasks;
 
 
+
+	
+	//random chance of creating a QRF
+	_bso_gene_Rqrf = [1,2,3,4] call BIS_fnc_selectRandom;
+	
+	//generates location for QRF (if required)
+	_qrfTMark = createMarker ["QrfTMark", (getPos cache0)];
+	//"QrfTMark" setMarkerType "mil_box";
+	//"QrfTMark" setMarkerColor "ColorBlack";
+
+	switch (_bso_gene_Rqrf) do {	
+    case 1: { 
+	// RF trigger. DAC QRF
+	diag_log format ["%1, %2 - DAC QRF", player, time];
+	trg3 = createTrigger ["EmptyDetector", getPos cache0];
+	trg3 setTriggerArea [100, 100, 0, false];
+	trg3 setTriggerActivation [bso_gene_sideX_blu, "PRESENT", false];
+	trg3 setTriggerStatements ["this","[0,{_x = [""QrfTMark""]execVM ""mission\gene\obj\bso_gene_qrf_DAC.sqf"";},[]] call CBA_fnc_globalExecute;",""];
+		};
+    case 2: { 
+	// QRF trigger. DAC QRF from 2 directions
+	diag_log format ["%1, %2 - Double DAC QRF", player, time];
+	trg3 = createTrigger ["EmptyDetector", getPos cache0];
+	trg3 setTriggerArea [100, 100, 0, false];
+	trg3 setTriggerActivation [bso_gene_sideX_blu, "PRESENT", false];
+	trg3 setTriggerStatements ["this","[0,{_x = [""QrfTMark""]execVM ""mission\gene\obj\bso_gene_qrf_DAC2.sqf"";},[]] call CBA_fnc_globalExecute;",""];
+		};	
+	case 3: { 
+	// QRF trigger. BSO Helo insertion
+	diag_log format ["%1, %2 - Helo QRF", player, time];
+	trg3 = createTrigger ["EmptyDetector", getPos cache0];
+	trg3 setTriggerArea [100, 100, 0, false];
+	trg3 setTriggerActivation [bso_gene_sideX_blu, "PRESENT", false];
+	trg3 setTriggerStatements ["this","[0,{_x = [""QrfTMark""]execVM ""mission\gene\obj\bso_gene_qrf_helo.sqf"";},[]] call CBA_fnc_globalExecute;",""];
+		};		
+    case 4: {
+	diag_log format ["%1, %2 - NO QRF", player, time];
+		};
 	};
+	
+};	

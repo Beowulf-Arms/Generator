@@ -16,17 +16,17 @@ _qrfSMark2 = createMarker ["QrfStrMark2", _posZ2];
 	"QrfStrMark2" setMarkerPos (getPos _Nroad2);	
 
 // DAC QRF Waypoints
-	_values4 = ["z4",[1,0,0],[],[10],[10],[],[bso_gene_sideV,0,0,0,0]];
-	[(getMarkerPos _qrfTMark_1),100,100,0,0,_values4] call DAC_fNewZone;
+	_values4 = ["z4",[2,0,0],[],[30],[20],[],[bso_gene_sideV,0,1,0,1]];
+	[(getMarkerPos _qrfTMark_1),250,250,0,0,_values4] call DAC_fNewZone;
 	waituntil{DAC_NewZone == 0};
 	
 // DAC QRF 1
-	_values5 = ["z5",[1,0,0,0],[],[4,3,1,2],[1,1,1,2],[],[bso_gene_sideV,0,0,0,0]];
+	_values5 = ["z5",[2,0,0,0],[],[4,3,1,2],[1,1,1,2],[],[bso_gene_sideV,0,1,0,1]];
 	[(getMarkerPos "QrfStrMark1"),100,100,0,0,_values5] call DAC_fNewZone;
 	waituntil{DAC_NewZone == 0};
 
 // DAC QRF 2
-	_values6 = ["z6",[1,0,0,0],[],[4,3,1,2],[1,1,1,2],[],[bso_gene_sideV,0,0,0,0]];
+	_values6 = ["z6",[2,0,0,0],[],[4,3,1,2],[1,1,1,2],[],[bso_gene_sideV,0,1,0,1]];
 	[(getMarkerPos "QrfStrMark2"),100,100,0,0,_values6] call DAC_fNewZone;
 	
-	};	
+};	
