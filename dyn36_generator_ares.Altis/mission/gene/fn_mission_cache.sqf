@@ -65,8 +65,10 @@ if (isServer) then {
 
 	// Setup QRF
 
-	private _qrfPos = [getMarkerPos "m_1", 2000, 3000, 20, 0, 0.7, 0, [[(getMarkerPos "gene_stageArea")], 1000]] call BIS_fnc_findSafePos;
-	private _qrfAtkDir = _qrfPos getRelDir (getMarkerPos "m_1");
+	private _qrfPos = [getMarkerPos "m_1", 2000, 3000, 20, 0, 0.7, 0, [[getMarkerPos "gene_stageArea", 1000]]] call BIS_fnc_findSafePos;
+	private _tempObj = "Land_HelipadEmpty_F" createVehicle _qrfPos;
+	private _qrfAtkDir = _tempObj getRelDir (getMarkerPos "m_1");
+
 
 	private _trg2 = createTrigger ["EmptyDetector", getMarkerPos "m_1"];
 	_trg2 setTriggerArea [300, 300, 0, false];
@@ -74,6 +76,9 @@ if (isServer) then {
 	_trg2 setTriggerStatements ["this", format ["[_qrfPos, _qrfAtkDir] call gene_fnc_gene_qrfMech",_qrfPos, _qrfAtkDir],""];
 	_trg2 setTriggerInterval 5;
 
+	_TrigMark = createMarker ["qrfTrig", _qrfPos]; 
+	"qrfTrig" setMarkerType "mil_pickup";
+	"qrfTrig" setMarkerColor "ColorEast";
 
 
 	

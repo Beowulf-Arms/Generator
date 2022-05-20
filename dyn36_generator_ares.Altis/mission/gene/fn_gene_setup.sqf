@@ -5,7 +5,7 @@ if (isServer) then
 	bso_gene_taskNum = 0; publicVariable "bso_gene_taskNum";
 
 	// Marker locations
-	bso_gene_locations = ["l_1","l_2","l_3","l_4","l_5","l_6","l_7","l_8","l_9","l_10","l_11","l_12","l_13","l_14","l_15","l_16","l_17","l_18","l_19","l_20","l_21","l_22","l_23","l_24","l_25","l_26","l_27","l_28","l_29","l_30","l_31","l_32","l_33","l_34","l_35","l_36"];
+	bso_gene_locations = ["l_1","l_2","l_3","l_4","l_5","l_6","l_7","l_8","l_9","l_10","l_11","l_12","l_13","l_14","l_15","l_16","l_17","l_18","l_19","l_20","l_21","l_22","l_23","l_24","l_25","l_26","l_27","l_28","l_29","l_30","l_31","l_32","l_33","l_34","l_35"];
 	publicVariable "bso_gene_locations";
 
 	bso_gene_starts = ["s_1","s_2","s_3"];
@@ -43,7 +43,8 @@ if (isServer) then
 	bso_gene_gl = ["O_BSO_FIA_GL"];
 	publicVariable "bso_gene_gl";
 
-	bso_gene_opfgrp = ["O_BSO_FIA_GL","O_BSO_FIA_AUTO","O_BSO_FIA_MG","O_BSO_FIA_DMR","O_BSO_FIA_INS","O_BSO_FIA_INS2","O_BSO_FIA_INS3"];
+	bso_gene_opfgrp = ["O_BSO_FIA_GL","O_BSO_FIA_AUTO","O_BSO_FIA_MG","O_BSO_FIA_DMR","O_BSO_FIA_INS","O_BSO_FIA_INS2","O_BSO_FIA_INS3","O_BSO_FIA_INS4","O_BSO_FIA_INS5","O_BSO_FIA_INS6","O_BSO_FIA_INS7","O_BSO_FIA_LAT","O_BSO_FIA_rMAT","O_BSO_FIA_MAT"];
+	
 	publicVariable "bso_gene_opfgrp";
 
 
