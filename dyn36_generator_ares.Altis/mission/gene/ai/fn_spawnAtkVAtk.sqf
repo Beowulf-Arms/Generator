@@ -7,9 +7,9 @@ private _gLeader = leader _group;
 private _atkType = floor random 3;
 
 if (_atkType == 1) then {
-	[_gLeader, _atkPos] spawn lambs_wp_fnc_taskAssault;
+	[_group, _atkPos, _Radius, "SAD", "AWARE", "YELLOW", "NORMAL", "VEE"] call CBA_fnc_addWaypoint;
 } else {
-	private _wp1 = [_group, _atkPos, _Radius, "MOVE", "AWARE", "YELLOW", "FULL", "VEE"] call CBA_fnc_addWaypoint;
+	[_group, _atkPos, _Radius, "MOVE", "AWARE", "YELLOW", "NORMAL", "VEE"] call CBA_fnc_addWaypoint;
 };
 
 _group setVariable ["lambs_danger_enableGroupReinforce", true, true];

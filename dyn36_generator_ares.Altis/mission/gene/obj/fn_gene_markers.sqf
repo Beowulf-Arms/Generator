@@ -18,13 +18,6 @@
 	"border_1" setMarkerSize [2100, 2100];
 	"border_1" setMarkerColor "ColorEast";	
 	
-	//used for qrf spawning
-	_borderMark = createMarker ["border_2", (getMarkerPos "M_1")]; 
-	"border_2" setMarkerShape  "RECTANGLE";
-	"border_2" setMarkerBrush "Border";
-	"border_2" setMarkerSize [2500, 2500];
-	"border_2" setMarkerAlpha 0;	
-	
 	_aoMark = createMarker ["ao", [(getMarkerPos "m_1" select 0) -1900, (getMarkerPos "m_1" select 1) -1900]]; 
 	"ao" setMarkerType "mil_box";
 	"ao" setMarkerColor "ColorEast";

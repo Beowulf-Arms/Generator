@@ -26,24 +26,18 @@ if (isServer) then {
 	// Vehc Patrol Groups
     for "_i" from 1 to 2 do {
 		private _randomPos = [getMarkerPos "m_1", 100, 300, 5, 0, 0.7, 0, [], [getMarkerPos "m_1", getMarkerPos "m_1"]] call BIS_fnc_findSafePos;
-		private _nearestRoad = [_randomPos, 500] call BIS_fnc_nearestRoad;
-		private _roadPos = getPos _nearestRoad;
-		private _SpawnPos = _roadPos;
-		//if (_roadPos == [0,0,0]) then {_SpawnPos = _randomPos};
-		_roadDir = getDir _nearestRoad;
-		[_SpawnPos, _roadDir] call gene_fnc_spawnMechPatrol;
+		private _Roads = _randomPos nearRoads 200;
+		private _spawnRoad = selectRandom _Roads;
+		[getPos _spawnRoad, getDir _spawnRoad] call gene_fnc_spawnMechPatrol;
 		sleep 1; // seems to combat some strangeness of units spawning on top of each other
 	};
 
 	// Atk Vehc Groups
     for "_i" from 1 to 2 do {
 		private _randomPos = [getMarkerPos "m_1", 100, 300, 5, 0, 0.7, 0, [], [getMarkerPos "m_1", getMarkerPos "m_1"]] call BIS_fnc_findSafePos;
-		private _nearestRoad = [_randomPos, 500] call BIS_fnc_nearestRoad;
-		private _roadPos = getPos _nearestRoad;
-		private _SpawnPos = _roadPos;
-		//if (_roadPos == [0,0,0]) then {_SpawnPos = _randomPos};
-		_roadDir = getDir _nearestRoad;
-		[_SpawnPos, _roadDir] call gene_fnc_spawnAtkVPatrol;
+		private _Roads = _randomPos nearRoads 200;
+		private _spawnRoad = selectRandom _Roads;
+		[getPos _spawnRoad, getDir _spawnRoad] call gene_fnc_spawnAtkVPatrol;
 		sleep 1; // seems to combat some strangeness of units spawning on top of each other
 	};
 
@@ -73,7 +67,7 @@ if (isServer) then {
 
 	private _trg2 = createTrigger ["EmptyDetector", getMarkerPos "m_1"];
 	_trg2 setTriggerArea [300, 300, 0, false];
-	_trg2 setTriggerActivation [bso_gene_side_blu, bso_gene_sideD, false];
+	_trg2 setTriggerActivation [east, bso_gene_sideD, false];
 	_trg2 setTriggerStatements ["this", format ["[%1, %2, %3] call gene_fnc_gene_qrfMech", _qrfPos, _atkPos, _qrfAtkDir],""];
 	_trg2 setTriggerInterval 5;
 
