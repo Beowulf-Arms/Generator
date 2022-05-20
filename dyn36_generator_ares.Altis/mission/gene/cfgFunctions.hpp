@@ -16,13 +16,18 @@ class gene
 		class spawnGroup {};
 		class spawnMechGroup {};
 		class spawnAtkVehc {};
+
         class spawnPatrol {};
         class spawnMechPatrol {};
         class spawnAtkVPatrol {};
+
         class spawnAtk {};
         class spawnMechAtk {};
         class spawnAtkVAtk {};
+		
         class spawnGarrison {};
+		class spawnStaticWpn {};
+		
 	};
 
 	class obj

@@ -43,8 +43,8 @@ if (isServer) then
 	bso_gene_gl = ["O_BSO_FIA_GL"];
 	publicVariable "bso_gene_gl";
 
-	bso_gene_opfgrp = ["O_BSO_FIA_GL","O_BSO_FIA_AUTO","O_BSO_FIA_MG","O_BSO_FIA_DMR","O_BSO_FIA_INS","O_BSO_FIA_INS2","O_BSO_FIA_INS3","O_BSO_FIA_INS4","O_BSO_FIA_INS5","O_BSO_FIA_INS6","O_BSO_FIA_INS7","O_BSO_FIA_LAT","O_BSO_FIA_rMAT","O_BSO_FIA_MAT"];
-	
+	// first entry used for static weapons
+	bso_gene_opfgrp = ["O_BSO_FIA_INS","O_BSO_FIA_INS2","O_BSO_FIA_INS3","O_BSO_FIA_AUTO","O_BSO_FIA_LAT","O_BSO_FIA_MG","O_BSO_FIA_DMR","O_BSO_FIA_INS","O_BSO_FIA_INS2","O_BSO_FIA_INS3","O_BSO_FIA_INS4","O_BSO_FIA_INS5","O_BSO_FIA_INS6","O_BSO_FIA_INS7","O_BSO_FIA_LAT","O_BSO_FIA_AUTO","O_BSO_FIA_rMAT","O_BSO_FIA_MAT"];	
 	publicVariable "bso_gene_opfgrp";
 
 
@@ -60,6 +60,13 @@ if (isServer) then
 
 	bso_gene_opfTransHelo = ["O_BSO_FIA_uh1"];
 	publicVariable "bso_gene_opfTransHelo";
+
+	
+	bso_gene_opfStatic_Arty = ["bso_arty_rokit_cluster_opf","bso_arty_rokit_he_opf","O_BSO_FIA_BSO_M252"];
+	publicVariable "bso_gene_opfStatic_Arty";
+
+	bso_gene_opfStatic_AA = ["O_BSO_FIA_M2","bso_bms_launcher_static_mk2_opf"];
+	publicVariable "bso_gene_opfStatic_AA";
 
 	gene_patrol_groups = [];
 	publicVariable "gene_patrol_groups";

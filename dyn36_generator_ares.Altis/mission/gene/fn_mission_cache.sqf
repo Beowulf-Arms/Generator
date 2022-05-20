@@ -23,6 +23,12 @@ if (isServer) then {
     	[_randomPos] call gene_fnc_spawnPatrol;
 	};
 
+   // Static Weapons
+    for "_i" from 1 to 2 do {
+    	private _randomPos = [getMarkerPos "m_1", 0, 300, 1, 0, 0.2, 0, [], [getMarkerPos "m_1", getMarkerPos "m_1"]] call BIS_fnc_findSafePos;
+    	[_randomPos] call gene_fnc_spawnStaticWpn;
+	};
+
 	// Vehc Patrol Groups
     for "_i" from 1 to 2 do {
 		private _randomPos = [getMarkerPos "m_1", 100, 300, 5, 0, 0.7, 0, [], [getMarkerPos "m_1", getMarkerPos "m_1"]] call BIS_fnc_findSafePos;
@@ -67,7 +73,7 @@ if (isServer) then {
 
 	private _trg2 = createTrigger ["EmptyDetector", getMarkerPos "m_1"];
 	_trg2 setTriggerArea [300, 300, 0, false];
-	_trg2 setTriggerActivation [east, bso_gene_sideD, false];
+	_trg2 setTriggerActivation [bso_gene_side_blu, bso_gene_sideD, false];
 	_trg2 setTriggerStatements ["this", format ["[%1, %2, %3] call gene_fnc_gene_qrfMech", _qrfPos, _atkPos, _qrfAtkDir],""];
 	_trg2 setTriggerInterval 5;
 
