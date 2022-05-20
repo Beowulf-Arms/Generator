@@ -4,7 +4,9 @@ private _leaderType = selectRandom bso_gene_gl;
 private _transType = selectRandom bso_gene_opfTrans;
 private _group = createGroup [bso_gene_side, true];
 
-private _trans = [_position, _roadDir, _transType, _group] call BIS_fnc_spawnVehicle;
+private _spawnPosition = [_position, 0, 100] call BIS_fnc_findSafePos;
+
+private _trans = [_spawnPosition, _roadDir, _transType, _group] call BIS_fnc_spawnVehicle;
 
 // Gets the number of cargo seats as "_cargoSeats" to be filled with transportable units
 private _totalSeats = [_transType, true] call BIS_fnc_crewCount; // Number of total seats: crew + non-FFV cargo/passengers + FFV cargo/passengers

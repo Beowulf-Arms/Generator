@@ -1,19 +1,31 @@
-params ["_pos",["_AtkDir",0],["_numGrps",3],["_AtkVRatio",0.3],["_AtkRadius",300]];
+params ["_pos","_atkPos",["_AtkDir",0],["_numGrps",3],["_AtkVRatio",0.3],["_AtkRadius",300]];
 
-
+//creates count of atk vehcs.
 _numAtkVehc = round (_AtkVRatio * _numGrps);
 
-if !(_atkVRatio == 0) then {
-	_numMechs = round (_numGrps - _numAtkVehc);
+// if not 0 attack vehcs
+if !(_numAtkVehc == 0) then {
 
-	for "_i" from 1 to _numMechs do {
-		[_pos, _AtkRadius, _AtkDir] call gene_fnc_spawnAtkVAtk;
-		sleep 1;
+	// spawn attack vehcs
+	for "_i" from 1 to _numAtkVehc do {
+		private _spawnPosition = [_pos, 0, 100] call BIS_fnc_findSafePos;
+		[_spawnPosition, _atkPos, _AtkRadius, _AtkDir] call gene_fnc_spawnAtkVAtk;
 	};
-};
 
+	// calc number of mech groups
+	_numMechs = round (_numGrps - _numAtkVehc);	
+	// spawn mech groups
+	for "_i" from 1 to _numMechs do {
+		private _spawnPosition = [_pos, 0, 100] call BIS_fnc_findSafePos;
+		[_spawnPosition, _atkPos, _AtkRadius, _AtkDir] call gene_fnc_spawnMechAtk;
+		
+	};
 
-for "_i" from 1 to _numMechs do {
-	[_pos, _AtkRadius, _AtkDir] call gene_fnc_spawnMechAtk;
-	sleep 1;
+} else {
+	// if no atk vehcs needed, spawn mech groups.
+	for "_i" from 1 to _numGrps do {
+		private _spawnPosition = [_pos, 0, 100] call BIS_fnc_findSafePos;
+		[_spawnPosition, _atkPos, _AtkRadius, _AtkDir] call gene_fnc_spawnMechAtk;
+		
+	};
 };
