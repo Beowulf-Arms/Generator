@@ -8,7 +8,13 @@ class gene
 		class gene_mb {};
         class mission_clear {};
         class mission_cache {};
-		class garageNew {};
+	};
+
+	class vehcSpawn
+	{
+		file = "mission\gene\vehcSpawn";
+		class spawnVehc {};
+		class ListVehcs {};
 	};
 
 	class ai

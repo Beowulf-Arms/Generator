@@ -122,4 +122,4 @@ class CfgDebriefing
 };
 
 
-#include "gene\MyDialog.hpp"
+#include "gene\vehcSpawn\MyDialog.hpp"
