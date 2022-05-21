@@ -52,7 +52,7 @@ placecache = {
 //	[[_unit],"addcacheEH"] call BIS_fnc_MP;
 
 
-	[getPos _unit] call gene_fnc_spawnGarrison;
+	//[getPos _unit] call gene_fnc_spawnGarrison;
 };
 ////////////////////////
 

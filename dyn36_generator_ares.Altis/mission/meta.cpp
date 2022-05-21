@@ -120,3 +120,6 @@ class CfgDebriefing
 		pictureColor[] = {0.0,0.3,0.6,1};
 	};
 };
+
+
+#include "gene\MyDialog.hpp"

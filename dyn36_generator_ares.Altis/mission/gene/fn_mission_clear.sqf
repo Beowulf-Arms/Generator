@@ -6,6 +6,11 @@ if (isServer) then {
 	{if (side _x == bso_gene_side) then {deleteVehicle  _x;};} forEach allUnits;
 	
 	
+	{deleteVehicle _x} forEach nearestObjects [getMarkerPos "m_1", ["EmptyDetector"], 2000];
+	{deleteVehicle _x} forEach nearestObjects [getMarkerPos "m_1", ["bso_obj_cache"], 2000];
+	{deleteVehicle _x} forEach nearestObjects [getMarkerPos "m_1", ["Land_HelipadEmpty_F"], 2000];
+
+	
 	deleteMarker "obj1";
 	deleteMarker "border";
 	deleteMarker "border_1";
@@ -25,15 +30,6 @@ if (isServer) then {
 	
 	"m_1" setMarkerPos (getMarkerPos "m_0");
 	"gene_stageArea" setMarkerPos (getPos default_stageArea);
-
-
-	if (alive trg1) then {deletevehicle trg1;};
-	if (alive trg2) then {deletevehicle trg2;};
-	if (alive trg3) then {deletevehicle trg3;};
-	
-	if (alive cache0) then {deletevehicle cache0;};
-	if (alive cache1) then {deletevehicle cache1;};
-	if (alive cache2) then {deletevehicle cache2;};
 	
 	sleep 1;
 	[-2, {["BSOMission",["Mission Cleared. Generator ready"]] call BIS_fnc_showNotification;}] call CBA_fnc_globalExecute;

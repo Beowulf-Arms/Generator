@@ -8,11 +8,14 @@ class gene
 		class gene_mb {};
         class mission_clear {};
         class mission_cache {};
+		class garageNew {};
 	};
 
 	class ai
 	{
 		file = "mission\gene\ai";
+		class setupDefence {};
+
 		class spawnGroup {};
 		class spawnMechGroup {};
 		class spawnAtkVehc {};
@@ -26,6 +29,9 @@ class gene
         class spawnAtkVAtk {};
 		
         class spawnGarrison {};
+        class spawnCamp {};
+		class spawnMechGuard {};
+		class spawnAtkVGuard {};
 		class spawnStaticWpn {};
 		
 	};
@@ -34,6 +40,7 @@ class gene
 	{
 		file = "mission\gene\obj";
 		class cache_gen {};
+		class spawnTrench {};
         class gene_markers {};
         class gene_qrf {};
         class gene_qrfMech {};
