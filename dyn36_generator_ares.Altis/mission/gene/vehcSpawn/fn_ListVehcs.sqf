@@ -5,4 +5,6 @@ _listbox = _display displayCtrl 100;
 	_displayName = gettext (configFile >> "CfgVehicles" >> _classname >> "displayname");
 	_listbox lbAdd _displayName;
 	_listbox lbSetData [_forEachIndex, _x];	
-} forEach bso_gene_blu_landVehcs;
+} forEach bso_vehcList;
+
+//bso_gene_blu_landVehcs

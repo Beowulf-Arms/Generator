@@ -9,26 +9,33 @@ if (isServer) then {
 	clearItemCargoGlobal _box;
 	clearItemCargoGlobal _box;
 
-	_box addMagazineCargoGlobal  ["30Rnd_556x45_Stanag", 40];
-	_box addMagazineCargoGlobal  ["30Rnd_556x45_Stanag_Tracer_Red", 20];
+	_box addMagazineCargoGlobal  ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger", 40];
+	_box addMagazineCargoGlobal  ["rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red", 20];
 
-	_box addMagazineCargoGlobal  ["150Rnd_762x54_Box", 6];
-	_box addMagazineCargoGlobal  ["130Rnd_338_Mag", 4];
+	_box addMagazineCargoGlobal  ["rhsusf_200Rnd_556x45_mixed_soft_pouch", 6];
+	_box addMagazineCargoGlobal  ["rhsusf_100Rnd_556x45_mixed_soft_pouch", 6];
+	_box addMagazineCargoGlobal  ["rhsusf_100Rnd_762x51_m80a1epr", 4];
 	
 	_box addMagazineCargoGlobal  ["20Rnd_762x51_Mag", 4];
 	_box addMagazineCargoGlobal  ["ACE_20Rnd_762x51_Mag_Tracer", 4];
+
+	_box addMagazineCargoGlobal  ["rhsusf_8Rnd_00Buck", 4];
+	_box addMagazineCargoGlobal  ["rhsusf_8Rnd_Slug", 4];
 	
-	_box addMagazineCargoGlobal  ["16Rnd_9x21_Mag", 4];
+	_box addMagazineCargoGlobal  ["hlc_15Rnd_9x19_B_P226", 4];
+	_box addMagazineCargoGlobal  ["ptv_5Rnd_86x70_TRG42", 4];
 	
-	_box addMagazineCargoGlobal  ["30Rnd_9x21_Mag_SMG_02", 4];
+	_box addMagazineCargoGlobal  ["30Rnd_9x21_Mag", 4];
 
 	_box addMagazineCargoGlobal  ["HandGrenade", 16];
+	_box addMagazineCargoGlobal  ["ACE_M14", 16];
 	_box addMagazineCargoGlobal  ["SmokeShell", 8];
 	_box addMagazineCargoGlobal  ["SmokeShellRed", 1];
 	_box addMagazineCargoGlobal  ["SmokeShellGreen", 1];
 	_box addMagazineCargoGlobal  ["SmokeShellBlue", 1];
 	_box addMagazineCargoGlobal  ["SmokeShellPurple", 1];
 
+	_box addMagazineCargoGlobal  ["rhs_charge_tnt_x2_mag", 2];
 	_box addMagazineCargoGlobal  ["DemoCharge_Remote_Mag", 2];
 	_box addMagazineCargoGlobal  ["ATMine_Range_Mag", 2];
 	
@@ -41,10 +48,10 @@ if (isServer) then {
 	
 	_box addMagazineCargoGlobal  ["Titan_AA", 2];
 
-	_box addMagazineCargoGlobal  ["1Rnd_HE_Grenade_shell", 6];
-	_box addMagazineCargoGlobal  ["1Rnd_Smoke_Grenade_shell", 4];
-	_box addMagazineCargoGlobal  ["1Rnd_SmokeRed_Grenade_shell", 2];
-	_box addMagazineCargoGlobal  ["1Rnd_SmokeGreen_Grenade_shell", 2];
+	_box addMagazineCargoGlobal  ["rhs_mag_M433_HEDP", 6];
+	_box addMagazineCargoGlobal  ["rhs_mag_m714_White", 4];
+	_box addMagazineCargoGlobal  ["rhs_mag_m713_Red", 2];
+	_box addMagazineCargoGlobal  ["rhs_mag_m715_Green", 2];
 	_box addMagazineCargoGlobal  ["1Rnd_SmokePurple_Grenade_shell", 2];
 	_box addMagazineCargoGlobal  ["1Rnd_SmokeBlue_Grenade_shell", 2];
 	_box addMagazineCargoGlobal  ["UGL_FlareRed_F", 4];

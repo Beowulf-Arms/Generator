@@ -21,6 +21,20 @@ if (hasInterface) then {
     // Examples: Create ace interactions
     //_isAdmin = serverCommandAvailable "#kick";
     //if (_isAdmin) then {execVM "mission\bso_gene_admin.sqf"};
+	[] spawn {
+		waitUntil {trigger_BSOstart};
 
+		[ 
+			["GENERATOR: Ares","font = 'PuristaSemiBold'"],
+			["","<br/>"],
+			["Walker","font = 'PuristaMedium'"],
+			["","<br/>"],
+			['"United In Service!" - Altian Armed Forces Motto',"font = 'PuristaLight'"]
+		]  execVM "\a3\missions_f_bootcamp\Campaign\Functions\GUI\fn_SITREP.sqf";
+			
+	};
 
 };
+
+ACE_maxWeightDrag = 5000;
+ACE_maxWeightCarry  = 5000;

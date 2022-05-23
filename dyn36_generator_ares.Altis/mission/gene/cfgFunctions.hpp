@@ -8,6 +8,14 @@ class gene
 		class gene_mb {};
         class mission_clear {};
         class mission_cache {};
+		
+	};
+	
+	class loadouts
+	{
+		file = "mission\Loadouts";
+		class ammoBox {};
+		class armoury {};
 	};
 
 	class vehcSpawn
@@ -15,6 +23,13 @@ class gene
 		file = "mission\gene\vehcSpawn";
 		class spawnVehc {};
 		class ListVehcs {};
+		class vehcSpawnActions {};
+	};
+
+	class tele
+	{
+		file = "mission\gene\tele";
+		class tele {};
 	};
 
 	class ai

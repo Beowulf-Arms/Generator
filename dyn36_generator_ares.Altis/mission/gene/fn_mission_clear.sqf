@@ -30,6 +30,7 @@ if (isServer) then {
 	
 	"m_1" setMarkerPos (getMarkerPos "m_0");
 	"gene_stageArea" setMarkerPos (getPos default_stageArea);
+	gene_stageAreaPoint setPos (getPos default_stageArea);
 	
 	sleep 1;
 	[-2, {["BSOMission",["Mission Cleared. Generator ready"]] call BIS_fnc_showNotification;}] call CBA_fnc_globalExecute;

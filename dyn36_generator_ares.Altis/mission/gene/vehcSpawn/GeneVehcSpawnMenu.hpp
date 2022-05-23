@@ -1,5 +1,5 @@
 #include "CustomControlClasses.h"
-class MyDialog
+class GeneVehcSpawnMenu
 {
 	idd = 1234;
 	

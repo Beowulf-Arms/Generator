@@ -108,6 +108,48 @@ if (isServer) then
 	];
 	publicVariable "bso_gene_blu_landVehcs";
 
+	
+	bso_gene_blu_airVehcs = [
+		"I_Heli_Transport_02_F",
+		"I_Heli_light_03_dynamicLoadout_F",
+		"I_Heli_light_03_unarmed_F",
+		"I_Plane_Fighter_04_F",
+		"I_Plane_Fighter_03_dynamicLoadout_F",
+		"UK3CB_AAF_I_L39_PYLON",
+		"UK3CB_AAF_I_C130J",
+		"UK3CB_AAF_I_C130J_CARGO",
+		"UK3CB_AAF_I_C400",
+		"UK3CB_AAF_I_Cessna_T41_Armed",
+		"UK3CB_AAF_I_Cessna_T41",
+		"UK3CB_AAF_B_Gripen_DG",
+		"UK3CB_AAF_B_Gripen_G",
+		"UK3CB_AAF_B_AH9",
+		"UK3CB_AAF_B_AH1Z",
+		"UK3CB_AAF_B_Benches_MH9",
+		"UK3CB_AAF_B_Unarmed_MH9",
+		"UK3CB_AAF_B_UH1H_M240",
+		"UK3CB_AAF_B_UH1H_GUNSHIP",
+		"UK3CB_AAF_B_UH1H_MED",
+		"UK3CB_AAF_B_UH1H",
+		"UK3CB_AAF_B_UH60M",
+		"UK3CB_AAF_B_UH60M2"
+	];
+	publicVariable "bso_gene_blu_airVehcs";
+
+	bso_gene_blu_boatVehcs = [
+		"UK3CB_AAF_I_RHIB",
+		"UK3CB_AAF_I_RHIB_Gunboat",
+		"UK3CB_AAF_I_Skiff",
+		"UK3CB_AAF_I_SDV",
+		"UK3CB_AAF_I_Rubber_Rhib",
+		"rksla3_lcvpmk5_ind_generic_grey",
+		"rksla3_lcvpmk5_ind_viv_generic_grey",
+		"I_Boat_Armed_01_minigun_F",
+		"rhsusf_mkvsoc"
+	];
+	publicVariable "bso_gene_blu_boatVehcs";
+
+
 	bso_gene_sideV = 0;
 	publicVariable "bso_gene_sideV";
 
@@ -150,11 +192,12 @@ if (isServer) then
 
 	gene_atk_groups = [];
 	publicVariable "gene_atk_groups";
-	
-
 };
 
 
+[] call gene_fnc_vehcSpawnActions;
+
+/*
 private _GroupTele = ["GroupTele", 1] call BIS_fnc_getParamValue;
 private _LeaderTele = ["LeaderTele", 1] call BIS_fnc_getParamValue;
 
@@ -170,3 +213,15 @@ if (_GroupTele == 1) then {
 	_bsoFlagGL = ["bso_b_flag_GL", "Teleport to Group Leader", "", {_x = [(leader player)] execVM "mission\bso_tele.sqf";}, {true}, {}, [], [0,0,-2.5], 5] call ace_interact_menu_fnc_createAction; 
 	[typeof b_base_flag, 0, ["bso_b_flag"], _bsoFlagGL] call ace_interact_menu_fnc_addActionToClass;
 };
+*/
+
+
+_TeleCondition = {
+params ["_target", "_player", "_params"];
+((count nearestObjects [_player, ["Flag_AAF_F", "USMC_WarfareBVehicleServicePoint"], 100]) > 0);
+
+};
+_TeleExec = {createDialog "GeneTeleMenu";};
+
+_TeleAction = ["bso_gen_tele", "Tele. Menu", "BSO\noti\bso_logo.paa", _TeleExec, _TeleCondition] call ace_interact_menu_fnc_createAction;
+[typeOf player, 1, ["ACE_SelfActions"], _TeleAction] call ace_interact_menu_fnc_addActionToClass;

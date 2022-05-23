@@ -122,4 +122,5 @@ class CfgDebriefing
 };
 
 
-#include "gene\vehcSpawn\MyDialog.hpp"
+#include "gene\vehcSpawn\GeneVehcSpawnMenu.hpp"
+#include "gene\tele\GeneTeleMenu.hpp"

@@ -866,7 +866,7 @@ class blufor //Name of your faction referenced in the init call
 				"ACE_M14",
 				"smokeshell"			
 				};
-			launcher = "bso_nlaw_asm";
+			launcher = "launch_NLAW_F";
 			launcherItems[] = {};
 			backpackItems[] = {
 				"ACE_fieldDressing",
@@ -1404,7 +1404,7 @@ class blufor //Name of your faction referenced in the init call
 				"handgrenade",
 				"smokeshell"
 				};
-			launcher = "bso_nlaw_asm";
+			launcher = "launch_NLAW_F";
 			launcherItems[] = {};
 			backpackItems[] = {
 				"ACE_fieldDressing",
@@ -1447,7 +1447,7 @@ class blufor //Name of your faction referenced in the init call
 				"ACE_fieldDressing",
 				"ACE_fieldDressing"
 			};
-			personalRadios[] = {"ACRE_PRC343"
+			personalRadios[] = {"ACRE_PRC343","ACRE_PRC148"
 			};
 			assignedItems[] = {
 				"ItemMap",
@@ -1463,6 +1463,55 @@ class blufor //Name of your faction referenced in the init call
 			vest[] = {"UK3CB_AAF_O_V_Eagle_CREW_DIGI_GRN"};
 			headgear[] = {"H_HelmetCrew_I"};
 			nvg = "";
+			insignia = "";
+			binoculars = "Binocular";
+		};	
+		
+		class Pilot // Class Names
+		{
+			name = "Pilot";
+			primaryWeapon = "hgun_PDW2000_F";
+			primaryWeaponItems[] = {"optic_aco_smg","30Rnd_9x21_Mag"};
+			handgun = "";
+			handgunItems[] = {};
+			magazines[] = {
+				"30Rnd_9x21_Mag",
+				"30Rnd_9x21_Mag",
+				"30Rnd_9x21_Mag",				
+				"30Rnd_9x21_Mag",
+				"30Rnd_9x21_Mag",
+				"smokeshellblue",
+				"smokeshellblue",
+				"smokeshell",
+				"smokeshell"
+			};
+			items[] = {
+				"ACE_salineIV_500",
+				"ACE_Flashlight_MX991",
+				"ACE_fieldDressing",
+				"ACE_fieldDressing",
+				"ACE_morphine",				
+				"ACE_tourniquet",
+				"ACE_quikclot",	
+				"ACE_fieldDressing",
+				"ACE_fieldDressing"
+			};
+			personalRadios[] = {"ACRE_PRC343","ACRE_PRC148"
+			};
+			assignedItems[] = {
+				"ItemMap",
+				"ItemCompass",
+				"ItemWatch"
+			};
+			backpack = "";
+			backpackMagazines[] = {};
+			launcher = "";
+			launcherItems[] = {};
+			backpackItems[] = {};
+			uniform[] = {"UK3CB_AAF_I_U_H_Pilot_DIGI_GRN","U_I_HeliPilotCoveralls"};
+			vest[] = {"UK3CB_V_Pilot_Vest"};
+			headgear[] = {"H_PilotHelmetHeli_I"};
+			nvg = "ACE_NVG_Wide_Green";
 			insignia = "";
 			binoculars = "Binocular";
 		};				

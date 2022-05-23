@@ -1,10 +1,10 @@
 // Mission end conditions. By editing the "end" and "loser" configs in meta.cpp you can have the admin end the mission with a debrief.
 // BSO Generator Admin Actions
 
-_mainAction = ["bso_end_mission", "Mission End Conditions", "", {}, {serverCommandAvailable "#kick"}] call ace_interact_menu_fnc_createAction;
+//_mainAction = ["bso_end_mission", "Mission End Conditions", "", {}, {serverCommandAvailable "#kick"}] call ace_interact_menu_fnc_createAction;
 _mainAction1 = ["bso_gen_mission", "BSO Mission Board", "BSO\noti\bso_logo.paa", {}, {serverCommandAvailable "#kick"}] call ace_interact_menu_fnc_createAction;
 _mainAction2 = ["bso_gen_obj", "Gene Obj.", "", {}, {serverCommandAvailable "#kick"}] call ace_interact_menu_fnc_createAction;
-[typeOf player, 1, ["ACE_SelfActions","bso_admin_admin"], _mainAction] call ace_interact_menu_fnc_addActionToClass;
+//[typeOf player, 1, ["ACE_SelfActions","bso_admin_admin"], _mainAction] call ace_interact_menu_fnc_addActionToClass;
 [typeOf player, 1, ["ACE_SelfActions","bso_admin_admin"], _mainAction1] call ace_interact_menu_fnc_addActionToClass;
 [typeOf player, 1, ["ACE_SelfActions","bso_admin_admin","bso_gen_mission"], _mainAction2] call ace_interact_menu_fnc_addActionToClass;
 
