@@ -10,7 +10,7 @@ private _playerCount = playersNumber bso_gene_side_bluX;
 
 
 _groupCount = _grpSize;
-if (_playerCount <= 5) then {_groupCount =(_grpSize /2)};
+if (_playerCount <= 5) then {_groupCount = (_grpSize /2)};
 
 for "_i" from 1 to (_groupCount - 1) do {
     private _unitType = selectRandom bso_gene_opfgrp;

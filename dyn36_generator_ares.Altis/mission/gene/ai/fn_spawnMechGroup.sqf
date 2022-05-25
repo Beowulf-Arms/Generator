@@ -13,6 +13,8 @@ private _totalSeats = [_transType, true] call BIS_fnc_crewCount; // Number of to
 private _crewSeats = [_transType, false] call BIS_fnc_crewCount; // Number of crew seats only
 private _cargoSeats = _totalSeats - _crewSeats; // Number of total cargo/passenger seats: non-FFV + FFV
 
+if (_playerCount <= 5) then {_cargoSeats = (_cargoSeats /2)};
+
 for "_i" from 1 to _cargoSeats do {
     private _unitType = selectRandom bso_gene_opfgrp;
     private _unit = _group createUnit [_unitType, _position, [], 5, "NONE"];
