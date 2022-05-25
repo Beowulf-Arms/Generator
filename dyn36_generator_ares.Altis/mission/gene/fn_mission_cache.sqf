@@ -13,7 +13,11 @@ if (isServer) then {
 	
 	
 	// Cache creation
-	["bso_obj_cache",3,35,200,0,"m_1"] call gene_fnc_cache_gen;
+	private _caches = ["bso_obj_cache",3,35,200,getMarkerPos "m_1", 3] call gene_fnc_cache_gen;
+
+    {
+        [getPos _x] call gene_fnc_spawnGarrison;
+    } forEach _caches;
 
 	private _weightArray = [
 		[0.5,0.3,0.2], // 50% Inf "default"
