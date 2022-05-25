@@ -19,6 +19,8 @@ if (isServer) then
 	// Generator units/side variables list
 	bso_gene_side_blu = "west";
 	publicVariable "bso_gene_side_blu";
+	bso_gene_side_bluX = west;
+	publicVariable "bso_gene_side_bluX";
 
 	bso_gene_side = east;
 	publicVariable "bso_gene_side";
