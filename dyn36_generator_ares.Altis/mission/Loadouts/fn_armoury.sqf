@@ -263,6 +263,18 @@ _armoury = _this select 0;
 		"SmokeShellBlue",
 		"SmokeShellPurple",
 
+		"DemoCharge_Remote_Mag",
+		"SatchelCharge_Remote_Mag",
+		"ATMine_Range_Mag",
+		"ClaymoreDirectionalMine_Remote_Mag",
+		"APERSBoundingMine_Range_Mag",
+		"SLAMDirectionalMine_Wire_Mag",
+		"APERSTripMine_Wire_Mag",
+		"APERSMine_Range_Mag",
+		"ACE_FlareTripMine_Mag",
+		"APERSMineDispenser_Mag",
+		"AMP_Breaching_Charge_Mag",
+
 
 		// Medical
 		"ACE_salineIV_500",

@@ -3,6 +3,7 @@ if (isServer) then
 	private _bso_m1 = createMarker ["m_1", [0,0]];
 	private _bso_m0 = createMarker ["m_0", [0,0]];
 	bso_gene_taskNum = 0; publicVariable "bso_gene_taskNum";
+	bso_gene_ObjEnd = false; publicVariable "bso_gene_ObjEnd";
 
 	// Marker locations
 	bso_gene_locations = ["l_1","l_2","l_3","l_4","l_5","l_6","l_7","l_8","l_9","l_10","l_11","l_12","l_13","l_14","l_15","l_16","l_17","l_18","l_19","l_20","l_21","l_22","l_23","l_24","l_25","l_26","l_27","l_28","l_29","l_30","l_31","l_32","l_33","l_34","l_35"];
@@ -104,7 +105,10 @@ if (isServer) then
 		"I_LT_01_AA_F",
 		"I_LT_01_AT_F",
 		"I_LT_01_cannon_F",
-		"I_LT_01_scout_F"
+		"I_LT_01_scout_F",
+		"UK3CB_AAF_B_FV4201",
+		"UK3CB_AAF_B_M270_MLRS_HE",
+		"UK3CB_AAF_B_M270_MLRS_CLUSTER"
 	];
 	publicVariable "bso_gene_blu_landVehcs";
 
@@ -132,7 +136,12 @@ if (isServer) then
 		"UK3CB_AAF_B_UH1H_MED",
 		"UK3CB_AAF_B_UH1H",
 		"UK3CB_AAF_B_UH60M",
-		"UK3CB_AAF_B_UH60M2"
+		"UK3CB_AAF_B_UH60M2",
+		"UK3CB_AAF_B_Bell412_Armed_dynamicLoadout",
+		"UK3CB_AAF_B_Bell412_Utility",
+		"FIR_AV8B_NA",
+		"FIR_AV8B",
+		"FIR_AV8B_GR9A"
 	];
 	publicVariable "bso_gene_blu_airVehcs";
 
@@ -164,14 +173,14 @@ if (isServer) then
 	publicVariable "bso_gene_opfgrp";
 
 
-	bso_gene_opfTrans = ["O_BSO_FIA_OFFROAD_armour","O_BSO_FIA_transport","O_BSO_FIA_OFFROAD","O_BSO_FIA_TRUCK"];
+	bso_gene_opfTrans = ["O_BSO_FIA_OFFROAD_armour","O_BSO_FIA_transport","O_BSO_FIA_OFFROAD","O_BSO_FIA_TRUCK","UK3CB_O_G_LandRover_Closed","UK3CB_O_G_LandRover_Open,","UK3CB_O_G_Hilux_Closed","UK3CB_O_G_Hilux_Open"];
 	publicVariable "bso_gene_opfTrans";
 
 	bso_gene_opfArmTrans = ["O_BSO_FIA_gorgan"];
 	publicVariable "bso_gene_opfArmTrans";
 
 	
-	bso_gene_opfAtkVehc = ["O_BSO_FIA_OFFROAD_ARMED_armour","O_BSO_FIA_OFFROAD_AT_armour","O_BSO_FIA_OFFROAD_ARMED","O_BSO_FIA_OFFROAD_AT"];
+	bso_gene_opfAtkVehc = ["O_BSO_FIA_OFFROAD_ARMED_armour","O_BSO_FIA_OFFROAD_ARMED_armour","O_BSO_FIA_OFFROAD_AT_armour","O_BSO_FIA_OFFROAD_ARMED","O_BSO_FIA_OFFROAD_AT","UK3CB_O_G_LandRover_SF_M2","UK3CB_O_G_Hilux_Zu23_Front","UK3CB_O_G_Hilux_M2","UK3CB_O_G_Hilux_Vulcan_Front","UK3CB_O_G_Hilux_BMP","UK3CB_O_G_LandRover_M2","UK3CB_O_G_Hilux_BTR"];
 	publicVariable "bso_gene_opfAtkVehc";
 
 	bso_gene_opfTransHelo = ["O_BSO_FIA_uh1"];
@@ -218,7 +227,8 @@ if (_GroupTele == 1) then {
 
 _TeleCondition = {
 params ["_target", "_player", "_params"];
-((count nearestObjects [_player, ["Flag_AAF_F", "USMC_WarfareBVehicleServicePoint"], 100]) > 0);
+
+((count nearestObjects [_player, ["Flag_AAF_F", "USMC_WarfareBVehicleServicePoint"], 100]) > 0) || bso_gene_ObjEnd
 
 };
 _TeleExec = {createDialog "GeneTeleMenu";};
