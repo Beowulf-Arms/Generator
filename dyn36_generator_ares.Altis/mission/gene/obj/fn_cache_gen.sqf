@@ -6,7 +6,7 @@ private _houselist = nearestObjects [_center_pos, ["house"], _range];
 
 private _caches = [];
 
-for "_i" from 0 to _number_of_caches - 1 do {
+for "_i" from 1 to _number_of_caches do {
     private _attempts = 0;
     while { _attempts < 100 } do {
         _attempts = _attempts + 1;
@@ -31,6 +31,8 @@ for "_i" from 0 to _number_of_caches - 1 do {
         _cache setdir random 360;
 
         _caches pushBack _cache;
+
+        break;
     };
     if (_attempts >= 100) then { break; };
 };
