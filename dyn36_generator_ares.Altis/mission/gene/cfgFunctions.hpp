@@ -8,6 +8,7 @@ class gene
 		class gene_mb {};
         class mission_clear {};
         class mission_cache {};
+        class mission_elimHVT {};
 		
 	};
 	
@@ -66,6 +67,7 @@ class gene
         class gene_qrf {};
         class gene_qrfMech {};
         class gene_qrf_helo {};
+		class hvt_gen {};
 		class timeAcc {};
 	};
 };
