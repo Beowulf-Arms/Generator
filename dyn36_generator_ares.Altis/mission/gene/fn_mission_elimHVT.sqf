@@ -12,13 +12,8 @@ if (isServer) then {
 
 	sleep 3; // waits for server to complete location and task numbering
 	
-	
-	// Cache creation
-	private _caches = ["bso_obj_cache",3,35,200,getMarkerPos "m_1", 3] call gene_fnc_cache_gen;
+	_hvt = [getMarkerPos "m_1"] call gene_fnc_hvt_gen;
 
-    {
-        [getPos _x] call gene_fnc_spawnGarrison;
-    } forEach _caches;
 
 	private _weightArray = [
 		[0.5,0.3,0.2], // 50% Inf "default"
@@ -57,13 +52,13 @@ if (isServer) then {
 	private _trg1 = createTrigger ["EmptyDetector", getMarkerPos "m_1", false];
 	_trg1 setTriggerArea [1000, 1000, 0, false];
 	_trg1 setTriggerActivation ["CIV", "PRESENT", false];
-	_trg1 setTriggerStatements ["count (thisList select {(typeOf _x) in [""bso_obj_cache""]}) == 0", format ["[""Task_%1"", ""succeeded""] call FHQ_fnc_ttSetTaskState; bso_gene_ObjEnd = true; publicVariable ""bso_gene_ObjEnd""", bso_gene_taskNum],""];
+	_trg1 setTriggerStatements [format ["count (thisList select {(typeOf _x) in %1}) == 0", bso_gene_hvt], format ["[""Task_%1"", ""succeeded""] call FHQ_fnc_ttSetTaskState; bso_gene_ObjEnd = true; publicVariable ""bso_gene_ObjEnd""", bso_gene_taskNum],""];
 	_trg1 setTriggerInterval 5;
 	
 
 	[] call gene_fnc_gene_markers;
 	
-	[[format ["Task_%1",bso_gene_taskNum],"The enemy are stockpiling weapon caches around the town. Locate and destroy them.",format ["%1. Destroy the weapons caches",bso_gene_taskNum],"Destroy", getMarkerPos "m_1", "assigned", "destroy"]]call FHQ_fnc_ttAddTasks;
+	[[format ["Task_%1",bso_gene_taskNum],"Locate the HVT, and eliminate them.",format ["%1. Eliminate HVT",bso_gene_taskNum],"Eliminate", getMarkerPos "M_1", "assigned", "kill"]]call FHQ_fnc_ttAddTasks;
 
 	// Setup QRF
 
