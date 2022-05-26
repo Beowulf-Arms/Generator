@@ -5,7 +5,7 @@ class blufor //Name of your faction referenced in the init call
 		{
 			name = "Rifleman";
 			primaryWeapon = "arifle_Mk20C_F";
-			primaryWeaponItems[] = {"RKSL_optic_EOT552","rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger"};
+			primaryWeaponItems[] = {"RKSL_optic_EOT552","acc_pointer_ir","rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger"};
 			handgun = "";
 			handgunItems[] = {};
 			magazines[] = {
@@ -34,6 +34,7 @@ class blufor //Name of your faction referenced in the init call
 			personalRadios[] = {"ACRE_PRC343"
 			};
 			assignedItems[] = {
+				"ItemGPS",
 				"ItemMap",
 				"ItemCompass",
 				"ItemWatch"
@@ -62,7 +63,7 @@ class blufor //Name of your faction referenced in the init call
 				};
 			uniform[] = {"UK3CB_AAF_B_U_CombatUniform_Shortsleeve_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_Shortsleeve_Digi_Mix_01","UK3CB_AAF_B_U_CombatUniform_Digi_Mix_01"};
 			vest[] = {"UK3CB_AAF_O_V_Eagle_RIF_DIGI_GRN"};
-			headgear[] = {"pasgt_aafg","pasgt_aafg","pasgt_aafg","pasgt_aafr","pasgt_aaf"};
+			headgear[] = {"rhsusf_mich_bare_norotos_arc_alt","rhsusf_mich_bare_norotos_arc_alt_headset","rhsusf_mich_bare_norotos_arc_headset"};
 			nvg = "";
 			insignia = "";
 		};		
@@ -154,7 +155,7 @@ class blufor //Name of your faction referenced in the init call
 				};
 			uniform[] = {"U_I_FullGhillie_sard"};
 			vest[] = {"UK3CB_AAF_O_V_Eagle_RIF_DIGI_GRN"};
-			headgear[] = {"pasgt_aafg","pasgt_aafg","pasgt_aafg","pasgt_aafr","pasgt_aaf"};
+			headgear[] = {"rhsusf_mich_bare_norotos_arc_alt","rhsusf_mich_bare_norotos_arc_alt_headset","rhsusf_mich_bare_norotos_arc_headset"};
 			nvg = "";
 			insignia = "";
 			binoculars = "Rangefinder";
@@ -230,7 +231,7 @@ class blufor //Name of your faction referenced in the init call
 				};
 			uniform[] = {"U_I_FullGhillie_sard"};
 			vest[] = {"UK3CB_AAF_O_V_Eagle_RIF_DIGI_GRN"};
-			headgear[] = {"pasgt_aafg","pasgt_aafg","pasgt_aafg","pasgt_aafr","pasgt_aaf"};
+			headgear[] = {"rhsusf_mich_bare_norotos_arc_alt","rhsusf_mich_bare_norotos_arc_alt_headset","rhsusf_mich_bare_norotos_arc_headset"};
 			nvg = "";
 			insignia = "";
 			binoculars = "Rangefinder";
@@ -238,6 +239,85 @@ class blufor //Name of your faction referenced in the init call
 		class EOD // Class Names
 		{
 			name = "EOD";
+			primaryWeapon = "arifle_Mk20C_F";
+			primaryWeaponItems[] = {"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger"};
+			handgun = "ACE_VMM3";
+			handgunItems[] = {};
+			magazines[] = {
+				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
+				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
+				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",				
+				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
+				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
+				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red",
+				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red",
+				"handgrenade",
+				"handgrenade",
+				"smokeshell"
+			};
+			items[] = {
+				"ACE_DefusalKit",
+				"ACE_salineIV_500",
+				"ACE_Flashlight_MX991",
+				"ACE_fieldDressing",
+				"ACE_fieldDressing",
+				"ACE_morphine",				
+				"ACE_tourniquet",
+				"ACE_quikclot",	
+				"ACE_fieldDressing",
+				"ACE_fieldDressing"
+			};
+			personalRadios[] = {"ACRE_PRC343"
+			};
+			assignedItems[] = {
+				"ItemGPS",
+				"ItemMap",
+				"ItemCompass",
+				"ItemWatch"
+			};
+			backpack = "B_TacticalPack_oli";
+			backpackMagazines[] = {
+				"ACE_M14",
+				"ACE_M14",
+				"ACE_M14",
+				"ACE_M14",
+				"DemoCharge_Remote_Mag",
+				"DemoCharge_Remote_Mag",
+				"DemoCharge_Remote_Mag",
+				"DemoCharge_Remote_Mag",
+				"ClaymoreDirectionalMine_Remote_Mag",	
+				"ClaymoreDirectionalMine_Remote_Mag",		
+				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
+				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
+				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",				
+				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
+				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red",
+				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red",
+				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red",
+				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red",
+				"handgrenade",
+				"handgrenade",
+				"handgrenade",
+				"handgrenade",
+				"smokeshell"
+				};
+			launcher = "rhs_weap_m72a7";
+			launcherItems[] = {};
+			backpackItems[] = {
+				
+				"ACE_fieldDressing",
+				"ACE_fieldDressing",
+				"ACE_morphine"
+				};
+			uniform[] = {"UK3CB_AAF_B_U_CombatUniform_Shortsleeve_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_Shortsleeve_Digi_Mix_01","UK3CB_AAF_B_U_CombatUniform_Digi_Mix_01"};
+			vest[] = {"UK3CB_AAF_O_V_Eagle_RIF_DIGI_GRN"};
+			headgear[] = {"rhsusf_mich_bare_norotos_arc_alt","rhsusf_mich_bare_norotos_arc_alt_headset","rhsusf_mich_bare_norotos_arc_headset"};
+			nvg = "";
+			insignia = "";
+		};			
+		class EODShotty // Class Names
+		{
+			name = "EOD (Shotgun)";
 			primaryWeapon = "rhs_weap_M590_8RD";
 			primaryWeaponItems[] = {"rhsusf_8Rnd_00Buck"};
 			handgun = "ACE_VMM3";
@@ -272,102 +352,7 @@ class blufor //Name of your faction referenced in the init call
 			personalRadios[] = {"ACRE_PRC343"
 			};
 			assignedItems[] = {
-				"ItemMap",
-				"ItemCompass",
-				"ItemWatch"
-			};
-			backpack = "B_TacticalPack_oli";
-			backpackMagazines[] = {
-				"ACE_M14",
-				"ACE_M14",
-				"ACE_M14",
-				"ACE_M14",
-				"rhs_charge_tnt_x2_mag",
-				"rhs_charge_tnt_x2_mag",
-				"rhs_charge_tnt_x2_mag",
-				"rhs_charge_tnt_x2_mag",
-				"DemoCharge_Remote_Mag",
-				"DemoCharge_Remote_Mag",
-				"DemoCharge_Remote_Mag",
-				"DemoCharge_Remote_Mag",			
-				"rhsusf_8Rnd_00Buck",
-				"rhsusf_8Rnd_00Buck",
-				"rhsusf_8Rnd_00Buck",				
-				"rhsusf_8Rnd_00Buck",
-				"rhsusf_8Rnd_00Buck",
-				"rhsusf_8Rnd_Slug",
-				"rhsusf_8Rnd_Slug",
-				"rhsusf_8Rnd_Slug",
-				"rhsusf_8Rnd_Slug",
-				"rhsusf_8Rnd_Slug",
-				"handgrenade",
-				"handgrenade",
-				"handgrenade",
-				"handgrenade",
-				"ACE_M14",
-				"smokeshell",
-				"rhsusf_8Rnd_00Buck",
-				"rhsusf_8Rnd_00Buck",
-				"rhsusf_8Rnd_00Buck",				
-				"rhsusf_8Rnd_00Buck",
-				"rhsusf_8Rnd_00Buck",
-				"rhsusf_8Rnd_Slug",
-				"rhsusf_8Rnd_Slug",
-				"rhsusf_8Rnd_Slug",
-				"rhsusf_8Rnd_Slug",
-				"rhsusf_8Rnd_Slug"
-				};
-			launcher = "rhs_weap_m72a7";
-			launcherItems[] = {};
-			backpackItems[] = {
-				
-				"ACE_fieldDressing",
-				"ACE_fieldDressing",
-				"ACE_morphine"
-				};
-			uniform[] = {"UK3CB_AAF_B_U_CombatUniform_Shortsleeve_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_Shortsleeve_Digi_Mix_01","UK3CB_AAF_B_U_CombatUniform_Digi_Mix_01"};
-			vest[] = {"UK3CB_AAF_O_V_Eagle_RIF_DIGI_GRN"};
-			headgear[] = {"pasgt_aafg","pasgt_aafg","pasgt_aafg","pasgt_aafr","pasgt_aaf"};
-			nvg = "";
-			insignia = "";
-		};			
-		class EODLeader // Class Names
-		{
-			name = "EOD Leader";
-			primaryWeapon = "rhs_weap_M590_8RD";
-			primaryWeaponItems[] = {"rhsusf_8Rnd_00Buck"};
-			handgun = "ACE_VMM3";
-			handgunItems[] = {};
-			magazines[] = {
-				"rhsusf_8Rnd_00Buck",
-				"rhsusf_8Rnd_00Buck",
-				"rhsusf_8Rnd_00Buck",				
-				"rhsusf_8Rnd_00Buck",
-				"rhsusf_8Rnd_00Buck",
-				"rhsusf_8Rnd_Slug",
-				"rhsusf_8Rnd_Slug",
-				"rhsusf_8Rnd_Slug",
-				"rhsusf_8Rnd_Slug",
-				"rhsusf_8Rnd_Slug",
-				"handgrenade",
-				"handgrenade",
-				"smokeshell"
-			};
-			items[] = {
-				"ACE_DefusalKit",
-				"ACE_salineIV_500",
-				"ACE_Flashlight_MX991",
-				"ACE_fieldDressing",
-				"ACE_fieldDressing",
-				"ACE_morphine",				
-				"ACE_tourniquet",
-				"ACE_quikclot",	
-				"ACE_fieldDressing",
-				"ACE_fieldDressing"
-			};
-			personalRadios[] = {"ACRE_PRC343","ACRE_PRC148"
-			};
-			assignedItems[] = {
+				"ItemGPS",
 				"ItemMap",
 				"ItemCompass",
 				"ItemWatch"
@@ -423,7 +408,7 @@ class blufor //Name of your faction referenced in the init call
 				};
 			uniform[] = {"UK3CB_AAF_B_U_CombatUniform_Shortsleeve_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_Shortsleeve_Digi_Mix_01","UK3CB_AAF_B_U_CombatUniform_Digi_Mix_01"};
 			vest[] = {"UK3CB_AAF_O_V_Eagle_RIF_DIGI_GRN"};
-			headgear[] = {"pasgt_aafg","pasgt_aafg","pasgt_aafg","pasgt_aafr","pasgt_aaf"};
+			headgear[] = {"rhsusf_mich_bare_norotos_arc_alt","rhsusf_mich_bare_norotos_arc_alt_headset","rhsusf_mich_bare_norotos_arc_headset"};
 			nvg = "";
 			insignia = "";
 		};				
@@ -432,7 +417,7 @@ class blufor //Name of your faction referenced in the init call
 		{
 			name = "Mortar (60mm)";
 			primaryWeapon = "arifle_Mk20C_F";
-			primaryWeaponItems[] = {"RKSL_optic_EOT552","rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger"};
+			primaryWeaponItems[] = {"RKSL_optic_EOT552","acc_pointer_ir","rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger"};
 			handgun = "";
 			handgunItems[] = {};
 			magazines[] = {
@@ -465,6 +450,7 @@ class blufor //Name of your faction referenced in the init call
 			personalRadios[] = {"ACRE_PRC343"
 			};
 			assignedItems[] = {
+				"ItemGPS",
 				"ItemMap",
 				"ItemCompass",
 				"ItemWatch"
@@ -492,7 +478,7 @@ class blufor //Name of your faction referenced in the init call
 				};
 			uniform[] = {"UK3CB_AAF_B_U_CombatUniform_Shortsleeve_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_Shortsleeve_Digi_Mix_01","UK3CB_AAF_B_U_CombatUniform_Digi_Mix_01"};
 			vest[] = {"UK3CB_AAF_O_V_Eagle_RIF_DIGI_GRN"};
-			headgear[] = {"pasgt_aafg","pasgt_aafg","pasgt_aafg","pasgt_aafr","pasgt_aaf"};
+			headgear[] = {"rhsusf_mich_bare_norotos_arc_alt","rhsusf_mich_bare_norotos_arc_alt_headset","rhsusf_mich_bare_norotos_arc_headset"};
 			nvg = "";
 			insignia = "";
 		};				
@@ -500,7 +486,7 @@ class blufor //Name of your faction referenced in the init call
 		class SquadLeader {
 			name = "Squad Leader";
 			primaryWeapon = "arifle_Mk20C_F";
-			primaryWeaponItems[] = {"RKSL_optic_EOT552","rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger"};
+			primaryWeaponItems[] = {"RKSL_optic_EOT552","acc_pointer_ir","rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger"};
 			handgun = "hlc_pistol_P226R_Combat";
 			handgunItems[] = {"hlc_15Rnd_9x19_B_P226"};
 			magazines[] = {
@@ -584,7 +570,7 @@ class blufor //Name of your faction referenced in the init call
 				};
 			uniform[] = {"UK3CB_AAF_B_U_CombatUniform_Shortsleeve_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_Shortsleeve_Digi_Mix_01","UK3CB_AAF_B_U_CombatUniform_Digi_Mix_01"};
 			vest[] = {"UK3CB_AAF_O_V_Eagle_SL_DIGI_GRN"};
-			headgear[] = {"pasgt_aafg","pasgt_aafg","pasgt_aafg","pasgt_aafr","pasgt_aaf"};
+			headgear[] = {"rhsusf_mich_bare_norotos_arc_alt","rhsusf_mich_bare_norotos_arc_alt_headset","rhsusf_mich_bare_norotos_arc_headset"};
 			nvg = "";
 			binoculars = "Binocular";
 			insignia = "";
@@ -593,7 +579,7 @@ class blufor //Name of your faction referenced in the init call
 		class Autorifleman {
 			name = "Autorifleman";
 			primaryWeapon = "rhs_weap_m249_light_L";
-			primaryWeaponItems[] = {"rhsusf_200Rnd_556x45_mixed_soft_pouch","rhsusf_acc_saw_bipod","RKSL_optic_EOT552"};
+			primaryWeaponItems[] = {"rhsusf_200Rnd_556x45_mixed_soft_pouch","rhsusf_acc_kac_grip_saw_bipod","RKSL_optic_EOT552"};
 			handgun = "hlc_pistol_P226R_Combat";
 			handgunItems[] = {"hlc_15Rnd_9x19_B_P226"};
 			magazines[] = {
@@ -623,6 +609,7 @@ class blufor //Name of your faction referenced in the init call
 			personalRadios[] = {"ACRE_PRC343"
 			};
 			assignedItems[] = {
+				"ItemGPS",
 				"ItemMap",
 				"ItemCompass",
 				"ItemWatch"
@@ -646,7 +633,7 @@ class blufor //Name of your faction referenced in the init call
 				};
 			uniform[] = {"UK3CB_AAF_B_U_CombatUniform_Shortsleeve_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_Shortsleeve_Digi_Mix_01","UK3CB_AAF_B_U_CombatUniform_Digi_Mix_01"};
 			vest[] = {"UK3CB_AAF_O_V_Eagle_MG_DIGI_GRN"};
-			headgear[] = {"pasgt_aafg","pasgt_aafg","pasgt_aafg","pasgt_aafr","pasgt_aaf"};
+			headgear[] = {"rhsusf_mich_bare_norotos_arc_alt","rhsusf_mich_bare_norotos_arc_alt_headset","rhsusf_mich_bare_norotos_arc_headset"};
 			nvg = "";
 			insignia = "";
 		};			
@@ -654,7 +641,7 @@ class blufor //Name of your faction referenced in the init call
 		{
 			name = "AR Asst.";
 			primaryWeapon = "arifle_Mk20C_F";
-			primaryWeaponItems[] = {"RKSL_optic_EOT552","rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger"};
+			primaryWeaponItems[] = {"RKSL_optic_EOT552","acc_pointer_ir","rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger"};
 			handgun = "";
 			handgunItems[] = {};
 			magazines[] = {
@@ -683,6 +670,7 @@ class blufor //Name of your faction referenced in the init call
 			personalRadios[] = {"ACRE_PRC343"
 			};
 			assignedItems[] = {
+				"ItemGPS",
 				"ItemMap",
 				"ItemCompass",
 				"ItemWatch"
@@ -706,7 +694,7 @@ class blufor //Name of your faction referenced in the init call
 				};
 			uniform[] = {"UK3CB_AAF_B_U_CombatUniform_Shortsleeve_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_Shortsleeve_Digi_Mix_01","UK3CB_AAF_B_U_CombatUniform_Digi_Mix_01"};
 			vest[] = {"UK3CB_AAF_O_V_Eagle_RIF_DIGI_GRN"};
-			headgear[] = {"pasgt_aafg","pasgt_aafg","pasgt_aafg","pasgt_aafr","pasgt_aaf"};
+			headgear[] = {"rhsusf_mich_bare_norotos_arc_alt","rhsusf_mich_bare_norotos_arc_alt_headset","rhsusf_mich_bare_norotos_arc_headset"};
 			nvg = "";
 			insignia = "";
 			binoculars = "Binocular";
@@ -715,7 +703,7 @@ class blufor //Name of your faction referenced in the init call
 		{
 			name = "Team Leader";
 			primaryWeapon = "arifle_Mk20_GL_F";
-			primaryWeaponItems[] = {"rhs_mag_M433_HEDP","RKSL_optic_EOT552","rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger"};
+			primaryWeaponItems[] = {"rhs_mag_M433_HEDP","RKSL_optic_EOT552","acc_pointer_ir","rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger"};
 			handgun = "";
 			handgunItems[] = {};
 			magazines[] = {
@@ -751,6 +739,7 @@ class blufor //Name of your faction referenced in the init call
 			personalRadios[] = {"ACRE_PRC343","ACRE_PRC148"
 			};
 			assignedItems[] = {
+				"ItemGPS",
 				"ItemMap",
 				"ItemCompass",
 				"ItemWatch"
@@ -802,7 +791,7 @@ class blufor //Name of your faction referenced in the init call
 				};
 			uniform[] = {"UK3CB_AAF_B_U_CombatUniform_Shortsleeve_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_Shortsleeve_Digi_Mix_01","UK3CB_AAF_B_U_CombatUniform_Digi_Mix_01"};
 			vest[] = {"UK3CB_AAF_O_V_Eagle_GL_DIGI_GRN"};
-			headgear[] = {"pasgt_aafg","pasgt_aafg","pasgt_aafg","pasgt_aafr","pasgt_aaf"};
+			headgear[] = {"rhsusf_mich_bare_norotos_arc_alt","rhsusf_mich_bare_norotos_arc_alt_headset","rhsusf_mich_bare_norotos_arc_headset"};
 			nvg = "";
 			insignia = "";
 			binoculars = "Binocular";
@@ -811,7 +800,7 @@ class blufor //Name of your faction referenced in the init call
 		{
 			name = "Rifleman (LAT)";
 			primaryWeapon = "arifle_Mk20C_F";
-			primaryWeaponItems[] = {"RKSL_optic_EOT552","rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger"};
+			primaryWeaponItems[] = {"RKSL_optic_EOT552","acc_pointer_ir","rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger"};
 			handgun = "";
 			handgunItems[] = {};
 			magazines[] = {
@@ -844,6 +833,7 @@ class blufor //Name of your faction referenced in the init call
 			personalRadios[] = {"ACRE_PRC343"
 			};
 			assignedItems[] = {
+				"ItemGPS",
 				"ItemMap",
 				"ItemCompass",
 				"ItemWatch"
@@ -875,7 +865,7 @@ class blufor //Name of your faction referenced in the init call
 				};
 			uniform[] = {"UK3CB_AAF_B_U_CombatUniform_Shortsleeve_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_Shortsleeve_Digi_Mix_01","UK3CB_AAF_B_U_CombatUniform_Digi_Mix_01"};
 			vest[] = {"UK3CB_AAF_O_V_Eagle_RIF_DIGI_GRN"};
-			headgear[] = {"pasgt_aafg","pasgt_aafg","pasgt_aafg","pasgt_aafr","pasgt_aaf"};
+			headgear[] = {"rhsusf_mich_bare_norotos_arc_alt","rhsusf_mich_bare_norotos_arc_alt_headset","rhsusf_mich_bare_norotos_arc_headset"};
 			nvg = "";
 			insignia = "";
 		};		
@@ -884,7 +874,7 @@ class blufor //Name of your faction referenced in the init call
 		{
 			name = "Grenadier";
 			primaryWeapon = "arifle_Mk20_GL_F";
-			primaryWeaponItems[] = {"rhs_mag_M433_HEDP","RKSL_optic_EOT552","rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger"};
+			primaryWeaponItems[] = {"rhs_mag_M433_HEDP","RKSL_optic_EOT552","acc_pointer_ir","rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger"};
 			handgun = "";
 			handgunItems[] = {};
 			magazines[] = {
@@ -920,6 +910,7 @@ class blufor //Name of your faction referenced in the init call
 			personalRadios[] = {"ACRE_PRC343"
 			};
 			assignedItems[] = {
+				"ItemGPS",
 				"ItemMap",
 				"ItemCompass",
 				"ItemWatch"
@@ -971,7 +962,7 @@ class blufor //Name of your faction referenced in the init call
 				};
 			uniform[] = {"UK3CB_AAF_B_U_CombatUniform_Shortsleeve_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_Shortsleeve_Digi_Mix_01","UK3CB_AAF_B_U_CombatUniform_Digi_Mix_01"};
 			vest[] = {"UK3CB_AAF_O_V_Eagle_GL_DIGI_GRN"};
-			headgear[] = {"pasgt_aafg","pasgt_aafg","pasgt_aafg","pasgt_aafr","pasgt_aaf"};
+			headgear[] = {"rhsusf_mich_bare_norotos_arc_alt","rhsusf_mich_bare_norotos_arc_alt_headset","rhsusf_mich_bare_norotos_arc_headset"};
 			nvg = "";
 			insignia = "";
 		};	
@@ -979,7 +970,7 @@ class blufor //Name of your faction referenced in the init call
 		{
 			name = "Combat Medic";
 			primaryWeapon = "arifle_Mk20C_F";
-			primaryWeaponItems[] = {"RKSL_optic_EOT552","rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger"};
+			primaryWeaponItems[] = {"RKSL_optic_EOT552","acc_pointer_ir","rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger"};
 			handgun = "";
 			handgunItems[] = {};
 			magazines[] = {
@@ -1011,6 +1002,7 @@ class blufor //Name of your faction referenced in the init call
 			personalRadios[] = {"ACRE_PRC343"
 			};	
 			assignedItems[] = {
+				"ItemGPS",
 				"ItemMap",
 				"ItemCompass",
 				"ItemWatch"
@@ -1171,7 +1163,7 @@ class blufor //Name of your faction referenced in the init call
 				};
 			uniform[] = {"UK3CB_AAF_B_U_CombatUniform_Shortsleeve_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_Shortsleeve_Digi_Mix_01","UK3CB_AAF_B_U_CombatUniform_Digi_Mix_01"};
 			vest[] = {"UK3CB_AAF_O_V_Eagle_MED_DIGI_GRN"};
-			headgear[] = {"pasgt_aafg","pasgt_aafg","pasgt_aafg","pasgt_aafr","pasgt_aaf"};
+			headgear[] = {"rhsusf_mich_bare_norotos_arc_alt","rhsusf_mich_bare_norotos_arc_alt_headset","rhsusf_mich_bare_norotos_arc_headset"};
 			nvg = "";
 			insignia = "";
 		};		
@@ -1179,9 +1171,9 @@ class blufor //Name of your faction referenced in the init call
 		{
 			name = "Platoon Leader";
 			primaryWeapon = "arifle_Mk20_GL_F";
-			primaryWeaponItems[] = {"rhs_mag_M433_HEDP","RKSL_optic_EOT552","rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger"};
+			primaryWeaponItems[] = {"rhs_mag_M433_HEDP","RKSL_optic_EOT552","acc_pointer_ir","rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger"};
 			handgun = "hlc_pistol_P226R_Combat";
-			handgunItems[] = {};
+			handgunItems[] = {"hlc_15Rnd_9x19_B_P226"};
 			magazines[] = {
 				"rhs_mag_M433_HEDP",
 				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
@@ -1255,7 +1247,7 @@ class blufor //Name of your faction referenced in the init call
 				};
 			uniform[] = {"UK3CB_AAF_B_U_CombatUniform_Shortsleeve_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_Shortsleeve_Digi_Mix_01","UK3CB_AAF_B_U_CombatUniform_Digi_Mix_01"};
 			vest[] = {"UK3CB_AAF_O_V_Eagle_SL_DIGI_GRN"};
-			headgear[] = {"pasgt_aafg","pasgt_aafg","pasgt_aafg","pasgt_aafr","pasgt_aaf"};
+			headgear[] = {"rhsusf_mich_bare_norotos_arc_alt","rhsusf_mich_bare_norotos_arc_alt_headset","rhsusf_mich_bare_norotos_arc_headset"};
 			nvg = "";
 			binoculars = "Binocular";
 			insignia = "";
@@ -1265,7 +1257,7 @@ class blufor //Name of your faction referenced in the init call
 		{
 			name = "JTAC";
 			primaryWeapon = "arifle_Mk20_GL_F";
-			primaryWeaponItems[] = {"rhs_mag_M433_HEDP","RKSL_optic_EOT552","rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger"};
+			primaryWeaponItems[] = {"rhs_mag_M433_HEDP","RKSL_optic_EOT552","acc_pointer_ir","rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger"};
 			handgun = "";
 			handgunItems[] = {};
 			magazines[] = {
@@ -1340,7 +1332,7 @@ class blufor //Name of your faction referenced in the init call
 				};
 			uniform[] = {"UK3CB_AAF_B_U_CombatUniform_Shortsleeve_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_Shortsleeve_Digi_Mix_01","UK3CB_AAF_B_U_CombatUniform_Digi_Mix_01"};
 			vest[] = {"UK3CB_AAF_O_V_Eagle_GL_DIGI_GRN"};
-			headgear[] = {"pasgt_aafg","pasgt_aafg","pasgt_aafg","pasgt_aafr","pasgt_aaf"};
+			headgear[] = {"rhsusf_mich_bare_norotos_arc_alt","rhsusf_mich_bare_norotos_arc_alt_headset","rhsusf_mich_bare_norotos_arc_headset"};
 			nvg = "";
 			binoculars = "Laserdesignator";
 			insignia = "";
@@ -1352,7 +1344,7 @@ class blufor //Name of your faction referenced in the init call
 			primaryWeapon = "ptv_m14tp2_wdl";
 			primaryWeaponItems[] = {"20Rnd_762x51_Mag","ptv_shortdot","ptv_hbrs"};
 			handgun = "hlc_pistol_P226R_Combat";
-			handgunItems[] = {};
+			handgunItems[] = {"hlc_15Rnd_9x19_B_P226"};
 			magazines[] = {
 				"20Rnd_762x51_Mag",
 				"20Rnd_762x51_Mag",
@@ -1413,7 +1405,7 @@ class blufor //Name of your faction referenced in the init call
 				};
 			uniform[] = {"UK3CB_AAF_B_U_CombatUniform_Shortsleeve_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_Shortsleeve_Digi_Mix_01","UK3CB_AAF_B_U_CombatUniform_Digi_Mix_01"};
 			vest[] = {"UK3CB_AAF_O_V_Eagle_RIF_DIGI_GRN"};
-			headgear[] = {"pasgt_aafg","pasgt_aafg","pasgt_aafg","pasgt_aafr","pasgt_aaf"};
+			headgear[] = {"rhsusf_mich_bare_norotos_arc_alt","rhsusf_mich_bare_norotos_arc_alt_headset","rhsusf_mich_bare_norotos_arc_headset"};
 			nvg = "";
 			binoculars = "Rangefinder";
 			insignia = "";
@@ -1423,7 +1415,7 @@ class blufor //Name of your faction referenced in the init call
 		{
 			name = "Crew";
 			primaryWeapon = "arifle_Mk20C_F";
-			primaryWeaponItems[] = {"RKSL_optic_EOT552","rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger"};
+			primaryWeaponItems[] = {"RKSL_optic_EOT552","acc_pointer_ir","rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger"};
 			handgun = "";
 			handgunItems[] = {};
 			magazines[] = {
@@ -1450,6 +1442,7 @@ class blufor //Name of your faction referenced in the init call
 			personalRadios[] = {"ACRE_PRC343","ACRE_PRC148"
 			};
 			assignedItems[] = {
+				"ItemGPS",
 				"ItemMap",
 				"ItemCompass",
 				"ItemWatch"
@@ -1499,6 +1492,7 @@ class blufor //Name of your faction referenced in the init call
 			personalRadios[] = {"ACRE_PRC343","ACRE_PRC148"
 			};
 			assignedItems[] = {
+				"ItemGPS",
 				"ItemMap",
 				"ItemCompass",
 				"ItemWatch"

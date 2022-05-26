@@ -225,12 +225,16 @@ _armoury = _this select 0;
 
 		"optic_lrps",
 		"optic_mrco",
+		"optic_hamr",
 		"ptv_hbrs",
 		"rhsusf_acc_t1_high",
 		"rhsusf_acc_t1_low",
 
+		"rhsusf_acc_kac_grip_saw_bipod",
+
 		"muzzle_snds_338_black",
 		"ptv_rotex308",
+		"acc_pointer_ir",
 
 		"rhsusf_acc_m8541_mrds",
 		"rhsusf_acc_premier_mrds",
@@ -302,6 +306,12 @@ _armoury = _this select 0;
 		"ACE_ATragMX",
 		"ACE_UAVBattery",
 		"ITC_Land_B_UAV_Packed",
+		"ITC_Land_B_AR2e_Packed",
+		"ITC_Land_B_AR2i_Packed",
+		"ITC_Land_B_AL6_Packed",
+		"ITC_Land_B_AL6m_Packed",
+		"ITC_Land_BW_RemoteGLTD_Packed",
+		"ITC_Land_B_RemoteGLTD_Packed",
 
 		"Binocular",
 		"UK3CB_BAF_Soflam_Laserdesignator",
@@ -309,9 +319,15 @@ _armoury = _this select 0;
 		"ace_dragon_sight",
 		"laserbatteries",
 
+		"UK3CB_BAF_Javelin_CLU",
+		"UK3CB_BAF_Javelin_Slung_Tube",
+
+		"ACE_NVG_Gen4_Green",
+
 		// radio
 		"ACRE_PRC343",
 		"ACRE_PRC148",
+		"ACRE_PRC117F",
 
 	
 		// uniform
