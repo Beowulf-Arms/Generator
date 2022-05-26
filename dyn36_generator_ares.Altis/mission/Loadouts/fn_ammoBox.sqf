@@ -65,6 +65,7 @@ if (isServer) then {
 	_box addItemCargoGlobal  ["ACE_epinephrine", 5];
 	_box addItemCargoGlobal  ["ACE_elasticBandage", 20];
 	_box addItemCargoGlobal  ["ACE_packingBandage", 20];
+	_box addItemCargoGlobal  ["ACE_CableTie", 4];
 
 };
 

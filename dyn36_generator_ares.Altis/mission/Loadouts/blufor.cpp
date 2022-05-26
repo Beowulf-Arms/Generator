@@ -1297,7 +1297,7 @@ class blufor //Name of your faction referenced in the init call
 				"ItemCompass",
 				"ItemWatch"
 			};
-			backpack = "B_AssaultPack_dgtl";
+			backpack = "UK3CB_BAF_B_Bergen_OLI_JTAC_H_A";
 			backpackMagazines[] = {
 				"rhs_mag_M433_HEDP",
 				"rhs_mag_M433_HEDP",
@@ -1334,7 +1334,7 @@ class blufor //Name of your faction referenced in the init call
 			vest[] = {"UK3CB_AAF_O_V_Eagle_GL_DIGI_GRN"};
 			headgear[] = {"rhsusf_mich_bare_norotos_arc_alt","rhsusf_mich_bare_norotos_arc_alt_headset","rhsusf_mich_bare_norotos_arc_headset"};
 			nvg = "";
-			binoculars = "Laserdesignator";
+			binoculars = "UK3CB_BAF_Soflam_Laserdesignator";
 			insignia = "";
 		};
 		

@@ -9,6 +9,7 @@ class gene
         class mission_clear {};
         class mission_cache {};
         class mission_elimHVT {};
+        class mission_capHVT {};
 		
 	};
 	

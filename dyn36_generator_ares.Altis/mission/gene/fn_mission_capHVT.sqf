@@ -48,17 +48,25 @@ if (isServer) then {
 	] call gene_fnc_setupDefence;
 
 
-	//obj trigger	
+	//obj trigger - Capture, Success
+	private _trg1 = createTrigger ["EmptyDetector", getPos bso_mb_map, false];
+	_trg1 setTriggerArea [100, 100, 0, false, 20];
+	_trg1 setTriggerActivation ["VEHICLE", "PRESENT", false];
+	_trg1 triggerAttachVehicle [HVT1];
+	_trg1 setTriggerStatements ["this", format ["[""Task_%1"", ""succeeded""] call FHQ_fnc_ttSetTaskState; bso_gene_ObjEnd = true; publicVariable ""bso_gene_ObjEnd""", bso_gene_taskNum],""];
+	_trg1 setTriggerInterval 5;
+
+	//obj trigger - Killed, Fail
 	private _trg1 = createTrigger ["EmptyDetector", getMarkerPos "m_1", false];
-	_trg1 setTriggerArea [1000, 1000, 0, false];
+	_trg1 setTriggerArea [0, 0, 0, false];
 	_trg1 setTriggerActivation ["CIV", "PRESENT", false];
-	_trg1 setTriggerStatements ["!alive HVT1", format ["[""Task_%1"", ""succeeded""] call FHQ_fnc_ttSetTaskState; bso_gene_ObjEnd = true; publicVariable ""bso_gene_ObjEnd""", bso_gene_taskNum],""];
+	_trg1 setTriggerStatements ["!alive HVT1", format ["[""Task_%1"", ""failed""] call FHQ_fnc_ttSetTaskState; bso_gene_ObjEnd = true; publicVariable ""bso_gene_ObjEnd""", bso_gene_taskNum],""];
 	_trg1 setTriggerInterval 5;
 	
 
 	[] call gene_fnc_gene_markers;
 	
-	[[format ["Task_%1",bso_gene_taskNum],"Locate the HVT, and eliminate them.",format ["%1. Eliminate HVT",bso_gene_taskNum],"Eliminate", getMarkerPos "M_1", "assigned", "kill"]]call FHQ_fnc_ttAddTasks;
+	[[format ["Task_%1",bso_gene_taskNum],"Locate the HVT, and capture them by returning them to the Main Base.",format ["%1. Capture HVT",bso_gene_taskNum],"Capture", getMarkerPos "M_1", "assigned", "meet"]]call FHQ_fnc_ttAddTasks;
 
 	// Setup QRF
 
@@ -67,11 +75,11 @@ if (isServer) then {
 	private _tempObj = "Land_HelipadEmpty_F" createVehicle _qrfPos;
 	private _qrfAtkDir = (_tempObj getRelDir (getMarkerPos "m_1")) + 180;
 
-	private _trg2 = createTrigger ["EmptyDetector", getMarkerPos "m_1"];
-	_trg2 setTriggerArea [300, 300, 0, false, 50];
-	_trg2 setTriggerActivation [bso_gene_side_blu, bso_gene_sideD, false];
-	_trg2 setTriggerStatements ["this", format ["[%1, %2, %3] call gene_fnc_gene_qrfMech", _qrfPos, _atkPos, _qrfAtkDir],""];
-	_trg2 setTriggerInterval 5;
+	private _trg3 = createTrigger ["EmptyDetector", getMarkerPos "m_1"];
+	_trg3 setTriggerArea [300, 300, 0, false, 50];
+	_trg3 setTriggerActivation [bso_gene_side_blu, bso_gene_sideD, false];
+	_trg3 setTriggerStatements ["this", format ["[%1, %2, %3] call gene_fnc_gene_qrfMech", _qrfPos, _atkPos, _qrfAtkDir],""];
+	_trg3 setTriggerInterval 5;
 
 	//_TrigMark = createMarker ["qrfTrig", _qrfPos]; 
 	//"qrfTrig" setMarkerType "mil_pickup";

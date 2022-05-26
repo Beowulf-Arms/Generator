@@ -449,7 +449,9 @@ _armoury = _this select 0;
 		"usm_bdu_cap_odg",
 		"usm_bdu_cap_blu",
 		"usm_bdu_cap_tan",
-		"usm_bdu_boonie_odg"
+		"usm_bdu_boonie_odg",
+		
+		"ACE_CableTie"
 
 
 
