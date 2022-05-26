@@ -66,5 +66,6 @@ class gene
         class gene_qrf {};
         class gene_qrfMech {};
         class gene_qrf_helo {};
+		class timeAcc {};
 	};
 };

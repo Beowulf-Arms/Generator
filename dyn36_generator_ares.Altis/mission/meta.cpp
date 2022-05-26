@@ -58,45 +58,7 @@ class CfgBsoLoadouts {
 };
 
 
-class Params
-{
-	class Daytime
-	{
-		title = "Time";
-		texts[] = {"Morning","Day","Evening","Night"};
-		values[] = {6,12,18,0};
-		default = 12;
-		function = "BIS_fnc_paramDaytime"; // (Optional) Function called when player joins, selected value is passed as an argument
- 		isGlobal = 1; // (Optional) 1 to execute script / function locally for every player who joins, 0 to do it only on server
-	};
-	
-	class Weather
-	{
-		title = "Weather";
-		texts[] = {"Clear","Cloudy","Overcast"};
-		values[] = {0,0.5,1};
-		default = 0.2;
-		function = "BIS_fnc_setOvercast"; // (Optional) Function called when player joins, selected value is passed as an argument
- 		isGlobal = 1; // (Optional) 1 to execute script / function locally for every player who joins, 0 to do it only on server
-	};
-	
-	class GroupTele
-	{
-		title = "Group Leader Teleport Flag";
-		texts[] = {"Enabled","Disabled"};
-		values[] = {1,0};
-		default = 1;
-	};	
 
-	class LeaderTele
-	{
-		title = "Mission Leader Teleport Flag";
-		texts[] = {"Enabled","Disabled"};
-		values[] = {1,0};
-		default = 1;
-	};	
-	
-};
 
 // Used for custom debriefing screens launched by the admin or triggers ingame. See briefing.sqf for admin interactions
 class CfgDebriefing
@@ -121,6 +83,6 @@ class CfgDebriefing
 	};
 };
 
-
+#include "gene\gene_params.hpp"
 #include "gene\vehcSpawn\GeneVehcSpawnMenu.hpp"
 #include "gene\tele\GeneTeleMenu.hpp"
