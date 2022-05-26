@@ -142,8 +142,11 @@ if (isServer) then
 		"UK3CB_AAF_B_Bell412_Armed_dynamicLoadout",
 		"UK3CB_AAF_B_Bell412_Utility",
 		"FIR_AV8B_NA",
+		"FIR_AV8B_NA_no_cam",
 		"FIR_AV8B",
-		"FIR_AV8B_GR9A"
+		"FIR_AV8B_no_cam",
+		"FIR_AV8B_GR9A",
+		"FIR_AV8B_GR9A_no_cam"
 	];
 	publicVariable "bso_gene_blu_airVehcs";
 
