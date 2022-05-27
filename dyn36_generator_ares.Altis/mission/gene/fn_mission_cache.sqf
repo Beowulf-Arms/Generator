@@ -9,6 +9,7 @@ if (isServer) then {
 	bso_gene_taskNum = bso_gene_taskNum + 1; publicVariable "bso_gene_taskNum";
 	bso_gene_ObjSet = true; publicVariable "bso_gene_ObjSet";
 	bso_gene_ObjEnd = false; publicVariable "bso_gene_ObjEnd";
+	bso_gene_IntelObj = "CACHE"; publicVariable "bso_gene_IntelObj";
 
 	sleep 3; // waits for server to complete location and task numbering
 	
@@ -18,7 +19,11 @@ if (isServer) then {
 
     {
         [getPos _x, 10] call gene_fnc_spawnGarrison;
+		_x setVariable ["bso_gene_IntelRadius", 100, true];
+		_x setVariable ["bso_gene_IntelMarker", "none", true];
     } forEach _caches;
+	bso_obj_Caches = _caches; publicVariable "bso_obj_Caches";
+	bso_obj_IntelSubjects = bso_obj_Caches; publicVariable "bso_obj_IntelSubjects";
 
 	private _weightArray = [
 		[0.5,0.3,0.2], // 50% Inf "default"

@@ -34,6 +34,8 @@ if (isServer) then {
 	sleep 2;
 	bso_gene_ObjSet = false; publicVariable "bso_gene_ObjSet";
 	[-2, {["BSOMission",["Mission Cleared. Generator ready"]] call BIS_fnc_showNotification;}] call CBA_fnc_globalExecute;
+	bso_gene_IntelObj = "NONE"; publicVariable "bso_gene_IntelObj";
+	bso_gene_IntelRadius = 0; publicVariable "bso_gene_IntelRadius";
 
 };
 

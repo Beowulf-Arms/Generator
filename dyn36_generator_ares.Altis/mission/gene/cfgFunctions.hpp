@@ -71,5 +71,7 @@ class gene
         class gene_qrf_helo {};
 		class hvt_gen {};
 		class timeAcc {};
+		class intelAction {};
+		class intelFound {};
 	};
 };

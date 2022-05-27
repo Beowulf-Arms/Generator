@@ -9,10 +9,12 @@ if (isServer) then {
 	bso_gene_taskNum = bso_gene_taskNum + 1; publicVariable "bso_gene_taskNum";
 	bso_gene_ObjSet = true; publicVariable "bso_gene_ObjSet";
 	bso_gene_ObjEnd = false; publicVariable "bso_gene_ObjEnd";
+	bso_gene_IntelObj = "CACHE"; publicVariable "bso_gene_IntelObj";
 
 	sleep 3; // waits for server to complete location and task numbering
 	
 	HVT1 = [getMarkerPos "m_1"] call gene_fnc_hvt_gen;
+	HVT1 setVariable ["bso_gene_IntelRadius", 300, true];
 
 
 	private _weightArray = [
