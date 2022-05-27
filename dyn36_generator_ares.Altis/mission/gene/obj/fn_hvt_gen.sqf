@@ -19,6 +19,7 @@ private _hvtClass = selectRandom bso_gene_hvt;
 private _hvtGroup = createGroup [bso_gene_side, true];
 private _hvt = _hvtGroup createUnit [ _hvtClass, _hvtPos, [], 0, "CAN_COLLIDE"];
 _hvt setdir random 360;
+_hvt disableAI "PATH";
 // create HVT guards
 
 if (_guarded) then {
