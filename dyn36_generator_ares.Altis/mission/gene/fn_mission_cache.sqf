@@ -17,7 +17,7 @@ if (isServer) then {
 	private _caches = ["bso_obj_cache",3,35,200,getMarkerPos "m_1", 3] call gene_fnc_cache_gen;
 
     {
-        [getPos _x] call gene_fnc_spawnGarrison;
+        [getPos _x, 10] call gene_fnc_spawnGarrison;
     } forEach _caches;
 
 	private _weightArray = [
@@ -66,8 +66,6 @@ if (isServer) then {
 	[[format ["Task_%1",bso_gene_taskNum],"The enemy are stockpiling weapon caches around the town. Locate and destroy them.",format ["%1. Destroy the weapons caches",bso_gene_taskNum],"Destroy", getMarkerPos "m_1", "assigned", "destroy"]]call FHQ_fnc_ttAddTasks;
 
 	// Setup QRF
-
-
 	[getMarkerPos "m_1"] call gene_fnc_qrf_setup;
 
 };	

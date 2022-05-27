@@ -1,7 +1,7 @@
 params ["_pos","_atkPos",["_numGrps",0],["_AtkRadius",300]];
 
 if (_numGrps == 0) then {
-	_numGrps = floor random [2,3,5];
+	_numGrps = floor random [3,4,6];
 };
 
 for "_i" from 1 to _numGrps do {

@@ -69,7 +69,6 @@ if (isServer) then {
 	[[format ["Task_%1",bso_gene_taskNum],"Locate the HVT, and capture them by returning them to the Main Base.",format ["%1. Capture HVT",bso_gene_taskNum],"Capture", getMarkerPos "M_1", "assigned", "meet"]]call FHQ_fnc_ttAddTasks;
 
 	// Setup QRF
-
 	[getPos HVT1] call gene_fnc_qrf_setup;
 
 };	

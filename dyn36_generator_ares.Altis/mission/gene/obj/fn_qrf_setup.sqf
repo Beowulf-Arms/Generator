@@ -4,7 +4,7 @@ params ["_cPos",["_numQRF",0],["_QRFtRadius",300]];
 private _totalQRF = _numQRF;
 
 if (_totalQRF == 0) then {
-	_totalQRF = floor random [1,2,4];
+	_totalQRF = floor random [1,3,4];
 };
 
 
