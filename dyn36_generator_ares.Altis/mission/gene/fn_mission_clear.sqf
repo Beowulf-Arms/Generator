@@ -6,11 +6,10 @@ if (isServer) then {
 	{if (side _x == bso_gene_side) then {deleteVehicle  _x;};} forEach allUnits;
 	
 	
-	{deleteVehicle _x} forEach nearestObjects [getMarkerPos "m_1", ["EmptyDetector"], 2000];
-	{deleteVehicle _x} forEach nearestObjects [getMarkerPos "m_1", ["bso_obj_cache"], 2000];
-	{deleteVehicle _x} forEach nearestObjects [getMarkerPos "m_1", ["Land_HelipadEmpty_F"], 2000];
+	{deleteVehicle _x} forEach nearestObjects [getMarkerPos "m_1", ["EmptyDetector","bso_obj_cache","Land_HelipadEmpty_F"], 3000];
 
-	
+	{ if (typeOf _x in bso_gene_hvt) then { deleteVehicle _x; } } forEach allUnits;
+
 	deleteMarker "obj1";
 	deleteMarker "border";
 	deleteMarker "border_1";
