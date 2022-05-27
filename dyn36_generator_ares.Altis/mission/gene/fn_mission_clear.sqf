@@ -26,6 +26,7 @@ if (isServer) then {
 	deleteMarker "QrfHeloLZ1Mark";
 	deleteMarker "QrfHeloLZ2Mark";
 	deleteMarker "QrfHeloLZ3Mark";
+	{deleteMarker _x} forEach bso_obj_IntelMarks;
 	
 	"m_1" setMarkerPos (getMarkerPos "m_0");
 	"gene_stageArea" setMarkerPos (getPos default_stageArea);

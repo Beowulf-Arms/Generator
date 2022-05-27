@@ -5,9 +5,9 @@ params ["_unit"];
 	_unit,											// object the action is attached to
 	"Search for Intel",										// Title of the action
 	"\a3\ui_f\data\igui\cfg\actions\take_ca.paa",	// Idle icon shown on screen
-	"\a3\ui_f\data\igui\cfg\actions\take_ca.paa",	// Progress icon shown on screen
-	"_this distance _target < 1",						// Condition for the action to be shown
-	"_caller distance _target < 1",						// Condition for the action to progress
+	"",	// Progress icon shown on screen
+	"_this distance _target < 2",						// Condition for the action to be shown
+	"_caller distance _target < 2",						// Condition for the action to progress
 	{},													// Code executed when action starts
 	{},													// Code executed on every progress tick
 	{ _this call gene_fnc_intelFound;},				// Code executed on completion

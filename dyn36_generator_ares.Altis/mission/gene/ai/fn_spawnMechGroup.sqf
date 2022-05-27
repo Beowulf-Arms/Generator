@@ -22,4 +22,18 @@ for "_i" from 1 to _cargoSeats do {
     _unit moveInAny vehicle leader _unit;
 };
 
+if (bso_gene_IntelObj in ["CACHE","HVT"]) then {
+    
+   _leader = leader _group;
+
+   [_leader] call gene_fnc_intelAction;
+
+   removeBackpackGlobal _leader;
+   _leader addBackpackGlobal "UK3CB_B_O_Radio_Backpack";
+
+   removeHeadgear _leader;
+   _leader addHeadgear "H_Beret_blk";
+
+};
+
 _group

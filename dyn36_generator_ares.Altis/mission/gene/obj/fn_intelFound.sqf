@@ -27,6 +27,7 @@ if (_IntRadius <= 25 ) then {
 		_IntMark setMarkerColor "ColorEast";
 		_IntMark setMarkerBrush  "Border";
 		_IntMark setMarkerSize [_IntRadius, _IntRadius];
+		bso_obj_IntelMarks = bso_obj_IntelMarks + [_IntMark];
 		_subject setVariable ["bso_gene_IntelMarker", _IntMark, true];	
 		_subject setVariable ["bso_gene_IntelRadius", (_IntRadius / 2), true];
 		hint "New intel on an objective location found!";
