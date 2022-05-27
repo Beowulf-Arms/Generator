@@ -261,11 +261,22 @@ _armoury = _this select 0;
 
 		// Grenades
 		"HandGrenade",
+		"ACE_M14",
+		"ACE_M84",
+		"ACE_CTS9",
 		"SmokeShell",
 		"SmokeShellRed",
 		"SmokeShellGreen",
 		"SmokeShellBlue",
 		"SmokeShellPurple",
+
+		"ACE_Chemlight_HiBlue",
+		"ACE_Chemlight_HiGreen",
+		"ACE_Chemlight_HiRed",
+		"ACE_Chemlight_HiWhite",
+		"ACE_Chemlight_HiYellow",
+		"ACE_Chemlight_UltraHiOrange",
+
 
 		"DemoCharge_Remote_Mag",
 		"SatchelCharge_Remote_Mag",

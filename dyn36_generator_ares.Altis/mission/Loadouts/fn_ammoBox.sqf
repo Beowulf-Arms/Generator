@@ -29,6 +29,8 @@ if (isServer) then {
 
 	_box addMagazineCargoGlobal  ["HandGrenade", 16];
 	_box addMagazineCargoGlobal  ["ACE_M14", 16];
+	_box addMagazineCargoGlobal  ["ACE_M84", 16];
+	_box addMagazineCargoGlobal  ["ACE_CTS9", 3];
 	_box addMagazineCargoGlobal  ["SmokeShell", 8];
 	_box addMagazineCargoGlobal  ["SmokeShellRed", 1];
 	_box addMagazineCargoGlobal  ["SmokeShellGreen", 1];
