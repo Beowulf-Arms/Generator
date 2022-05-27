@@ -1,5 +1,4 @@
-//params ["_positionObject"];
-params ["_pos",["_Radius",100]];
+params ["_pos","_atkPos",["_Radius",300]];
 
 //private _pos = getPosATL _positionObject;
 
@@ -10,9 +9,9 @@ private _atkType = floor random 3;
 private _gLeader = leader _group;
 
 if (_atkType == 1) then {
-	[_gLeader, _pos] spawn lambs_wp_fnc_taskAssault;
+	[_gLeader, _atkPos] spawn lambs_wp_fnc_taskAssault;
 } else {
-	private _wp1 = [_group, _pos, _Radius, "MOVE", "AWARE", "YELLOW", "FULL", "VEE"] call CBA_fnc_addWaypoint;
+	private _wp1 = [_group, _atkPos, _Radius, "MOVE", "AWARE", "YELLOW", "FULL", "VEE"] call CBA_fnc_addWaypoint;
 };
 
 

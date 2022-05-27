@@ -65,6 +65,7 @@ class gene
 		class cache_gen {};
 		class spawnTrench {};
         class gene_markers {};
+		class qrf_setup {};
         class gene_qrf {};
         class gene_qrfMech {};
         class gene_qrf_helo {};
