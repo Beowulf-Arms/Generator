@@ -63,6 +63,7 @@ class gene
 	{
 		file = "mission\gene\obj";
 		class cache_gen {};
+		class find_building_pos {};
 		class spawnTrench {};
         class gene_markers {};
 		class qrf_setup {};

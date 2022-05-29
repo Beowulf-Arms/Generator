@@ -2,39 +2,24 @@ if (!isServer) exitWith {};
 
 params ["_box_type", "_number_of_caches", "_min_spacing", "_range", "_center_pos", "_min_house_size"];
 
-private _houselist = nearestObjects [_center_pos, ["house"], _range];
+private _positions = [_center_pos, _range, _number_of_caches, _min_spacing, _min_house_size] call gene_fnc_find_building_pos;
 
 private _caches = [];
 
-for "_i" from 1 to _number_of_caches do {
-    private _attempts = 0;
-    while { _attempts < 100 } do {
-        _attempts = _attempts + 1;
-        
-        private _house = selectRandom _houselist;
-        private _housepos  = _house buildingPos -1;
+{
+    private _pos = _x;
 
-        if (count _housepos < _min_house_size) then { continue; };
+    private _cache = createVehicle [_box_type, _pos, [], 0, "NONE"];
 
-        private _pos = selectRandom _housepos;
+    clearWeaponCargoGlobal _cache;
+    clearMagazineCargoGlobal _cache;
+    clearItemCargoGlobal _cache;
+    clearBackpackCargoGlobal _cache;
 
-        if (_caches findIf { _x distance _pos < _min_spacing } >= 0) then { continue; };
+    _cache setPosATL _pos;
+    _cache setdir random 360;
 
-        private _cache = createVehicle [_box_type, _pos, [], 0, "NONE"];
-
-        clearWeaponCargoGlobal _cache;
-        clearMagazineCargoGlobal _cache;
-        clearItemCargoGlobal _cache;
-        clearBackpackCargoGlobal _cache;
-
-        _cache setPosATL _pos;
-        _cache setdir random 360;
-
-        _caches pushBack _cache;
-
-        break;
-    };
-    if (_attempts >= 100) then { break; };
-};
+    _caches pushBack _cache;
+} forEach _positions;
 
 _caches
