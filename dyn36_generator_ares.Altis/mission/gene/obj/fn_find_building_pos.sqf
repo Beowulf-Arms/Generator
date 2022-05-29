@@ -3,9 +3,11 @@
 Finds building positions in _range around _center_pos, filtering based on parameters.
 
 Keeps at least _min_spacing meters between found positions, and positions in _avoid_positions.
-_min_house_size is the lower bound for the count of buildingPos of a building. Checked after balconies are filterd, if that filter is used.
+_min_house_size is the lower bound for the count of buildingPos of a building. Checked before filters.
 
 All positions are ATL.
+
+Blacklist is an array of pairs of building type and a position index array. No a building must only occur once example: [["Land_i_Stone_HouseBig_V1_F", [2]]]
 
 >>> _include_close_positions = False
 
@@ -29,7 +31,8 @@ params [
     ["_prefer_highground", true],
     ["_avoid_balconies", true],
     ["_avoid_positions", []],
-    ["_include_close_positions", false]
+    ["_include_close_positions", false],
+    ["_blacklist", []]
 ];
 
 private _houselist = _center_pos nearObjects ["house", _range];
@@ -43,29 +46,45 @@ for "_i" from 1 to _number_of_positions do {
         _attempts = _attempts + 1;
         
         private _house = selectRandom _houselist;
-        private _housepos  = _house buildingPos -1;
-        
+
         if (_positions findIf { _x distance _house < _min_spacing } >= 0) then { continue; };
 
+        private _housepos  = _house buildingPos -1;
+        
+        if (count _housepos < _min_house_size) then { continue; };
+
+        private _obj_house_pos = +_housepos; // list that we can filter, but still keep the original around
+
+        private _blacklist_index = _blacklist findIf { _x select 0 == typeof _house };
+
+        if (_blacklist_index != -1) then {
+            private _building_pos_blacklist = _blacklist select _blacklist_index select 1;
+            _building_pos_blacklist sort false; // back to front, so that we can just delete the index
+            {
+                _obj_house_pos deleteAt _x;
+            } forEach _building_pos_blacklist;
+        };
+    
         if (_avoid_balconies) then {
-            _housepos = _housepos select {
+            _obj_house_pos = _obj_house_pos select {
                 private _asl = AGLToASL _x;
                 lineIntersects [_asl vectorAdd [0, 0, 0.2], _asl vectorAdd [0, 0, 10]]
             };
         };
-
-        if (count _housepos < _min_house_size) then { continue; };
+        
+        if (count _obj_house_pos == 0) then { continue; };
 
         private "_pos";
         if (_prefer_highground) then {
             private _highground_z = -9999;
             {
-                _highground_z = _highground_z max (_x select 2);
-            } forEach _housepos;
-            private _highground_positions = _housepos select { _x select 2 >= _highground_z - 0.1 };
+                private _asl = AGLToASL _x;
+                _highground_z = _highground_z max (_asl select 2);
+            } forEach _obj_house_pos;
+            private _highground_positions = _obj_house_pos select { (AGLToASL _x) select 2 >= _highground_z - 0.1 };
             _pos = selectRandom _highground_positions;
         } else {
-            _pos = selectRandom _housepos;
+            _pos = selectRandom _obj_house_pos;
         };
 
         _positions pushBack _pos;

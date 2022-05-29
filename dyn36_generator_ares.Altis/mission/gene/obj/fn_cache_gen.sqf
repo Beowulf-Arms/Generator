@@ -2,7 +2,7 @@ if (!isServer) exitWith {};
 
 params ["_box_type", "_number_of_caches", "_min_spacing", "_range", "_center_pos", "_min_house_size"];
 
-private _positions = [_center_pos, _range, _number_of_caches, _min_spacing, _min_house_size] call gene_fnc_find_building_pos;
+private _positions = [_center_pos, _range, _number_of_caches, _min_spacing, _min_house_size, true, true, [], false, [["Land_i_Stone_HouseBig_V1_F", [2]]]] call gene_fnc_find_building_pos;
 
 private _caches = [];
 
