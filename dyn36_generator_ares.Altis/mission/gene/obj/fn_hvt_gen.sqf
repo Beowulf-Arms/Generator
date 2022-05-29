@@ -1,6 +1,6 @@
 if (!isServer) exitWith {};
 
-params ["_pos",["_distance",100],["_min_house_size",4],["_guarded",true]];
+params ["_pos",["_distance",100],["_min_house_size",6],["_guarded",true]];
 
 // Get HVT Location
 

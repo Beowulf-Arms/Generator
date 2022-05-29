@@ -22,7 +22,7 @@ for "_i" from 1 to _cargoSeats do {
     _unit moveInAny vehicle leader _unit;
 };
 
-if (bso_gene_IntelObj in ["CACHE","HVT"]) then {
+if (bso_gene_IntelObj in ["CACHE","HVT","LAPTOP"]) then {
     
    _leader = leader _group;
 

@@ -1,3 +1,6 @@
+// example debug call
+//[getMarkerPos "m_1", 100, 1, 5, 6] call compile preprocessFileLineNumbers "mission\gene\obj\debug_find_building_pos.sqf";
+
 if (isNil "debug_cleanup") then { debug_cleanup = []; };
 
 {

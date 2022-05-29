@@ -17,7 +17,7 @@ for "_i" from 1 to (_groupCount - 1) do {
     _unitType createUnit [_position, _group];
 };
 
-if (bso_gene_IntelObj in ["CACHE","HVT"]) then {
+if (bso_gene_IntelObj in ["CACHE","HVT","LAPTOP"]) then {
     
    _leader = leader _group;
 

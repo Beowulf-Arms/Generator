@@ -10,6 +10,7 @@ class gene
         class mission_cache {};
         class mission_elimHVT {};
         class mission_capHVT {};
+        class mission_dlLaptop {};
 		
 	};
 	
@@ -70,9 +71,15 @@ class gene
         class gene_qrf {};
         class gene_qrfMech {};
         class gene_qrf_helo {};
+		class qrfWaves_setup {};
+		class qrfWave {};
 		class hvt_gen {};
 		class timeAcc {};
 		class intelAction {};
 		class intelFound {};
+		class laptopAction {};
+		class laptop_gen {};
+		class downloadStart {};
+
 	};
 };
