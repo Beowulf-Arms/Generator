@@ -1,5 +1,5 @@
 // Will create a dynamic QRF (no trigger!) consisting of a number of groups
-params ["_cPos",["_qrfType", "random"],["_numQRF",0],["_QRFtRadius",300]];
+params ["_cPos",["_qrfType", "random"],["_numQRF",0],["_QRFtRadius",200]];
 
 private _totalQRF = _numQRF;
 

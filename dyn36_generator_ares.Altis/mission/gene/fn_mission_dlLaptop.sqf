@@ -70,6 +70,6 @@ if (isServer) then {
 	private _trgQRF = createTrigger ["EmptyDetector", getPos Laptop1, false];
 	_trgQRF setTriggerArea [300, 300, 0, false, 50];
 	_trgQRF setTriggerActivation [bso_gene_side_blu, bso_gene_sideD, false];
-	_trgQRF setTriggerStatements ["this", "[getPos Laptop1, bso_gene_dataCaptured] spawn gene_fnc_qrfWaves_setup",""];
+	_trgQRF setTriggerStatements ["this", "[getPos Laptop1, bso_gene_dataCaptured] spawn gene_fnc_qrfWaveSetup",""];
 
 };	
