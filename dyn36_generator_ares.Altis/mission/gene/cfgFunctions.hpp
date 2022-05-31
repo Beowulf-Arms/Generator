@@ -71,7 +71,7 @@ class gene
         class gene_qrf {};
         class gene_qrfMech {};
         class gene_qrf_helo {};
-		class qrfWaves_setup {};
+		class qrfWaveSetup {};
 		class qrfWave {};
 		class hvt_gen {};
 		class timeAcc {};

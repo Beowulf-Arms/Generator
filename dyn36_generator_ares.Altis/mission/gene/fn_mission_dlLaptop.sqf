@@ -66,7 +66,10 @@ if (isServer) then {
 	
 	[[format ["Task_%1",bso_gene_taskNum],"Locate the Computer Terminal, and download the data to a usb stick before returning it to base.",format ["%1. Capture Data",bso_gene_taskNum],"Download", getMarkerPos "M_1", "assigned", "download"]]call FHQ_fnc_ttAddTasks;
 
-	// Setup QRF
-	[getPos Laptop1, bso_gene_dataCaptured] call gene_fnc_qrfWaves_setup;
+	// Start QRF Waves
+	private _trgQRF = createTrigger ["EmptyDetector", getPos Laptop1, false];
+	_trgQRF setTriggerArea [300, 300, 0, false, 50];
+	_trgQRF setTriggerActivation [bso_gene_side_blu, bso_gene_sideD, false];
+	_trgQRF setTriggerStatements ["this", "[getPos Laptop1, bso_gene_dataCaptured] spawn gene_fnc_qrfWaves_setup",""];
 
 };	

@@ -1,49 +1,35 @@
-if (!isServer) exitWith {};
-// Will create a dynamic QRF(s) 
-params ["_cPos","_qrfType"];
+// Will create a dynamic QRF (no trigger!) consisting of a number of groups
+params ["_cPos",["_qrfType", "random"],["_numQRF",0],["_QRFtRadius",300]];
 
-[_cPos, _qrfType] spawn {
-	params ["_cPos","_qrfType"];
-	while {bso_gene_WaveQRF} do {
+private _totalQRF = _numQRF;
 
-	// Number of seperate QRFs that come at once
-		private _totalQRF = floor random [1,2,3];
+if (_totalQRF == 0) then {
+	_totalQRF = floor random [1,3,4];
+};
 
-		for "_i" from 1 to _totalQRF do {
-			switch _qrfType do
-			{
-				case "inf": {
-					_qrfTypeW = ["inf", "mech"] selectRandomWeighted [1,0];
-				};
-				case "mech": {
-					_qrfTypeW = ["inf", "mech"] selectRandomWeighted [0,1];
-				};
-				case "random": {
-					_qrfTypeW = ["inf", "mech"] selectRandomWeighted [0.3,0.7];
-				};	
-			};
 
-			if (_qrfTypeW == "inf") then {
+for "_i" from 1 to _totalQRF do {
+	
+	if (_qrfType == "random") then {_qrfType = ["inf", "mech"] selectRandomWeighted [0.3,0.7];};
 
-				private _qrfPos = [getMarkerPos "m_1", 1000, 1500, 20, 0, 0.7, 0, [[getMarkerPos "gene_stageArea", 1000]]] call BIS_fnc_findSafePos;
-			} else {
-				private _qrfPos = [getMarkerPos "m_1", 1000, 1500, 20, 0, 0.7, 0, [[getMarkerPos "gene_stageArea", 1000]]] call BIS_fnc_findSafePos;
-			};
-			//private _atkPos = (getMarkerPos "m_1");
-			private _tempObj = "Land_HelipadEmpty_F" createVehicle _qrfPos;
-			private _qrfAtkDir = (_tempObj getRelDir _qrfPos) + 180;
+	private _qrfPos = [getMarkerPos "m_1", 2000, 3000, 20, 0, 0.7, 0, [[getMarkerPos "gene_stageArea", 1000]]] call BIS_fnc_findSafePos;
+	//private _atkPos = (getMarkerPos "m_1");
+	private _tempObj = "Land_HelipadEmpty_F" createVehicle _qrfPos;
+	private _qrfAtkDir = (_tempObj getRelDir _qrfPos) + 180;
 
-			switch _qrfTypeW do
-			{
-				case "inf": {
-					[_qrfPos,_cPos] call gene_fnc_gene_qrf;
-				};
-				case "mech": {
-					[_qrfPos, _cPos, _qrfAtkDir] call gene_fnc_gene_qrfMech;
-				};
-			};
+	private _ranPos = [[[_cPos, _QRFtRadius]]] call BIS_fnc_randomPos;
+
+
+	switch _qrfType do
+	{
+		case "inf": {
+			[_qrfPos, _ranPos] call gene_fnc_gene_qrfMech;
+			[str _ranPos, _ranPos, "ICON", [1, 1], "COLOR:", "ColorRed","TYPE:","mil_triangle","TEXT:","Inf QRF"] call CBA_fnc_createMarker; 
 		};
+		case "mech": {
+			[_qrfPos, _ranPos, _qrfAtkDir] call gene_fnc_gene_qrfMech;
+			[str _ranPos, _ranPos, "ICON", [1, 1], "COLOR:", "ColorRed","TYPE:","mil_triangle","TEXT:","MECH QRF"] call CBA_fnc_createMarker; 
+		};
+	};	
 
-		sleep (floor random [180,300,600]);
-	};
 };
