@@ -6,6 +6,6 @@ if (!isServer) exitWith {};
 while {!_exitVariable} do {
 
 	[_cPos,_qrfType] call gene_fnc_qrfWave;
-	hint "QRF spawned!";
-	sleep (floor random [18,30,60]);
+	//hint "QRF spawned!";
+	sleep (floor random [180,240,300]);
 };

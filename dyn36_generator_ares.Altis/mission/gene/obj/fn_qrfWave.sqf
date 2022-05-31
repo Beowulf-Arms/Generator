@@ -24,11 +24,11 @@ for "_i" from 1 to _totalQRF do {
 	{
 		case "inf": {
 			[_qrfPos, _ranPos] call gene_fnc_gene_qrfMech;
-			[str _ranPos, _ranPos, "ICON", [1, 1], "COLOR:", "ColorRed","TYPE:","mil_triangle","TEXT:","Inf QRF"] call CBA_fnc_createMarker; 
+			//[str _ranPos, _ranPos, "ICON", [1, 1], "COLOR:", "ColorRed","TYPE:","mil_triangle","TEXT:","Inf QRF"] call CBA_fnc_createMarker; 
 		};
 		case "mech": {
 			[_qrfPos, _ranPos, _qrfAtkDir] call gene_fnc_gene_qrfMech;
-			[str _ranPos, _ranPos, "ICON", [1, 1], "COLOR:", "ColorRed","TYPE:","mil_triangle","TEXT:","MECH QRF"] call CBA_fnc_createMarker; 
+			//[str _ranPos, _ranPos, "ICON", [1, 1], "COLOR:", "ColorRed","TYPE:","mil_triangle","TEXT:","MECH QRF"] call CBA_fnc_createMarker; 
 		};
 	};	
 
