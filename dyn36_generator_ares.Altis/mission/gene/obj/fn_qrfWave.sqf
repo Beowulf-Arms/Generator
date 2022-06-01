@@ -14,8 +14,7 @@ for "_i" from 1 to _totalQRF do {
 
 	private _qrfPos = [getMarkerPos "m_1", 2000, 3000, 20, 0, 0.7, 0, [[getMarkerPos "gene_stageArea", 1000]]] call BIS_fnc_findSafePos;
 	//private _atkPos = (getMarkerPos "m_1");
-	private _tempObj = "Land_HelipadEmpty_F" createVehicle _qrfPos;
-	private _qrfAtkDir = (_tempObj getRelDir _qrfPos) + 180;
+	private _qrfAtkDir = (_qrfPos getDir _qrfPos) + 180;
 
 	private _ranPos = [[[_cPos, _QRFtRadius]]] call BIS_fnc_randomPos;
 

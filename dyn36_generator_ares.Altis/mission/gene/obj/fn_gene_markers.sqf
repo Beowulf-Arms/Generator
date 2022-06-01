@@ -26,9 +26,8 @@
 
 
 	//Sets Staging Area. Checks if on road, if no road is nearby. Will find a safe spot not in water, and not in AO
-	private _StageDir = default_stageArea getRelDir (getMarkerPos "m_1");
-	private _tempObj = "Land_HelipadEmpty_F" createVehicle (getMarkerPos "m_1");
-	private _stagePos = _tempObj getRelPos [2500, _stageDir + 180]; //This requires an object to reference... fuck arma
+	private _StageDir = default_stageArea getDir (getMarkerPos "m_1");
+	private _stagePos = (getMarkerPos "m_1") getPos [2500, _stageDir + 180];
 	private _nearestRoad = [_stagePos, 300] call BIS_fnc_nearestRoad;
 	private _CheckRoad = isNull _nearestRoad;
 	if (_CheckRoad) then {
@@ -42,5 +41,4 @@
 		"gene_stageArea" setMarkerPos _stageSafeAct;
 		gene_stageAreaPoint setPos _stageSafeAct;
 	};
-	//deleteVehicle _tempObj;
 
