@@ -1,4 +1,4 @@
-params ["_pos","_atkPos",["_Radius",300]];
+params ["_pos","_atkPos",["_Radius",100]];
 
 //private _pos = getPosATL _positionObject;
 

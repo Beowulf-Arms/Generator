@@ -1,5 +1,5 @@
 // Will create a dynamic QRF(s) 
-params ["_cPos",["_numQRF",0],["_QRFtRadius",300]];
+params ["_cPos",["_qrfType","random"],["_numQRF",0],["_QRFtRadius",300],["_QRFSpawnRadiusMin",2000],["_QRFSpawnRadiusMax",3000]];
 
 private _totalQRF = _numQRF;
 
@@ -9,9 +9,9 @@ if (_totalQRF == 0) then {
 
 
 for "_i" from 1 to _totalQRF do {
-	private _qrfType = ["inf", "mech"] selectRandomWeighted [0.3,0.7];
+	if (_qrfType == "random") then {_qrfType = ["inf", "mech"] selectRandomWeighted [0.3,0.7];};
 
-	private _qrfPos = [getMarkerPos "m_1", 2000, 3000, 20, 0, 0.7, 0, [[getMarkerPos "gene_stageArea", 1000]]] call BIS_fnc_findSafePos;
+	private _qrfPos = [getMarkerPos "m_1", _QRFSpawnRadiusMin, _QRFSpawnRadiusMax, 20, 0, 0.7, 0, [[getMarkerPos "gene_stageArea", 1000]]] call BIS_fnc_findSafePos;
 	//private _atkPos = (getMarkerPos "m_1");
 	private _tempObj = "Land_HelipadEmpty_F" createVehicle _qrfPos;
 	private _qrfAtkDir = (_tempObj getRelDir _qrfPos) + 180;

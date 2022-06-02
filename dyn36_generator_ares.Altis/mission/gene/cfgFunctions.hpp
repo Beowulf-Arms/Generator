@@ -57,6 +57,8 @@ class gene
 		class spawnMechGuard {};
 		class spawnAtkVGuard {};
 		class spawnStaticWpn {};
+
+		class spawnMechAtk_insert {};
 		
 	};
 

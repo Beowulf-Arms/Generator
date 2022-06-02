@@ -1,4 +1,4 @@
-params ["_pos","_atkPos",["_Radius",300],["_roadDir", 0]];
+params ["_pos","_atkPos",["_Radius",100],["_roadDir", 0]];
 
 private _group = [_pos,_roadDir] call gene_fnc_spawnMechGroup;
 

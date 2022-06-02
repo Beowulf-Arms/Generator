@@ -73,6 +73,13 @@ if (isServer) then {
 	[[format ["Task_%1",bso_gene_taskNum],"Locate the HVT, and capture them by returning them to the Main Base.",format ["%1. Capture HVT",bso_gene_taskNum],"Capture", getMarkerPos "M_1", "assigned", "meet"]]call FHQ_fnc_ttAddTasks;
 
 	// Setup QRF
-	[getPos HVT1] call gene_fnc_qrf_setup;
+	[getPos HVT1, "inf", 1, 50, 700, 1000] call gene_fnc_qrf_setup;
+
+	// Start QRF Waves
+	private _trgQRF = createTrigger ["EmptyDetector", getPos HVT1, false];
+	_trgQRF setTriggerArea [300, 300, 0, false, 50];
+	_trgQRF setTriggerActivation [bso_gene_side_blu, bso_gene_sideD, false];
+	_trgQRF setTriggerStatements ["this", "[getPos HVT1, ""bso_gene_ObjEnd""] spawn gene_fnc_qrfWaveSetup",""];
+
 
 };	

@@ -4,15 +4,9 @@ params ["_pos",["_distance",100],["_min_house_size",6],["_guarded",true]];
 
 // Get HVT Location
 
-private _houselist = nearestObjects [_pos, ["house"], _distance];
+private _buildingPoss = [_pos, _distance, 1, 5, _min_house_size] call gene_fnc_find_building_pos;
 
-
-private _house = selectRandom _houselist;
-private _housepos  = _house buildingPos -1;
-
-if (count _housepos < _min_house_size) then { continue; };
-
-private _hvtPos = selectRandom _housepos;
+private _hvtPos = selectRandom _buildingPoss;
 
 // create HVT
 private _hvtClass = selectRandom bso_gene_hvt;
@@ -23,7 +17,7 @@ _hvt disableAI "PATH";
 // create HVT guards
 
 if (_guarded) then {
-[getPos _hvt, 10] call gene_fnc_spawnGarrison;
+ [getPos _hvt, 10] call gene_fnc_spawnGarrison;
 };
 
 _hvt
