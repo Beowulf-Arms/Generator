@@ -21,7 +21,7 @@ if !(_numAtkVehc == 0) then {
 	// spawn mech groups
 	for "_i" from 1 to _numMechs do {
 		private _spawnPosition = [_pos, 0, 100] call BIS_fnc_findSafePos;
-		[_spawnPosition, _atkPos, _AtkRadius, _AtkDir] call gene_fnc_spawnMechAtk;
+		[_spawnPosition, _atkPos, _AtkRadius, _AtkDir] call gene_fnc_spawnMechAtk_insert;
 		
 	};
 
@@ -29,7 +29,7 @@ if !(_numAtkVehc == 0) then {
 	// if no atk vehcs needed, spawn mech groups.
 	for "_i" from 1 to _numGrps do {
 		private _spawnPosition = [_pos, 0, 100] call BIS_fnc_findSafePos;
-		[_spawnPosition, _atkPos, _AtkRadius, _AtkDir] call gene_fnc_spawnMechAtk;
+		[_spawnPosition, _atkPos, _AtkRadius, _AtkDir] call gene_fnc_spawnMechAtk_insert;
 		
 	};
 };

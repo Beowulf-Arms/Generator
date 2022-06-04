@@ -13,31 +13,32 @@ private _totalSeats = [_transType, true] call BIS_fnc_crewCount; // Number of to
 private _crewSeats = [_transType, false] call BIS_fnc_crewCount; // Number of crew seats only
 private _cargoSeats = _totalSeats - _crewSeats; // Number of total cargo/passenger seats: non-FFV + FFV
 
-private _playerCount = playersNumber bso_gene_side_bluX;
-if (_playerCount <= 5) then {_cargoSeats = (_cargoSeats /2)};
-
-
 private _infGroup = [_pos, _cargoSeats] call gene_fnc_spawnGroup;
 private _infGroupLead = leader _infGroup;
 {_x moveInAny (_trans select 0)} forEach units group _infGroupLead;
 
-_infWP1 = [_infgrp, _atkPos, 0, "MOVE", "AWARE", "RED", "FULL", "WEDGE"] call CBA_fnc_addWaypoint;
-_infWP2 = [_infgrp, _atkPos, 0, "MOVE", "SAFE", "RED", "NORMAL", "WEDGE", "[this, this, 30] call lambs_wp_fnc_taskGarrison"] call CBA_fnc_addWaypoint;
+//dismount point
+_disDir = _atkPos getDir _pos;
+_disPointOg = _atkPos getPos [_DismountRadius, _disDir];
+_disPoint = [[[_disPointOg, 50]], []] call BIS_fnc_randomPos;
+
+
+_infWP1 = [_infGroup, _atkPos, 0, "MOVE", "AWARE", "RED", "FULL", "WEDGE"] call CBA_fnc_addWaypoint;
+_infWP1 setWaypointStatements ["true", "this setVariable [""lambs_danger_enableGroupReinforce"", true, true]"];
+_infWP2 = [_infGroup, _atkPos, 0, "MOVE", "SAFE", "RED", "NORMAL", "WEDGE", "[this, this, 30] call lambs_wp_fnc_taskGarrison"] call CBA_fnc_addWaypoint;
 
 
 if (_APCSupport) then {
 	// APC Waypoints
-	[_Tgroup, _atkPos, _DismountRadius, "TR UNLOAD", "SAFE", "GREEN", "NORMAL", "NO CHANGE"] call CBA_fnc_addWaypoint;
-	[_Tgroup, _atkPos, 0, "MOVE", "AWARE", "GREEN", "LIMITED", "NO CHANGE"] call CBA_fnc_addWaypoint;
+	_TransWP1 = [_Tgroup, _disPoint, _DismountRadius, "TR UNLOAD", "SAFE", "GREEN", "NORMAL", "NO CHANGE"] call CBA_fnc_addWaypoint;
+	_TransWP1 setWaypointCompletionRadius _DismountRadius;
+	_TransWP2 = [_Tgroup, _atkPos, 0, "MOVE", "AWARE", "GREEN", "LIMITED", "NO CHANGE"] call CBA_fnc_addWaypoint;
+	_TransWP2 setWaypointStatements ["true", "this setVariable [""lambs_danger_enableGroupReinforce"", true, true]"];
 
 } else {
 	// Trans waypoints
-	_TransWP1 = [_Tgroup, _atkPos, _DismountRadius, "TR UNLOAD", "CARELESS", "GREEN", "NORMAL", "NO CHANGE"] call CBA_fnc_addWaypoint;
+	_TransWP1 = [_Tgroup, _disPoint, 0, "TR UNLOAD", "CARELESS", "GREEN", "NORMAL", "NO CHANGE"] call CBA_fnc_addWaypoint;
+	_TransWP1 setWaypointCompletionRadius _DismountRadius;
 	_TransWP2 = [_Tgroup, _pos, 0, "MOVE", "CARELESS", "GREEN", "NORMAL", "NO CHANGE"] call CBA_fnc_addWaypoint;
 	_TransWP2 setWaypointStatements ["true", "cleanUpveh = vehicle leader this; {deleteVehicle _x} forEach crew cleanUpveh + [cleanUpveh];"];
 };
-
-
-
-
-//_group setVariable ["lambs_danger_enableGroupReinforce", true, true];
