@@ -11,6 +11,7 @@ class gene
         class mission_elimHVT {};
         class mission_capHVT {};
         class mission_dlLaptop {};
+        class medicLevelPlayers {};
 		
 	};
 	

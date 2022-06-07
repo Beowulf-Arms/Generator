@@ -37,6 +37,16 @@ class Params
 		values[] = {1,2,3,4,5};
 		default = 1;
 	};
+	
+	class MedicLevel
+	{
+		title = "Player Medic Level";
+		texts[] = {"Medic Slots Only","All Slots"};
+		values[] = {0,1};
+		default = 0;
+		function = "gene_fnc_medicLevelPlayers"; // (Optional) Function called when player joins, selected value is passed as an argument
+ 		isGlobal = 0; // (Optional) 1 to execute script / function locally for every player who joins, 0 to do it only on server
+	};
 
     /*	
         class GroupTele
