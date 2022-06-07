@@ -29,6 +29,14 @@ class Params
 		function = "gene_fnc_timeAcc"; // (Optional) Function called when player joins, selected value is passed as an argument
  		isGlobal = 0; // (Optional) 1 to execute script / function locally for every player who joins, 0 to do it only on server
 	};
+	
+	class AIFaction
+	{
+		title = "Enemy Faction";
+		texts[] = {"(BSO) FIA","(BSO) CSAT Iran","(3CB) Takistani Army","(3CB) NAPA","AAF (INDFOR)"};
+		values[] = {1,2,3,4,5};
+		default = 1;
+	};
 
     /*	
         class GroupTele
