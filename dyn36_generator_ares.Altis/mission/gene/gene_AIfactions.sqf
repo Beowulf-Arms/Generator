@@ -250,7 +250,7 @@ switch (_aiFaction) do
 		bso_gene_hvt = ["UK3CB_AAF_I_OFF"];
 
 		// Group Leader. Created for all infantry groups. Can be any unit (or = opfgrp)
-		bso_gene_gl = ["I_Story_Colonel_F"];
+		bso_gene_gl = ["I_soldier_SL_F"];
 
 		// Array of infantry used for faction. First entry used for static weapons. To reduce ratio of "special" weapons, add more non-specials. EG Multiple rifle classes.
 		bso_gene_opfgrp = ["I_soldier_F","I_soldier_F","I_soldier_F","I_Soldier_AR_F","I_Soldier_LAT_F","I_Soldier_rMAT_F","I_Soldier_MG_F","I_Soldier_M_F","I_soldier_F","I_soldier_F","I_soldier_F","I_soldier_F","I_soldier_F","I_soldier_F","I_soldier_F","I_Soldier_LAT_F","I_Soldier_AR_F","I_Soldier_MG_F","I_Soldier_MAT_F","I_BSO_AAF_AA_BMS_MK2"];	

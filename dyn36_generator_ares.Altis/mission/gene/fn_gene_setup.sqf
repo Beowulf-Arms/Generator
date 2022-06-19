@@ -34,6 +34,14 @@ if (isServer) then
 
 	gene_atk_groups = [];
 	publicVariable "gene_atk_groups";
+
+	bsoFaction = switch ("PlayerFaction" call BIS_fnc_getParamValue) do
+    {
+        case 1:	{ "aaf" };
+        case 2:	{ "csat" };
+        case 3:	{ "racs" };
+    };
+    publicVariable "bsoFaction";
 };
 
 

@@ -29,6 +29,14 @@ class Params
 		function = "gene_fnc_timeAcc"; // (Optional) Function called when player joins, selected value is passed as an argument
  		isGlobal = 0; // (Optional) 1 to execute script / function locally for every player who joins, 0 to do it only on server
 	};
+
+	class PlayerFaction
+	{
+		title = "Player Faction";
+		texts[] = {"AAF SF","CSAT SF","RACS SF (WIP)"};
+		values[] = {1,2,3};
+		default = 1;
+	};
 	
 	class AIFaction
 	{

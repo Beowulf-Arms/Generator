@@ -3,7 +3,7 @@ class gene
 	class main
 	{
 		file = "mission\gene";
-		class gene_setup {};
+		class gene_setup { preInit=1; };
 		class gene_admin {};
 		class gene_mb {};
         class mission_clear {};
