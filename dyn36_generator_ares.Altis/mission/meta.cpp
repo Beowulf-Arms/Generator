@@ -9,7 +9,7 @@
 Use the fields below to set your mission attributes. For assistance speak to an admin or see the BI wiki for Description.ext
 */
 
-overviewText = "1-36<br />DYN<br />Unlimited<br />Advanced Medical<br />Dynamic DAC Generator - Altian Rangers take on the FIA over Altis<br />JIP teleport to Leader<br /><br />Walker";
+overviewText = "1-36<br />DYN<br />Unlimited<br />Advanced Medical<br />Beowulfs Dynamic Mission Generator - Altis International Airbase<br /><br />Walker";
 
 /*
 
@@ -39,7 +39,7 @@ Author 															//<!--- This is you!!
 overviewPicture = "mission\gene_ares.jpg";								// <!-- Mission Picture (Use jpg at 1024x512 for quality/compression)
 loadScreen = "mission\gene_ares.jpg";									// <!-- Loading Screen Picture (See above)
 OnLoadName = "Generator - Ares";									// <!-- Mission Name (Just Text)
-OnLoadMission = "AAF SF are unleashed on the FIA insurgents"; 	
+OnLoadMission = "Beowulfs Dynamic Mission Generator - Altis International Airbase"; 	
 author="Walker";												// <!-- This is you!!
 
 class Header {

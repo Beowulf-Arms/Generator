@@ -72,34 +72,27 @@ class aaf //Name of your faction referenced in the init call
 	class Sniper // Class Names
 		{
 			name = "Sniper";
-			primaryWeapon = "ptv_TRG42";
-			primaryWeaponItems[] = {"ptv_5Rnd_86x70_TRG42","muzzle_snds_338_black","optic_lrps","ptv_hbrs"};
+			primaryWeapon = "srifle_GM6_F";
+			primaryWeaponItems[] = {"5Rnd_127x108_APDS_Mag","optic_lrps"};
 			handgun = "hlc_pistol_P226R_Combat";
 			handgunItems[] = {"hlc_15Rnd_9x19_B_P226"};
 			magazines[] = {
-				"ptv_5Rnd_86x70_TRG42",
-				"ptv_5Rnd_86x70_TRG42",
-				"ptv_5Rnd_86x70_TRG42",				
-				"ptv_5Rnd_86x70_TRG42",
-				"ptv_5Rnd_86x70_TRG42",
-				"ptv_5Rnd_86x70_TRG42",
-				"ptv_5Rnd_86x70_TRG42",
+				"5Rnd_127x108_APDS_Mag",
+				"5Rnd_127x108_APDS_Mag",
+				"5Rnd_127x108_APDS_Mag",				
+				"5Rnd_127x108_APDS_Mag",
 				"hlc_15Rnd_9x19_B_P226",
 				"hlc_15Rnd_9x19_B_P226",
 				"hlc_15Rnd_9x19_B_P226",
 				"handgrenade",
 				"handgrenade",
 				"smokeshell",
-				"ptv_5Rnd_86x70_TRG42",
-				"ptv_5Rnd_86x70_TRG42",
-				"ptv_5Rnd_86x70_TRG42",				
-				"ptv_5Rnd_86x70_TRG42",
-				"ptv_5Rnd_86x70_TRG42",
-				"ptv_5Rnd_86x70_TRG42",
-				"ptv_5Rnd_86x70_TRG42",
 				"hlc_15Rnd_9x19_B_P226",
 				"hlc_15Rnd_9x19_B_P226",
-				"hlc_15Rnd_9x19_B_P226"
+				"hlc_15Rnd_9x19_B_P226",
+				"5Rnd_127x108_APDS_Mag",
+				"5Rnd_127x108_APDS_Mag",				
+				"5Rnd_127x108_APDS_Mag"
 			};
 			items[] = {
 				"ACE_Maptools",
@@ -126,20 +119,12 @@ class aaf //Name of your faction referenced in the init call
 			backpack = "B_AssaultPack_dgtl";
 			backpackMagazines[] = {
 				"ACE_M14",
-				"ptv_5Rnd_86x70_TRG42",
-				"ptv_5Rnd_86x70_TRG42",
-				"ptv_5Rnd_86x70_TRG42",				
-				"ptv_5Rnd_86x70_TRG42",
-				"ptv_5Rnd_86x70_TRG42",
-				"ptv_5Rnd_86x70_TRG42",
-				"ptv_5Rnd_86x70_TRG42",
-				"ptv_5Rnd_86x70_TRG42",
-				"ptv_5Rnd_86x70_TRG42",
-				"ptv_5Rnd_86x70_TRG42",				
-				"ptv_5Rnd_86x70_TRG42",
-				"ptv_5Rnd_86x70_TRG42",
-				"ptv_5Rnd_86x70_TRG42",
-				"ptv_5Rnd_86x70_TRG42",
+				"hlc_15Rnd_9x19_B_P226",
+				"hlc_15Rnd_9x19_B_P226",
+				"hlc_15Rnd_9x19_B_P226",
+				"5Rnd_127x108_APDS_Mag",
+				"5Rnd_127x108_APDS_Mag",				
+				"5Rnd_127x108_APDS_Mag",
 				"handgrenade",
 				"handgrenade",
 				"ACE_M14",
@@ -205,13 +190,9 @@ class aaf //Name of your faction referenced in the init call
 			backpack = "B_AssaultPack_dgtl";
 			backpackMagazines[] = {
 				"ACE_M14",
-				"ptv_5Rnd_86x70_TRG42",
-				"ptv_5Rnd_86x70_TRG42",
-				"ptv_5Rnd_86x70_TRG42",				
-				"ptv_5Rnd_86x70_TRG42",
-				"ptv_5Rnd_86x70_TRG42",
-				"ptv_5Rnd_86x70_TRG42",
-				"ptv_5Rnd_86x70_TRG42",		
+				"5Rnd_127x108_APDS_Mag",
+				"5Rnd_127x108_APDS_Mag",				
+				"5Rnd_127x108_APDS_Mag",	
 				"20Rnd_762x51_Mag",
 				"20Rnd_762x51_Mag",
 				"20Rnd_762x51_Mag",
@@ -3027,22 +3008,23 @@ class csat //Name of your faction referenced in the init call
 
 class racs //Name of your faction referenced in the init call
  {
-		name = "Beowulf Loadout Faction"; //Human name of your faction
+		name = "RACS SF"; //Human name of your faction
 		class Rifleman // Class Names
 		{
 			name = "Rifleman";
-			primaryWeapon = "arifle_Mk20C_F";
-			primaryWeaponItems[] = {"RKSL_optic_EOT552","acc_pointer_ir","rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger"};
-			handgun = "";
-			handgunItems[] = {};
+			primaryWeapon = "hlc_rifle_CQBR";
+			primaryWeaponItems[] = {"rhsusf_acc_eotech","rhsusf_acc_grip2_tan","rhsusf_acc_anpeq15_light","hlc_30rnd_556x45_SPR_L5"};
+			handgun = "hgun_P07_F";
+			handgunItems[] = {"16Rnd_9x21_Mag"};
 			magazines[] = {
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",				
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red",
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_SPR_L5",				
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_t_L5",
+				"hlc_30rnd_556x45_t_L5",
+				"16Rnd_9x21_Mag",
 				"handgrenade",
 				"handgrenade",
 				"smokeshell"
@@ -3066,15 +3048,17 @@ class racs //Name of your faction referenced in the init call
 				"ItemCompass",
 				"ItemWatch"
 			};
-			backpack = "B_AssaultPack_dgtl";
+			backpack = "UK3CB_BAF_B_Bergen_TAN_Rifleman_A";
 			backpackMagazines[] = {
 				"ACE_M14",
-				"rhsusf_200Rnd_556x45_mixed_soft_pouch",
-				"rhsusf_200Rnd_556x45_mixed_soft_pouch",			
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red",
+				"rhsusf_200Rnd_556x45_soft_pouch_coyote",
+				"rhsusf_200Rnd_556x45_soft_pouch_coyote",			
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_t_L5",
+				"hlc_30rnd_556x45_t_L5",
+				"16Rnd_9x21_Mag",
+				"16Rnd_9x21_Mag",
 				"handgrenade",
 				"handgrenade",
 				"ACE_M14",
@@ -3088,42 +3072,92 @@ class racs //Name of your faction referenced in the init call
 				"ACE_fieldDressing",
 				"ACE_morphine"
 				};
-			uniform[] = {"UK3CB_AAF_B_U_CombatUniform_Shortsleeve_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_Shortsleeve_Digi_Mix_01","UK3CB_AAF_B_U_CombatUniform_Digi_Mix_01"};
-			vest[] = {"UK3CB_AAF_O_V_Eagle_RIF_DIGI_GRN"};
-			headgear[] = {"rhsusf_mich_bare_norotos_arc_alt","rhsusf_mich_bare_norotos_arc_alt_headset","rhsusf_mich_bare_norotos_arc_headset"};
+			uniform[] = {"rhs_uniform_g3_m81"};
+			vest[] = {"mbavkhk_r"};
+			headgear[] = {"rhsusf_opscore_ut_pelt","rhsusf_opscore_ut_pelt_cam"};
 			nvg = "";
 			insignia = "";
-		};		
+		};
+		class Rifleman2 // Class Names
+		{
+			name = "Rifleman2";
+			primaryWeapon = "rhs_weap_SCARH_FDE_CQC";
+			primaryWeaponItems[] = {"rhs_mag_20Rnd_SCAR_762x51_mk316_special","rhsusf_acc_anpeq15_light","rhsusf_acc_eotech","rhsusf_acc_grip2_tan"};
+			handgun = "hgun_P07_F";
+			handgunItems[] = {"16Rnd_9x21_Mag"};
+			magazines[] = {
+				{"rhs_mag_20Rnd_SCAR_762x51_mk316_special",5},
+				{"rhs_mag_20Rnd_SCAR_762x51_m62_tracer",2},
+				{"16Rnd_9x21_Mag",2},
+				{"HandGrenade",2},
+				"SmokeShell"
+			};
+			items[] = {
+				"ACE_salineIV_500",
+				"ACE_Flashlight_MX991",
+				"ACE_fieldDressing",
+				"ACE_fieldDressing",
+				"ACE_morphine",				
+				"ACE_tourniquet",
+				"ACE_quikclot",	
+				"ACE_fieldDressing",
+				"ACE_fieldDressing"
+			};
+			personalRadios[] = {"ACRE_PRC343"
+			};
+			assignedItems[] = {
+				"ItemGPS",
+				"ItemMap",
+				"ItemCompass",
+				"ItemWatch"
+			};
+			backpack = "UK3CB_BAF_B_Bergen_TAN_Rifleman_A";
+			backpackMagazines[] = {
+				"ACE_M14",
+				{"rhs_mag_20Rnd_SCAR_762x51_m80a1_epr",4},
+				{"rhs_mag_20Rnd_SCAR_762x51_m62_tracer",2},
+				{"rhsusf_200Rnd_556x45_soft_pouch_coyote",2},
+				"handgrenade",
+				"handgrenade",
+				"ACE_M14",
+				"smokeshell"
+				};
+			launcher = "";
+			launcherItems[] = {};
+			backpackItems[] = {
+				
+				"ACE_fieldDressing",
+				"ACE_fieldDressing",
+				"ACE_morphine"
+				};
+			uniform[] = {"rhs_uniform_g3_m81"};
+			vest[] = {"mbavkhk_r"};
+			headgear[] = {"rhsusf_opscore_ut_pelt","rhsusf_opscore_ut_pelt_cam"};
+			nvg = "";
+			insignia = "";
+		};				
 		
 		
 	class Sniper // Class Names
 		{
 			name = "Sniper";
-			primaryWeapon = "ptv_TRG42";
-			primaryWeaponItems[] = {"ptv_5Rnd_86x70_TRG42","muzzle_snds_338_black","optic_lrps","ptv_hbrs"};
-			handgun = "hlc_pistol_P226R_Combat";
+			primaryWeapon = "rhs_weap_M107_d";
+			primaryWeaponItems[] = {"rhsusf_mag_10Rnd_STD_50BMG_mk211","muzzle_snds_338_black","rhsusf_acc_m8541_d"};
+			handgun = "hgun_P07_F";
 			handgunItems[] = {"hlc_15Rnd_9x19_B_P226"};
 			magazines[] = {
-				"ptv_5Rnd_86x70_TRG42",
-				"ptv_5Rnd_86x70_TRG42",
-				"ptv_5Rnd_86x70_TRG42",				
-				"ptv_5Rnd_86x70_TRG42",
-				"ptv_5Rnd_86x70_TRG42",
-				"ptv_5Rnd_86x70_TRG42",
-				"ptv_5Rnd_86x70_TRG42",
+				"rhsusf_mag_10Rnd_STD_50BMG_mk211",
+				"rhsusf_mag_10Rnd_STD_50BMG_mk211",
+				"rhsusf_mag_10Rnd_STD_50BMG_mk211",				
+				"rhsusf_mag_10Rnd_STD_50BMG_mk211",
 				"hlc_15Rnd_9x19_B_P226",
 				"hlc_15Rnd_9x19_B_P226",
 				"hlc_15Rnd_9x19_B_P226",
 				"handgrenade",
 				"handgrenade",
 				"smokeshell",
-				"ptv_5Rnd_86x70_TRG42",
-				"ptv_5Rnd_86x70_TRG42",
-				"ptv_5Rnd_86x70_TRG42",				
-				"ptv_5Rnd_86x70_TRG42",
-				"ptv_5Rnd_86x70_TRG42",
-				"ptv_5Rnd_86x70_TRG42",
-				"ptv_5Rnd_86x70_TRG42",
+				"rhsusf_mag_10Rnd_STD_50BMG_mk211",
+				"rhsusf_mag_10Rnd_STD_50BMG_mk211",
 				"hlc_15Rnd_9x19_B_P226",
 				"hlc_15Rnd_9x19_B_P226",
 				"hlc_15Rnd_9x19_B_P226"
@@ -3150,23 +3184,13 @@ class racs //Name of your faction referenced in the init call
 				"ItemCompass",
 				"ItemWatch"
 			};
-			backpack = "B_AssaultPack_dgtl";
+			backpack = "UK3CB_BAF_B_Bergen_TAN_Rifleman_B";
 			backpackMagazines[] = {
 				"ACE_M14",
-				"ptv_5Rnd_86x70_TRG42",
-				"ptv_5Rnd_86x70_TRG42",
-				"ptv_5Rnd_86x70_TRG42",				
-				"ptv_5Rnd_86x70_TRG42",
-				"ptv_5Rnd_86x70_TRG42",
-				"ptv_5Rnd_86x70_TRG42",
-				"ptv_5Rnd_86x70_TRG42",
-				"ptv_5Rnd_86x70_TRG42",
-				"ptv_5Rnd_86x70_TRG42",
-				"ptv_5Rnd_86x70_TRG42",				
-				"ptv_5Rnd_86x70_TRG42",
-				"ptv_5Rnd_86x70_TRG42",
-				"ptv_5Rnd_86x70_TRG42",
-				"ptv_5Rnd_86x70_TRG42",
+				"rhsusf_mag_10Rnd_STD_50BMG_mk211",
+				"rhsusf_mag_10Rnd_STD_50BMG_mk211",
+				"rhsusf_mag_10Rnd_STD_50BMG_mk211",				
+				"rhsusf_mag_10Rnd_STD_50BMG_mk211",
 				"handgrenade",
 				"handgrenade",
 				"ACE_M14",
@@ -3180,9 +3204,9 @@ class racs //Name of your faction referenced in the init call
 				"ACE_fieldDressing",
 				"ACE_morphine"
 				};
-			uniform[] = {"U_I_FullGhillie_sard"};
-			vest[] = {"UK3CB_AAF_O_V_Eagle_RIF_DIGI_GRN"};
-			headgear[] = {"rhsusf_mich_bare_norotos_arc_alt","rhsusf_mich_bare_norotos_arc_alt_headset","rhsusf_mich_bare_norotos_arc_headset"};
+			uniform[] = {"rhs_uniform_g3_m81"};
+			vest[] = {"mbavkhk_r"};
+			headgear[] = {"rhsusf_opscore_ut_pelt","rhsusf_opscore_ut_pelt_cam"};
 			nvg = "";
 			insignia = "";
 			binoculars = "Rangefinder";
@@ -3191,18 +3215,18 @@ class racs //Name of your faction referenced in the init call
 		class Spotter // Class Names
 		{
 			name = "Spotter";
-			primaryWeapon = "ptv_m14_socom_wdl";
-			primaryWeaponItems[] = {"20Rnd_762x51_Mag","RKSL_optic_EOT552X","ptv_rotex308"};
-			handgun = "";
-			handgunItems[] = {};
+			primaryWeapon = "hlc_rifle_CQBR";
+			primaryWeaponItems[] = {"rhsusf_acc_eotech","rhsusf_acc_grip2_tan","rhsusf_acc_anpeq15_light","hlc_30rnd_556x45_SPR_L5"};
+			handgun = "hgun_P07_F";
+			handgunItems[] = {"16Rnd_9x21_Mag"};
 			magazines[] = {
-				"20Rnd_762x51_Mag",
-				"20Rnd_762x51_Mag",
-				"20Rnd_762x51_Mag",				
-				"20Rnd_762x51_Mag",
-				"20Rnd_762x51_Mag",
-				"20Rnd_762x51_Mag",
-				"20Rnd_762x51_Mag",
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_SPR_L5",				
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_t_L5",
+				"hlc_30rnd_556x45_t_L5",
 				"handgrenade",
 				"handgrenade",
 				"smokeshell"
@@ -3229,16 +3253,13 @@ class racs //Name of your faction referenced in the init call
 				"ItemCompass",
 				"ItemWatch"
 			};
-			backpack = "B_AssaultPack_dgtl";
+			backpack = "UK3CB_BAF_B_Bergen_TAN_Rifleman_B";
 			backpackMagazines[] = {
 				"ACE_M14",
-				"ptv_5Rnd_86x70_TRG42",
-				"ptv_5Rnd_86x70_TRG42",
-				"ptv_5Rnd_86x70_TRG42",				
-				"ptv_5Rnd_86x70_TRG42",
-				"ptv_5Rnd_86x70_TRG42",
-				"ptv_5Rnd_86x70_TRG42",
-				"ptv_5Rnd_86x70_TRG42",		
+				"rhsusf_mag_10Rnd_STD_50BMG_mk211",
+				"rhsusf_mag_10Rnd_STD_50BMG_mk211",
+				"rhsusf_mag_10Rnd_STD_50BMG_mk211",				
+				"rhsusf_mag_10Rnd_STD_50BMG_mk211",
 				"20Rnd_762x51_Mag",
 				"20Rnd_762x51_Mag",
 				"20Rnd_762x51_Mag",
@@ -3256,9 +3277,9 @@ class racs //Name of your faction referenced in the init call
 				"ACE_fieldDressing",
 				"ACE_morphine"
 				};
-			uniform[] = {"U_I_FullGhillie_sard"};
-			vest[] = {"UK3CB_AAF_O_V_Eagle_RIF_DIGI_GRN"};
-			headgear[] = {"rhsusf_mich_bare_norotos_arc_alt","rhsusf_mich_bare_norotos_arc_alt_headset","rhsusf_mich_bare_norotos_arc_headset"};
+			uniform[] = {"rhs_uniform_g3_m81"};
+			vest[] = {"mbavkhk_r"};
+			headgear[] = {"rhsusf_opscore_ut_pelt","rhsusf_opscore_ut_pelt_cam"};
 			nvg = "";
 			insignia = "";
 			binoculars = "Rangefinder";
@@ -3266,18 +3287,18 @@ class racs //Name of your faction referenced in the init call
 		class EOD // Class Names
 		{
 			name = "EOD";
-			primaryWeapon = "arifle_Mk20C_F";
-			primaryWeaponItems[] = {"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger"};
+			primaryWeapon = "hlc_rifle_CQBR";
+			primaryWeaponItems[] = {"rhsusf_acc_eotech","rhsusf_acc_grip2_tan","rhsusf_acc_anpeq15_light","hlc_30rnd_556x45_SPR_L5"};
 			handgun = "ACE_VMM3";
 			handgunItems[] = {};
 			magazines[] = {
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",				
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red",
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_SPR_L5",				
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_t_L5",
+				"hlc_30rnd_556x45_t_L5",
 				"handgrenade",
 				"handgrenade",
 				"smokeshell"
@@ -3302,7 +3323,7 @@ class racs //Name of your faction referenced in the init call
 				"ItemCompass",
 				"ItemWatch"
 			};
-			backpack = "B_TacticalPack_oli";
+			backpack = "UK3CB_BAF_B_Bergen_TAN_Rifleman_A";
 			backpackMagazines[] = {
 				"ACE_M14",
 				"ACE_M14",
@@ -3336,9 +3357,9 @@ class racs //Name of your faction referenced in the init call
 				"ACE_fieldDressing",
 				"ACE_morphine"
 				};
-			uniform[] = {"UK3CB_AAF_B_U_CombatUniform_Shortsleeve_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_Shortsleeve_Digi_Mix_01","UK3CB_AAF_B_U_CombatUniform_Digi_Mix_01"};
-			vest[] = {"UK3CB_AAF_O_V_Eagle_RIF_DIGI_GRN"};
-			headgear[] = {"rhsusf_mich_bare_norotos_arc_alt","rhsusf_mich_bare_norotos_arc_alt_headset","rhsusf_mich_bare_norotos_arc_headset"};
+			uniform[] = {"rhs_uniform_g3_m81"};
+			vest[] = {"mbavkhk_r"};
+			headgear[] = {"rhsusf_opscore_ut_pelt","rhsusf_opscore_ut_pelt_cam"};
 			nvg = "";
 			insignia = "";
 		};			
@@ -3384,7 +3405,7 @@ class racs //Name of your faction referenced in the init call
 				"ItemCompass",
 				"ItemWatch"
 			};
-			backpack = "B_TacticalPack_oli";
+			backpack = "UK3CB_BAF_B_Bergen_TAN_Rifleman_A";
 			backpackMagazines[] = {
 				"SmokeshellGreen",
 				"SmokeshellGreen",
@@ -3433,9 +3454,9 @@ class racs //Name of your faction referenced in the init call
 				"ACE_fieldDressing",
 				"ACE_morphine"
 				};
-			uniform[] = {"UK3CB_AAF_B_U_CombatUniform_Shortsleeve_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_Shortsleeve_Digi_Mix_01","UK3CB_AAF_B_U_CombatUniform_Digi_Mix_01"};
-			vest[] = {"UK3CB_AAF_O_V_Eagle_RIF_DIGI_GRN"};
-			headgear[] = {"rhsusf_mich_bare_norotos_arc_alt","rhsusf_mich_bare_norotos_arc_alt_headset","rhsusf_mich_bare_norotos_arc_headset"};
+			uniform[] = {"rhs_uniform_g3_m81"};
+			vest[] = {"mbavkhk_r"};
+			headgear[] = {"rhsusf_opscore_ut_pelt","rhsusf_opscore_ut_pelt_cam"};
 			nvg = "";
 			insignia = "";
 		};				
@@ -3443,22 +3464,18 @@ class racs //Name of your faction referenced in the init call
 		class mortar // Class Names
 		{
 			name = "Mortar (60mm)";
-			primaryWeapon = "arifle_Mk20C_F";
-			primaryWeaponItems[] = {"RKSL_optic_EOT552","acc_pointer_ir","rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger"};
+			primaryWeapon = "hlc_rifle_CQBR";
+			primaryWeaponItems[] = {"rhsusf_acc_eotech","rhsusf_acc_grip2_tan","rhsusf_acc_anpeq15_light","hlc_30rnd_556x45_SPR_L5"};
 			handgun = "";
 			handgunItems[] = {};
 			magazines[] = {
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",				
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red",
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_SPR_L5",				
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_t_L5",
+				"hlc_30rnd_556x45_t_L5",
 				"handgrenade",
 				"handgrenade",
 				"smokeshell"
@@ -3482,7 +3499,7 @@ class racs //Name of your faction referenced in the init call
 				"ItemCompass",
 				"ItemWatch"
 			};
-			backpack = "rhssaf_alice_smb";
+			backpack = "UK3CB_BAF_B_Bergen_TAN_Rifleman_B";
 			backpackMagazines[] = {	
 				"UK3CB_BAF_1Rnd_60mm_Mo_Shells",			
 				"UK3CB_BAF_1Rnd_60mm_Mo_Shells",
@@ -3503,34 +3520,30 @@ class racs //Name of your faction referenced in the init call
 				"ACE_fieldDressing",
 				"ACE_morphine"
 				};
-			uniform[] = {"UK3CB_AAF_B_U_CombatUniform_Shortsleeve_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_Shortsleeve_Digi_Mix_01","UK3CB_AAF_B_U_CombatUniform_Digi_Mix_01"};
-			vest[] = {"UK3CB_AAF_O_V_Eagle_RIF_DIGI_GRN"};
-			headgear[] = {"rhsusf_mich_bare_norotos_arc_alt","rhsusf_mich_bare_norotos_arc_alt_headset","rhsusf_mich_bare_norotos_arc_headset"};
+			uniform[] = {"rhs_uniform_g3_m81"};
+			vest[] = {"mbavkhk_r"};
+			headgear[] = {"rhsusf_opscore_ut_pelt","rhsusf_opscore_ut_pelt_cam"};
 			nvg = "";
 			insignia = "";
 		};				
 		
 		class SquadLeader {
 			name = "Squad Leader";
-			primaryWeapon = "arifle_Mk20C_F";
-			primaryWeaponItems[] = {"RKSL_optic_EOT552","acc_pointer_ir","rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger"};
-			handgun = "hlc_pistol_P226R_Combat";
-			handgunItems[] = {"hlc_15Rnd_9x19_B_P226"};
+			primaryWeapon = "hlc_rifle_CQBR";
+			primaryWeaponItems[] = {"rhsusf_acc_eotech","rhsusf_acc_grip2_tan","rhsusf_acc_anpeq15_light","hlc_30rnd_556x45_SPR_L5"};
+			handgun = "hgun_P07_F";
+			handgunItems[] = {"16Rnd_9x21_Mag"};
 			magazines[] = {
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",				
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red",
-				"hlc_15Rnd_9x19_B_P226",
-				"hlc_15Rnd_9x19_B_P226",
-				"hlc_15Rnd_9x19_B_P226",
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_SPR_L5",				
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_t_L5",
+				"hlc_30rnd_556x45_t_L5",
+				"16Rnd_9x21_Mag",
+				"16Rnd_9x21_Mag",
+				"16Rnd_9x21_Mag",
 				"handgrenade",
 				"handgrenade",
 				"smokeshell"
@@ -3557,16 +3570,17 @@ class racs //Name of your faction referenced in the init call
 				"ItemCompass",
 				"ItemWatch"
 			};
-			backpack = "B_AssaultPack_dgtl";
+			backpack = "UK3CB_BAF_B_Bergen_TAN_SL_A";
 			backpackMagazines[] = {
 				"ACE_M14",
 				"rhsusf_200Rnd_556x45_mixed_soft_pouch",			
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red",
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_SPR_L5",				
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_t_L5",
+				"hlc_30rnd_556x45_t_L5",
 				"ACE_M14",
 				"smokeshell",
 				"smokeshell",
@@ -3595,9 +3609,9 @@ class racs //Name of your faction referenced in the init call
 				"ACE_epinephrine"		
 				
 				};
-			uniform[] = {"UK3CB_AAF_B_U_CombatUniform_Shortsleeve_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_Shortsleeve_Digi_Mix_01","UK3CB_AAF_B_U_CombatUniform_Digi_Mix_01"};
-			vest[] = {"UK3CB_AAF_O_V_Eagle_SL_DIGI_GRN"};
-			headgear[] = {"rhsusf_mich_bare_norotos_arc_alt","rhsusf_mich_bare_norotos_arc_alt_headset","rhsusf_mich_bare_norotos_arc_headset"};
+			uniform[] = {"rhs_uniform_g3_m81"};
+			vest[] = {"mbavkhk_r"};
+			headgear[] = {"rhsusf_opscore_ut_pelt","rhsusf_opscore_ut_pelt_cam"};
 			nvg = "";
 			binoculars = "Binocular";
 			insignia = "";
@@ -3605,22 +3619,22 @@ class racs //Name of your faction referenced in the init call
 
 		class Autorifleman {
 			name = "Autorifleman";
-			primaryWeapon = "rhs_weap_m249_light_L";
-			primaryWeaponItems[] = {"rhsusf_200Rnd_556x45_mixed_soft_pouch","rhsusf_acc_kac_grip_saw_bipod","RKSL_optic_EOT552"};
-			handgun = "hlc_pistol_P226R_Combat";
-			handgunItems[] = {"hlc_15Rnd_9x19_B_P226"};
+			primaryWeapon = "rhs_weap_m249_pip_S_para";
+			primaryWeaponItems[] = {"rhsusf_200Rnd_556x45_soft_pouch_coyote","rhsusf_acc_kac_grip_saw_bipod","rhsusf_acc_eotech"};
+			handgun = "hgun_P07_F";
+			handgunItems[] = {"16Rnd_9x21_Mag"};
 			magazines[] = {
-				"hlc_15Rnd_9x19_B_P226",
-				"hlc_15Rnd_9x19_B_P226",
-				"hlc_15Rnd_9x19_B_P226",
-				"rhsusf_200Rnd_556x45_mixed_soft_pouch",
-				"rhsusf_200Rnd_556x45_mixed_soft_pouch",
+				"16Rnd_9x21_Mag",
+				"16Rnd_9x21_Mag",
+				"16Rnd_9x21_Mag",
+				"rhsusf_200Rnd_556x45_soft_pouch_coyote",
+				"rhsusf_200Rnd_556x45_soft_pouch_coyote",
 				"handgrenade",
 				"handgrenade",
 				"smokeshell",
-				"rhsusf_200Rnd_556x45_mixed_soft_pouch",	
-				"rhsusf_200Rnd_556x45_mixed_soft_pouch",	
-				"rhsusf_200Rnd_556x45_mixed_soft_pouch"	
+				"rhsusf_200Rnd_556x45_soft_pouch_coyote",	
+				"rhsusf_200Rnd_556x45_soft_pouch_coyote",	
+				"rhsusf_200Rnd_556x45_soft_pouch_coyote"	
 			};
 			items[] = {
 				"ACE_salineIV_500",
@@ -3641,12 +3655,12 @@ class racs //Name of your faction referenced in the init call
 				"ItemCompass",
 				"ItemWatch"
 			};
-			backpack = "B_TacticalPack_oli";
+			backpack = "UK3CB_BAF_B_Bergen_TAN_Rifleman_A";
 			backpackMagazines[] = {
-				"rhsusf_200Rnd_556x45_mixed_soft_pouch",
-				"rhsusf_200Rnd_556x45_mixed_soft_pouch",
-				"rhsusf_200Rnd_556x45_mixed_soft_pouch",
-				"rhsusf_200Rnd_556x45_mixed_soft_pouch"	
+				"rhsusf_200Rnd_556x45_soft_pouch_coyote",
+				"rhsusf_200Rnd_556x45_soft_pouch_coyote",
+				"rhsusf_200Rnd_556x45_soft_pouch_coyote",
+				"rhsusf_200Rnd_556x45_soft_pouch_coyote"	
 				};
 			launcher = "";
 			launcherItems[] = {};
@@ -3658,27 +3672,27 @@ class racs //Name of your faction referenced in the init call
 				"ACE_quikclot",	
 				"ACE_SpareBarrel"
 				};
-			uniform[] = {"UK3CB_AAF_B_U_CombatUniform_Shortsleeve_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_Shortsleeve_Digi_Mix_01","UK3CB_AAF_B_U_CombatUniform_Digi_Mix_01"};
-			vest[] = {"UK3CB_AAF_O_V_Eagle_MG_DIGI_GRN"};
-			headgear[] = {"rhsusf_mich_bare_norotos_arc_alt","rhsusf_mich_bare_norotos_arc_alt_headset","rhsusf_mich_bare_norotos_arc_headset"};
+			uniform[] = {"rhs_uniform_g3_m81"};
+			vest[] = {"mbavkhk_mg"};
+			headgear[] = {"rhsusf_opscore_ut_pelt","rhsusf_opscore_ut_pelt_cam"};
 			nvg = "";
 			insignia = "";
 		};			
 		class AutoAsst
 		{
 			name = "AR Asst.";
-			primaryWeapon = "arifle_Mk20C_F";
-			primaryWeaponItems[] = {"RKSL_optic_EOT552","acc_pointer_ir","rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger"};
+			primaryWeapon = "hlc_rifle_CQBR";
+			primaryWeaponItems[] = {"rhsusf_acc_eotech","rhsusf_acc_grip2_tan","rhsusf_acc_anpeq15_light","hlc_30rnd_556x45_SPR_L5"};
 			handgun = "";
 			handgunItems[] = {};
 			magazines[] = {
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",				
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red",
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_SPR_L5",				
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_t_L5",
+				"hlc_30rnd_556x45_t_L5",
 				"handgrenade",
 				"handgrenade",
 				"smokeshell"
@@ -3702,12 +3716,12 @@ class racs //Name of your faction referenced in the init call
 				"ItemCompass",
 				"ItemWatch"
 			};
-			backpack = "B_TacticalPack_oli";
+			backpack = "UK3CB_BAF_B_Bergen_TAN_Rifleman_A";
 			backpackMagazines[] = {
-				"rhsusf_200Rnd_556x45_mixed_soft_pouch",
-				"rhsusf_200Rnd_556x45_mixed_soft_pouch",
-				"rhsusf_200Rnd_556x45_mixed_soft_pouch",
-				"rhsusf_200Rnd_556x45_mixed_soft_pouch"
+				"rhsusf_200Rnd_556x45_soft_pouch_coyote",
+				"rhsusf_200Rnd_556x45_soft_pouch_coyote",
+				"rhsusf_200Rnd_556x45_soft_pouch_coyote",
+				"rhsusf_200Rnd_556x45_soft_pouch_coyote"
 				};
 			launcher = "";
 			launcherItems[] = {};
@@ -3719,9 +3733,9 @@ class racs //Name of your faction referenced in the init call
 				"ACE_quikclot",	
 				"ACE_SpareBarrel"
 				};
-			uniform[] = {"UK3CB_AAF_B_U_CombatUniform_Shortsleeve_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_Shortsleeve_Digi_Mix_01","UK3CB_AAF_B_U_CombatUniform_Digi_Mix_01"};
-			vest[] = {"UK3CB_AAF_O_V_Eagle_RIF_DIGI_GRN"};
-			headgear[] = {"rhsusf_mich_bare_norotos_arc_alt","rhsusf_mich_bare_norotos_arc_alt_headset","rhsusf_mich_bare_norotos_arc_headset"};
+			uniform[] = {"rhs_uniform_g3_m81"};
+			vest[] = {"mbavkhk_r"};
+			headgear[] = {"rhsusf_opscore_ut_pelt","rhsusf_opscore_ut_pelt_cam"};
 			nvg = "";
 			insignia = "";
 			binoculars = "Binocular";
@@ -3729,26 +3743,22 @@ class racs //Name of your faction referenced in the init call
 		class Teamleader
 		{
 			name = "Team Leader";
-			primaryWeapon = "arifle_Mk20_GL_F";
-			primaryWeaponItems[] = {"rhs_mag_M433_HEDP","RKSL_optic_EOT552","acc_pointer_ir","rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger"};
-			handgun = "";
-			handgunItems[] = {};
+			primaryWeapon = "hlc_rifle_CQBR";
+			primaryWeaponItems[] = {"rhsusf_acc_eotech","rhsusf_acc_grip2_tan","rhsusf_acc_anpeq15_light","hlc_30rnd_556x45_SPR_L5"};
+			handgun = "rhs_weap_M320";
+			handgunItems[] = {"rhs_mag_M433_HEDP"};
 			magazines[] = {
 				"rhs_mag_M433_HEDP",
 				"rhs_mag_M433_HEDP",
 				"rhs_mag_M433_HEDP",
 				"rhs_mag_M433_HEDP",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",				
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red",
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_SPR_L5",				
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_t_L5",
+				"hlc_30rnd_556x45_t_L5",
 				"handgrenade",
 				"handgrenade",
 				"smokeshell"
@@ -3771,7 +3781,7 @@ class racs //Name of your faction referenced in the init call
 				"ItemCompass",
 				"ItemWatch"
 			};
-			backpack = "B_AssaultPack_dgtl";
+			backpack = "UK3CB_BAF_B_Bergen_TAN_Rifleman_A";
 			backpackMagazines[] = {
 				"rhs_mag_M433_HEDP",
 				"rhs_mag_M433_HEDP",
@@ -3803,11 +3813,13 @@ class racs //Name of your faction referenced in the init call
 				"ACE_M14",
 				"ACE_M14",
 				"smokeshell",			
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red"
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_SPR_L5",				
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_t_L5",
+				"hlc_30rnd_556x45_t_L5"
 				};
 			launcher = "";
 			launcherItems[] = {};
@@ -3816,9 +3828,9 @@ class racs //Name of your faction referenced in the init call
 				"ACE_fieldDressing",
 				"ACE_morphine"
 				};
-			uniform[] = {"UK3CB_AAF_B_U_CombatUniform_Shortsleeve_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_Shortsleeve_Digi_Mix_01","UK3CB_AAF_B_U_CombatUniform_Digi_Mix_01"};
-			vest[] = {"UK3CB_AAF_O_V_Eagle_GL_DIGI_GRN"};
-			headgear[] = {"rhsusf_mich_bare_norotos_arc_alt","rhsusf_mich_bare_norotos_arc_alt_headset","rhsusf_mich_bare_norotos_arc_headset"};
+			uniform[] = {"rhs_uniform_g3_m81"};
+			vest[] = {"mbavkhk_r"};
+			headgear[] = {"rhsusf_opscore_ut_pelt","rhsusf_opscore_ut_pelt_cam"};
 			nvg = "";
 			insignia = "";
 			binoculars = "Binocular";
@@ -3826,22 +3838,18 @@ class racs //Name of your faction referenced in the init call
 		class RiflemanLAT
 		{
 			name = "Rifleman (LAT)";
-			primaryWeapon = "arifle_Mk20C_F";
-			primaryWeaponItems[] = {"RKSL_optic_EOT552","acc_pointer_ir","rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger"};
+			primaryWeapon = "hlc_rifle_CQBR";
+			primaryWeaponItems[] = {"rhsusf_acc_eotech","rhsusf_acc_grip2_tan","rhsusf_acc_anpeq15_light","hlc_30rnd_556x45_SPR_L5"};
 			handgun = "";
 			handgunItems[] = {};
 			magazines[] = {
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",				
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red",
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_SPR_L5",				
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_t_L5",
+				"hlc_30rnd_556x45_t_L5",
 				"handgrenade",
 				"handgrenade",
 				"smokeshell"
@@ -3865,19 +3873,18 @@ class racs //Name of your faction referenced in the init call
 				"ItemCompass",
 				"ItemWatch"
 			};
-			backpack = "B_AssaultPack_dgtl";
+			backpack = "UK3CB_BAF_B_Bergen_TAN_Rifleman_A";
 			backpackMagazines[] = {
 				"ACE_M14",
 				"rhsusf_200Rnd_556x45_mixed_soft_pouch",
 				"rhsusf_200Rnd_556x45_mixed_soft_pouch",			
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red",
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_SPR_L5",				
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_t_L5",
+				"hlc_30rnd_556x45_t_L5",
 				"handgrenade",
 				"handgrenade",
 				"ACE_M14",
@@ -3890,9 +3897,9 @@ class racs //Name of your faction referenced in the init call
 				"ACE_fieldDressing",
 				"ACE_morphine"
 				};
-			uniform[] = {"UK3CB_AAF_B_U_CombatUniform_Shortsleeve_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_Shortsleeve_Digi_Mix_01","UK3CB_AAF_B_U_CombatUniform_Digi_Mix_01"};
-			vest[] = {"UK3CB_AAF_O_V_Eagle_RIF_DIGI_GRN"};
-			headgear[] = {"rhsusf_mich_bare_norotos_arc_alt","rhsusf_mich_bare_norotos_arc_alt_headset","rhsusf_mich_bare_norotos_arc_headset"};
+			uniform[] = {"rhs_uniform_g3_m81"};
+			vest[] = {"mbavkhk_r"};
+			headgear[] = {"rhsusf_opscore_ut_pelt","rhsusf_opscore_ut_pelt_cam"};
 			nvg = "";
 			insignia = "";
 		};		
@@ -3900,8 +3907,8 @@ class racs //Name of your faction referenced in the init call
 		class Grenadier
 		{
 			name = "Grenadier";
-			primaryWeapon = "arifle_Mk20_GL_F";
-			primaryWeaponItems[] = {"rhs_mag_M433_HEDP","RKSL_optic_EOT552","acc_pointer_ir","rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger"};
+			primaryWeapon = "rhs_weap_m16a4_imod_M203";
+			primaryWeaponItems[] = {"rhs_mag_M433_HEDP","rhsusf_acc_eotech","rhsusf_acc_grip2_tan","rhsusf_acc_anpeq15_light","hlc_30rnd_556x45_SPR_L5"};
 			handgun = "";
 			handgunItems[] = {};
 			magazines[] = {
@@ -3909,17 +3916,13 @@ class racs //Name of your faction referenced in the init call
 				"rhs_mag_M433_HEDP",
 				"rhs_mag_M433_HEDP",
 				"rhs_mag_M433_HEDP",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",				
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red",
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_SPR_L5",				
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_t_L5",
+				"hlc_30rnd_556x45_t_L5",
 				"handgrenade",
 				"handgrenade",
 				"smokeshell"
@@ -3942,7 +3945,7 @@ class racs //Name of your faction referenced in the init call
 				"ItemCompass",
 				"ItemWatch"
 			};
-			backpack = "B_AssaultPack_dgtl";
+			backpack = "UK3CB_BAF_B_Bergen_TAN_Rifleman_A";
 			backpackMagazines[] = {
 				"rhs_mag_M433_HEDP",
 				"rhs_mag_M433_HEDP",
@@ -3974,11 +3977,13 @@ class racs //Name of your faction referenced in the init call
 				"ACE_M14",
 				"ACE_M14",
 				"smokeshell",			
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red"
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_SPR_L5",				
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_t_L5",
+				"hlc_30rnd_556x45_t_L5"
 				};
 			launcher = "";
 			launcherItems[] = {};
@@ -3987,30 +3992,27 @@ class racs //Name of your faction referenced in the init call
 				"ACE_fieldDressing",
 				"ACE_morphine"
 				};
-			uniform[] = {"UK3CB_AAF_B_U_CombatUniform_Shortsleeve_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_Shortsleeve_Digi_Mix_01","UK3CB_AAF_B_U_CombatUniform_Digi_Mix_01"};
-			vest[] = {"UK3CB_AAF_O_V_Eagle_GL_DIGI_GRN"};
-			headgear[] = {"rhsusf_mich_bare_norotos_arc_alt","rhsusf_mich_bare_norotos_arc_alt_headset","rhsusf_mich_bare_norotos_arc_headset"};
+			uniform[] = {"rhs_uniform_g3_m81"};
+			vest[] = {"mbavkhk_gl"};
+			headgear[] = {"rhsusf_opscore_ut_pelt","rhsusf_opscore_ut_pelt_cam"};
 			nvg = "";
 			insignia = "";
 		};	
 		class Medic
 		{
 			name = "Combat Medic";
-			primaryWeapon = "arifle_Mk20C_F";
-			primaryWeaponItems[] = {"RKSL_optic_EOT552","acc_pointer_ir","rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger"};
+			primaryWeapon = "hlc_rifle_CQBR";
+			primaryWeaponItems[] = {"rhsusf_acc_eotech","rhsusf_acc_grip2","rhsusf_acc_anpeq15_light","hlc_30rnd_556x45_SPR_L5"};
 			handgun = "";
 			handgunItems[] = {};
 			magazines[] = {
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",			
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",			
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",			
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",					
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red",
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_SPR_L5",				
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_t_L5",
+				"hlc_30rnd_556x45_t_L5",
 				"handgrenade",
 				"handgrenade",
 				"smokeshell"
@@ -4034,7 +4036,7 @@ class racs //Name of your faction referenced in the init call
 				"ItemCompass",
 				"ItemWatch"
 			};
-			backpack = "B_TacticalPack_oli";
+			backpack = "B_Kitbag_tan";
 			backpackMagazines[] = {
 				"smokeshell",
 				"smokeshell",
@@ -4188,34 +4190,28 @@ class racs //Name of your faction referenced in the init call
 				"ACE_tourniquet",
 				"ACE_tourniquet"
 				};
-			uniform[] = {"UK3CB_AAF_B_U_CombatUniform_Shortsleeve_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_Shortsleeve_Digi_Mix_01","UK3CB_AAF_B_U_CombatUniform_Digi_Mix_01"};
-			vest[] = {"UK3CB_AAF_O_V_Eagle_MED_DIGI_GRN"};
-			headgear[] = {"rhsusf_mich_bare_norotos_arc_alt","rhsusf_mich_bare_norotos_arc_alt_headset","rhsusf_mich_bare_norotos_arc_headset"};
+			uniform[] = {"rhs_uniform_g3_m81"};
+			vest[] = {"mbavkhk_m"};
+			headgear[] = {"rhsusf_opscore_ut_pelt","rhsusf_opscore_ut_pelt_cam"};
 			nvg = "";
 			insignia = "";
 		};		
 		class PlatoonLeader 
 		{
 			name = "Platoon Leader";
-			primaryWeapon = "arifle_Mk20_GL_F";
-			primaryWeaponItems[] = {"rhs_mag_M433_HEDP","RKSL_optic_EOT552","acc_pointer_ir","rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger"};
-			handgun = "hlc_pistol_P226R_Combat";
-			handgunItems[] = {"hlc_15Rnd_9x19_B_P226"};
+			primaryWeapon = "hlc_rifle_CQBR";
+			primaryWeaponItems[] = {"rhsusf_acc_eotech","rhsusf_acc_grip2_tan","rhsusf_acc_anpeq15_light","hlc_30rnd_556x45_SPR_L5"};
+			handgun = "rhs_weap_M320";
+			handgunItems[] = {};
 			magazines[] = {
 				"rhs_mag_M433_HEDP",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",				
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red",
-				"hlc_15Rnd_9x19_B_P226",
-				"hlc_15Rnd_9x19_B_P226",
-				"hlc_15Rnd_9x19_B_P226",
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_SPR_L5",				
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_t_L5",
+				"hlc_30rnd_556x45_t_L5",
 				"handgrenade",
 				"handgrenade",
 				"smokeshell"
@@ -4240,7 +4236,7 @@ class racs //Name of your faction referenced in the init call
 				"ItemCompass",
 				"ItemWatch"
 			};
-			backpack = "B_AssaultPack_dgtl";
+			backpack = "UK3CB_BAF_B_Bergen_TAN_SL_A";
 			backpackMagazines[] = {
 				"rhs_mag_M433_HEDP",
 				"rhs_mag_M433_HEDP",
@@ -4272,9 +4268,9 @@ class racs //Name of your faction referenced in the init call
 				"ACE_fieldDressing",
 				"ACE_morphine"
 				};
-			uniform[] = {"UK3CB_AAF_B_U_CombatUniform_Shortsleeve_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_Shortsleeve_Digi_Mix_01","UK3CB_AAF_B_U_CombatUniform_Digi_Mix_01"};
-			vest[] = {"UK3CB_AAF_O_V_Eagle_SL_DIGI_GRN"};
-			headgear[] = {"rhsusf_mich_bare_norotos_arc_alt","rhsusf_mich_bare_norotos_arc_alt_headset","rhsusf_mich_bare_norotos_arc_headset"};
+			uniform[] = {"rhs_uniform_g3_m81"};
+			vest[] = {"mbavkhk_r"};
+			headgear[] = {"rhsusf_opscore_ut_pelt","rhsusf_opscore_ut_pelt_cam"};
 			nvg = "";
 			binoculars = "Binocular";
 			insignia = "";
@@ -4283,20 +4279,20 @@ class racs //Name of your faction referenced in the init call
 		class JTAC
 		{
 			name = "JTAC";
-			primaryWeapon = "arifle_Mk20_GL_F";
-			primaryWeaponItems[] = {"rhs_mag_M433_HEDP","RKSL_optic_EOT552","acc_pointer_ir","rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger"};
+			primaryWeapon = "rhs_weap_m16a4_imod_M203";
+			primaryWeaponItems[] = {"rhs_mag_M433_HEDP","rhsusf_acc_eotech","rhsusf_acc_grip2_tan","rhsusf_acc_anpeq15_light","hlc_30rnd_556x45_SPR_L5"};
 			handgun = "";
 			handgunItems[] = {};
 			magazines[] = {
 				"rhs_mag_M433_HEDP",
 				"rhs_mag_M433_HEDP",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",				
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red",
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_SPR_L5",				
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_SPR_L5",
+				"hlc_30rnd_556x45_t_L5",
+				"hlc_30rnd_556x45_t_L5",
 				"handgrenade",
 				"handgrenade",
 				"smokeshell",
@@ -4357,9 +4353,9 @@ class racs //Name of your faction referenced in the init call
 				"ACE_fieldDressing",
 				"ACE_morphine"
 				};
-			uniform[] = {"UK3CB_AAF_B_U_CombatUniform_Shortsleeve_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_Shortsleeve_Digi_Mix_01","UK3CB_AAF_B_U_CombatUniform_Digi_Mix_01"};
-			vest[] = {"UK3CB_AAF_O_V_Eagle_GL_DIGI_GRN"};
-			headgear[] = {"rhsusf_mich_bare_norotos_arc_alt","rhsusf_mich_bare_norotos_arc_alt_headset","rhsusf_mich_bare_norotos_arc_headset"};
+			uniform[] = {"rhs_uniform_g3_m81"};
+			vest[] = {"mbavkhk_r"};
+			headgear[] = {"rhsusf_opscore_ut_pelt","rhsusf_opscore_ut_pelt_cam"};
 			nvg = "";
 			binoculars = "UK3CB_BAF_Soflam_Laserdesignator";
 			insignia = "";
@@ -4368,25 +4364,14 @@ class racs //Name of your faction referenced in the init call
 		class Marksman
 		{
 			name = "Marksman";
-			primaryWeapon = "ptv_m14tp2_wdl";
-			primaryWeaponItems[] = {"20Rnd_762x51_Mag","ptv_shortdot","ptv_hbrs"};
-			handgun = "hlc_pistol_P226R_Combat";
-			handgunItems[] = {"hlc_15Rnd_9x19_B_P226"};
+			primaryWeapon = "rhs_weap_SCARH_FDE_LB";	
+			primaryWeaponItems[] = {"rhs_mag_20Rnd_SCAR_762x51_mk316_special","rhsusf_acc_m8541_mrds","rhsusf_acc_anpeq16a","rhsusf_acc_harris_bipod"};
+			handgun = "hgun_P07_F";
+			handgunItems[] = {"16Rnd_9x21_Mag"};
 			magazines[] = {
-				"20Rnd_762x51_Mag",
-				"20Rnd_762x51_Mag",
-				"20Rnd_762x51_Mag",				
-				"20Rnd_762x51_Mag",
-				"20Rnd_762x51_Mag",
-				"20Rnd_762x51_Mag",
-				"20Rnd_762x51_Mag",
-				"20Rnd_762x51_Mag",
-				"20Rnd_762x51_Mag",
-				"20Rnd_762x51_Mag",
-				"20Rnd_762x51_Mag",
-				"hlc_15Rnd_9x19_B_P226",
-				"hlc_15Rnd_9x19_B_P226",
-				"hlc_15Rnd_9x19_B_P226",				
+				{"rhs_mag_20Rnd_SCAR_762x51_mk316_special",5},
+				{"rhs_mag_20Rnd_SCAR_762x51_m62_tracer",2},
+				{"16Rnd_9x21_Mag",3},				
 				"handgrenade",
 				"handgrenade",
 				"smokeshell"
@@ -4410,29 +4395,24 @@ class racs //Name of your faction referenced in the init call
 				"ItemCompass",
 				"ItemWatch"
 			};
-			backpack = "B_AssaultPack_dgtl";
+			backpack = "UK3CB_BAF_B_Bergen_TAN_Rifleman_A";
 			backpackMagazines[] = {
-				"20Rnd_762x51_Mag",
-				"20Rnd_762x51_Mag",
-				"20Rnd_762x51_Mag",
-				"20Rnd_762x51_Mag",
-				"hlc_15Rnd_9x19_B_P226",
-				"hlc_15Rnd_9x19_B_P226",
-				"hlc_15Rnd_9x19_B_P226",
-				"handgrenade",
-				"handgrenade",
-				"smokeshell"
+				{"rhs_mag_20Rnd_SCAR_762x51_mk316_special",5},
+				{"rhs_mag_20Rnd_SCAR_762x51_m62_tracer",2},
+				{"16Rnd_9x21_Mag",3},
+				{"HandGrenade",2},
+				"SmokeShell"
 				};
-			launcher = "launch_NLAW_F";
+			launcher = "";
 			launcherItems[] = {};
 			backpackItems[] = {
 				"ACE_fieldDressing",
 				"ACE_fieldDressing",
 				"ACE_morphine"
 				};
-			uniform[] = {"UK3CB_AAF_B_U_CombatUniform_Shortsleeve_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_Shortsleeve_Digi_Mix_01","UK3CB_AAF_B_U_CombatUniform_Digi_Mix_01"};
-			vest[] = {"UK3CB_AAF_O_V_Eagle_RIF_DIGI_GRN"};
-			headgear[] = {"rhsusf_mich_bare_norotos_arc_alt","rhsusf_mich_bare_norotos_arc_alt_headset","rhsusf_mich_bare_norotos_arc_headset"};
+			uniform[] = {"rhs_uniform_g3_m81"};
+			vest[] = {"mbavkhk_r"};
+			headgear[] = {"rhsusf_opscore_ut_pelt","rhsusf_opscore_ut_pelt_cam"};
 			nvg = "";
 			binoculars = "Rangefinder";
 			insignia = "";
@@ -4441,16 +4421,16 @@ class racs //Name of your faction referenced in the init call
 		class Crew // Class Names
 		{
 			name = "Crew";
-			primaryWeapon = "arifle_Mk20C_F";
-			primaryWeaponItems[] = {"RKSL_optic_EOT552","acc_pointer_ir","rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger"};
+			primaryWeapon = "rhs_weap_m4a1_carryhandle";
+			primaryWeaponItems[] = {"rhsusf_acc_SF3P556","rhsusf_acc_anpeq15_light","hlc_30rnd_556x45_M_L5"};
 			handgun = "";
 			handgunItems[] = {};
 			magazines[] = {
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",				
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
-				"rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
+				"hlc_30rnd_556x45_M_L5",
+				"hlc_30rnd_556x45_M_L5",
+				"hlc_30rnd_556x45_M_L5",				
+				"hlc_30rnd_556x45_M_L5",
+				"hlc_30rnd_556x45_M_L5",
 				"smokeshellblue",
 				"smokeshell",
 				"smokeshell"
@@ -4479,8 +4459,8 @@ class racs //Name of your faction referenced in the init call
 			launcher = "";
 			launcherItems[] = {};
 			backpackItems[] = {};
-			uniform[] = {"UK3CB_AAF_B_U_CombatUniform_Shortsleeve_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_DIGI_GRN","UK3CB_AAF_B_U_CombatUniform_Shortsleeve_Digi_Mix_01","UK3CB_AAF_B_U_CombatUniform_Digi_Mix_01"};
-			vest[] = {"UK3CB_AAF_O_V_Eagle_CREW_DIGI_GRN"};
+			uniform[] = {"bso_uniform_racs"};
+			vest[] = {"rhsusf_mbav_light"};
 			headgear[] = {"H_HelmetCrew_I"};
 			nvg = "";
 			insignia = "";
@@ -4490,16 +4470,14 @@ class racs //Name of your faction referenced in the init call
 		class Pilot // Class Names
 		{
 			name = "Pilot";
-			primaryWeapon = "hgun_PDW2000_F";
-			primaryWeaponItems[] = {"optic_aco_smg","30Rnd_9x21_Mag"};
+			primaryWeapon = "hlc_smg_mp5k_PDW";
+			primaryWeaponItems[] = {"hlc_30Rnd_9x19_B_MP5"};
 			handgun = "";
 			handgunItems[] = {};
 			magazines[] = {
-				"30Rnd_9x21_Mag",
-				"30Rnd_9x21_Mag",
-				"30Rnd_9x21_Mag",				
-				"30Rnd_9x21_Mag",
-				"30Rnd_9x21_Mag",
+				"hlc_30Rnd_9x19_B_MP5",
+				"hlc_30Rnd_9x19_B_MP5",
+				"hlc_30Rnd_9x19_B_MP5",
 				"smokeshellblue",
 				"smokeshellblue",
 				"smokeshell",
@@ -4529,9 +4507,9 @@ class racs //Name of your faction referenced in the init call
 			launcher = "";
 			launcherItems[] = {};
 			backpackItems[] = {};
-			uniform[] = {"UK3CB_AAF_I_U_H_Pilot_DIGI_GRN","U_I_HeliPilotCoveralls"};
+			uniform[] = {"bso_uniform_racs"};
 			vest[] = {"UK3CB_V_Pilot_Vest"};
-			headgear[] = {"H_PilotHelmetHeli_I"};
+			headgear[] = {"H_PilotHelmetHeli_B"};
 			nvg = "ACE_NVG_Wide_Green";
 			insignia = "";
 			binoculars = "Binocular";
