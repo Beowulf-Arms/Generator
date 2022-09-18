@@ -1,0 +1,53 @@
+["BSOMission",["Incoming Tasking..."]] call BIS_fnc_showNotification;
+
+if (isServer) then 
+{
+	"m_1" setMarkerPos (getMarkerPos (bso_gene_locations call BIS_fnc_selectRandom));
+
+};
+
+	_bso_gene_Rgrp1 = [bso_gene_opfgrp1, bso_gene_opfgrp2, bso_gene_opfgrp3] call BIS_fnc_selectRandom;
+	_bso_gene_Rgrp2 = [bso_gene_opfgrp1, bso_gene_opfgrp2, bso_gene_opfgrp3] call BIS_fnc_selectRandom;
+
+	_values1 = ["z1",[1,0,0],[4,2,25,5],[2,3,15,5],[1,1,10,5],[],[0,0,0,0,0]];
+	[(getMarkerPos "m_1"),500,500,0,0,_values1] call DAC_fNewZone;
+	
+	waituntil{DAC_NewZone == 0};
+	
+	_values2 = ["z2",[1,0,0],[],[],[],[ 2,1,50,1,100,5,[z1]],[0,0,0,0,0]];
+	[(getMarkerPos "m_1"),700,700,0,0,_values2] call DAC_fNewZone;
+	
+	
+	
+	_grp0 = createGroup bso_gene_side;
+	HVT1 = _grp0 createUnit [bso_gene_hvt,(getMarkerPos "m_1"),[],250,"FORM"];
+	
+// Additional jsm features. Can be removed	
+	removeAllWeapons HVT1;
+	HVT1 addHeadgear "H_Beret_blk";
+	HVT1 addGoggles "G_Sport_Greenblack";
+
+	[HVT1, getPos HVT1, 50, 1, 0, 1] call CBA_fnc_taskDefend;	
+	
+	grp1 = [getMarkerPos "m_1", bso_gene_side, _bso_gene_Rgrp1] call BIS_fnc_spawnGroup;
+	[grp1, getPos HVT1, 10, 1, 0.2, 0.2] call CBA_fnc_taskDefend;	
+
+	grp2 = [getMarkerPos "m_1", bso_gene_side, _bso_gene_Rgrp2] call BIS_fnc_spawnGroup;
+	[grp2, getMarkerPos "m_1", 30, 1, 0.2, 0.2] call CBA_fnc_taskDefend;		
+	
+
+	trg1 = createTrigger ["EmptyDetector", getMarkerPos "m_1"];
+	trg1 setTriggerArea [0, 0, 0, false];
+	trg1 setTriggerActivation ["NONE", "NOT PRESENT", false];
+	trg1 setTriggerStatements ["!alive hvt1", "if (isServer) then {[""Task_e_hvt"", ""succeeded""] call FHQ_fnc_ttSetTaskState;};",""];	
+
+	
+
+	if (isServer) then {
+	_x = [] execVM "mission\gene\obj\bso_gene_markers.sqf";
+	
+	[["Task_e_hvt","We have identified the location of an enemy commander. Move in and eliminate him.","Eliminate the HVT","Eliminate HVT"]]call FHQ_fnc_ttAddTasks;
+	
+	};
+
+	
